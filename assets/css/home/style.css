@@ -1,0 +1,87 @@
+header {
+  display: none;
+}
+
+.hero {
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 180px;
+}
+
+.hero_relative {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.hero__item {
+  position: absolute;
+  top: 50%;
+  left: 62px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  letter-spacing: -0.06em;
+}
+
+.hero__item div {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.hero__item div h2 {
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
+}
+
+.hero__item:first-child h2 {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.hero__subtitle {
+  position: absolute;
+  bottom: 46px;
+  left: 62px;
+  font-size: 36px;
+  overflow: hidden;
+}
+
+.hero__subtitle h3 {
+  -webkit-transform: translateY(110%);
+          transform: translateY(110%);
+}
+
+.hero__dots {
+  letter-spacing: normal;
+  font-family: serif;
+}
+
+.hero__image {
+  position: absolute;
+  -o-object-fit: contain;
+     object-fit: contain;
+  z-index: -1;
+  height: auto;
+  width: 70%;
+  bottom: -100%;
+  left: 30%;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.hero__image_1 {
+  left: 0%;
+  bottom: 50%;
+  width: 120%;
+}
+
+.hero__image_wrap {
+  position: absolute;
+  top: 0%;
+  left: 40%;
+  height: 100%;
+  width: 60%;
+  overflow: hidden;
+}
+/*# sourceMappingURL=style.css.map */

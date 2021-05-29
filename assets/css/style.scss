@@ -1,0 +1,21 @@
+@import url("reset.css");
+@import "vars";
+@import url("../fonts/Poppins/poppins.css");
+@import "header";
+@import "footer";
+body {
+  font-family: $Font-poppins, "Times New Roman", sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  width: 100%;
+  color: $black;
+  letter-spacing: normal;
+  background-color: $white;
+  margin: 0;
+  padding: 0;
+}
+
+.green {
+  color: $green;
+}
