@@ -61,5 +61,6 @@ var duration = 1,
     .to(".hero__image_3", {bottom: "50%",  duration: duration2}, (duration * 3) + .3) 
     .to(".hero__image_3", {width: "120%", left: "0%",  duration: duration}, duration * 5) 
     //text in
-    .to("#hero__item_3 h2", { transform: "translateY(0%)", duration: duration }, duration * 5);
+    .to("#hero__item_3 h2", { transform: "translateY(0%)", duration: duration }, duration * 5)
+    .to(".hero__subtitle h3", { transform: "translateY(0%)", duration: duration }, duration * 5);
 });

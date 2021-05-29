@@ -1,0 +1,101 @@
+.cards {
+  background-color: $black;
+  padding-top: 226px;
+  padding-bottom: 60px;
+  &__title {
+    font-size: $big;
+    width: 40%;
+    margin-right: 150px;
+    margin-left: auto;
+    letter-spacing: -0.06em;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 108px auto 0;
+  }
+  &__item {
+    border: 1px solid $green;
+    position: relative;
+    z-index: 3;
+    padding: 24px;
+    margin-right: 27px;
+    a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $green;
+      z-index: 1;
+      transition: $transition-5;
+    }
+    &:hover {
+        &::before {
+            bottom: 24px;
+            right: 24px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+        }
+        .cards__name, .cards__description {
+            color: $green;
+        }
+    }
+  }
+  &__name {
+    letter-spacing: -0.05em;
+    position: relative;
+    z-index: 3;
+    transition: $transition-5;
+  }
+  &__description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    width: 60%;
+    letter-spacing: -0.06em;
+    position: relative;
+    z-index: 3;
+    transition: $transition-5;
+    margin-top: 24px;
+  }
+  &__button {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-top: 21px;
+    margin-right: 0;
+    margin-left: auto;
+    border: 1px solid $black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+    
+    &_text {
+      font-size: 14px;
+      line-height: 21px;
+      width: 60%;
+      text-align: center;
+      letter-spacing: -0.06em;
+      text-transform: uppercase;
+    }
+  }
+}
