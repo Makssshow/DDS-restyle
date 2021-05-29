@@ -28,7 +28,7 @@ $(document).ready(function () {
       start: "top top",
       end: "300% bottom",
       pin: ".hero",
-      markers: true,
+      markers: false,
     },
   });
 
