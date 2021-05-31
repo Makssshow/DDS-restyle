@@ -1,26 +1,26 @@
 //Small ball anim
-var mainSBall = $(".small-ball-main"),
-  SPlanet = $(".small-ball-planet"),
-  smallBallCircle = $(".small-ball-circle"),
-  timeScaleSmall = 1,
-  durationSmall = 3;
-small = gsap.timeline({
-  repeat: -1,
-  repeatDelay: 1.5,
-  yoyo: true,
-  defaults: {
-    duration: durationSmall,
-    ease: "power1.out",
-    timeScale: timeScaleSmall,
-  },
-});
+var leftBall = $(".fret__anim_left"),
+  rightBall = $(".fret__anim_red-circle"),
+  redPlanet = $(".fret__anim_red-ball"),
+  manBall = $(".fret__anim_man"),
+  small = gsap.timeline({
+    repeat: -1,
+    repeatDelay: 1,
+    yoyo: true,
+    defaults: {
+      duration: 3,
+      ease: "power1.inOut",
+    },
+  });
 
 small
-  .to(mainSBall, { left: "20%" })
+  .to(leftBall, { x: "20%" })
 
-  .to(SPlanet, { transform: "scale(1.17)" }, 0)
+  .to(rightBall, { x: "-20%" }, 0)
 
-  .to(smallBallCircle, { right: "5%" }, 0);
+  .to(manBall, { x: "-200%" }, 0)
+
+  .to(redPlanet, { scale: "1.1" }, 0);
 
 //BRANDING
 var StopDuration = 1,
@@ -105,23 +105,22 @@ DigitalAnim = gsap.timeline({
   },
 });
 
-DigitalAnim
-.to(digitalMan, { x: 30, y: -30 })
-.to(digitalPlanet, { x: 30, y: -30 }, 0)
-.to(digitalMan, { x: 0, y: -60 })
-.to(digitalPlanet, { x: 60, y: 0 }, durationDigital)
-.to(digitalMan, { x: 0, y: 0 })
-.to(digitalPlanet, { x: 0, y: 0 }, durationDigital * 2 )
+DigitalAnim.to(digitalMan, { x: 30, y: -30 })
+  .to(digitalPlanet, { x: 30, y: -30 }, 0)
+  .to(digitalMan, { x: 0, y: -60 })
+  .to(digitalPlanet, { x: 60, y: 0 }, durationDigital)
+  .to(digitalMan, { x: 0, y: 0 })
+  .to(digitalPlanet, { x: 0, y: 0 }, durationDigital * 2)
 
-.to(crossRight, durationDigital * 2,{ width: "24px"}, 0)
-.to(crossTop, durationDigital * 2,{ height: "24px"}, 0)
-.to(crossLeft, durationDigital * 2,{ width: "24px"}, 0)
-.to(crossBottom, durationDigital * 2,{ height: "24px"}, 0)
+  .to(crossRight, durationDigital * 2, { width: "24px" }, 0)
+  .to(crossTop, durationDigital * 2, { height: "24px" }, 0)
+  .to(crossLeft, durationDigital * 2, { width: "24px" }, 0)
+  .to(crossBottom, durationDigital * 2, { height: "24px" }, 0)
 
-.to(crossRight, durationDigital * 2,{ width: "12px"}, durationDigital )
-.to(crossTop, durationDigital * 2,{ height: "12px"}, durationDigital )
-.to(crossLeft, durationDigital * 2,{ width: "12px"}, durationDigital )
-.to(crossBottom, durationDigital * 2,{ height: "12px"}, durationDigital );
+  .to(crossRight, durationDigital * 2, { width: "12px" }, durationDigital)
+  .to(crossTop, durationDigital * 2, { height: "12px" }, durationDigital)
+  .to(crossLeft, durationDigital * 2, { width: "12px" }, durationDigital)
+  .to(crossBottom, durationDigital * 2, { height: "12px" }, durationDigital);
 
 $("#digital-anim").hover(
   function () {
@@ -131,9 +130,6 @@ $("#digital-anim").hover(
     gsap.to(DigitalAnim, { timeScale: timeScaleMark, duration: StopDuration });
   }
 );
-
-
-
 
 // //marketing anim
 // var markSun = $(".marketing-sun-block"),

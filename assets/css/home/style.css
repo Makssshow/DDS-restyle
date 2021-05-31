@@ -5,7 +5,7 @@ header {
 .hero {
   background-color: #000000;
   color: #ffffff;
-  font-size: 180px;
+  font-size: 10vw;
 }
 
 .hero_relative {
@@ -30,8 +30,8 @@ header {
 }
 
 .hero__item div h2 {
-  -webkit-transform: translateY(110%);
-          transform: translateY(110%);
+  -webkit-transform: translateY(150%);
+          transform: translateY(150%);
 }
 
 .hero__item:first-child h2 {
@@ -48,8 +48,8 @@ header {
 }
 
 .hero__subtitle h3 {
-  -webkit-transform: translateY(110%);
-          transform: translateY(110%);
+  -webkit-transform: translateY(130%);
+          transform: translateY(130%);
 }
 
 .hero__dots {
@@ -62,18 +62,18 @@ header {
   -o-object-fit: contain;
      object-fit: contain;
   z-index: -1;
-  height: auto;
-  width: 70%;
+  height: 60%;
+  width: auto;
   bottom: -100%;
-  left: 30%;
+  right: 10%;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
 }
 
 .hero__image_1 {
-  left: 0%;
+  right: -10%;
   bottom: 50%;
-  width: 120%;
+  height: 100%;
 }
 
 .hero__image_wrap {
@@ -85,10 +85,50 @@ header {
   overflow: hidden;
 }
 
+.hero i {
+  font-style: italic;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 700px) {
+  .hero {
+    font-size: 72px;
+  }
+  .hero__item {
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  .hero__item div {
+    padding: 0;
+  }
+  .hero__image {
+    height: auto;
+    width: 60%;
+    right: 10%;
+  }
+  .hero__image_1 {
+    right: -30%;
+    width: 130%;
+  }
+  .hero__image_wrap {
+    left: 20%;
+    width: 80%;
+  }
+  .hero__subtitle {
+    font-size: 24px;
+    width: 90%;
+    left: 5%;
+  }
+}
+
 .cards {
   background-color: #000000;
   padding-top: 226px;
   padding-bottom: 60px;
+  position: relative;
+  z-index: 3;
 }
 
 .cards__title {
@@ -119,6 +159,9 @@ header {
   z-index: 3;
   padding: 24px;
   margin-right: 27px;
+  width: 442px;
+  height: 317px;
+  max-width: 30%;
 }
 
 .cards__item a {
@@ -143,8 +186,8 @@ header {
   height: 100%;
   background-color: #00df8e;
   z-index: 1;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .cards__item:hover::before {
@@ -155,7 +198,8 @@ header {
   border-radius: 50%;
 }
 
-.cards__item:hover .cards__name, .cards__item:hover .cards__description {
+.cards__item:hover .cards__name,
+.cards__item:hover .cards__description {
   color: #00df8e;
 }
 
@@ -163,20 +207,20 @@ header {
   letter-spacing: -0.05em;
   position: relative;
   z-index: 3;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 .cards__description {
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
-  width: 60%;
+  width: 50%;
   letter-spacing: -0.06em;
   position: relative;
   z-index: 3;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
   margin-top: 24px;
 }
 
@@ -184,9 +228,6 @@ header {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  margin-top: 21px;
-  margin-right: 0;
-  margin-left: auto;
   border: 1px solid #000000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -197,7 +238,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
   z-index: 3;
 }
 
@@ -208,5 +251,189 @@ header {
   text-align: center;
   letter-spacing: -0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 700px) {
+  .cards {
+    padding-top: 32px;
+  }
+  .cards__title {
+    font-size: 36px;
+    width: 80%;
+    margin: auto;
+  }
+  .cards__wrap {
+    margin-top: 64px;
+    width: 95%;
+  }
+  .cards__item {
+    margin-right: 0;
+    margin-bottom: 27px;
+    width: 100%;
+    height: 317px;
+    max-width: unset;
+  }
+  .cards__item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.fret {
+  color: #00df8e;
+  position: relative;
+}
+
+.fret__title {
+  color: #310462;
+  font-size: 180px;
+  text-align: center;
+  background-color: #00df8e;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.fret__title h2 {
+  padding-top: 235px;
+}
+
+.fret__ball {
+  margin-top: 500px;
+  position: relative;
+}
+
+.fret__text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.fret__description {
+  margin-left: 30px;
+  letter-spacing: -0.06em;
+}
+
+.fret__description_wrap {
+  margin-top: 200px;
+  width: 30%;
+  margin-right: 22%;
+  margin-left: auto;
+}
+
+.fret__link {
+  margin-top: 32px;
+}
+
+.fret__link a {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: -0.06em;
+  padding-bottom: 20px;
+  position: relative;
+  line-height: 21px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.fret__link a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 62px;
+  height: 8px;
+  background-color: #ffffff;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.fret__link a:hover {
+  color: #f10000;
+}
+
+.fret__link a:hover::before {
+  width: 12px;
+  height: 18px;
+  background-color: #f10000;
+}
+
+.fret__subtitle {
+  font-size: 180px;
+  text-align: center;
+  letter-spacing: -0.06em;
+  margin-top: 32px;
+}
+
+.fret__background {
+  width: 100%;
+  height: auto;
+}
+
+.fret__anim {
+  width: 720px;
+  margin: 92px auto 0;
+  position: relative;
+}
+
+.fret__anim_left {
+  position: relative;
+  width: 70%;
+  z-index: 3;
+}
+
+.fret__anim_red-ball {
+  position: absolute;
+  z-index: 3;
+  width: 60%;
+  left: 50%;
+  top: 15%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.fret__anim_man {
+  width: 5%;
+  bottom: 4%;
+  right: 35%;
+  position: absolute;
+  z-index: 3;
+}
+
+.fret__anim_ball {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.fret__anim_red-circle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  width: 70%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #000000;
+}
+
+.fret__fake-bg {
+  width: 100%;
+  height: auto;
+  top: 50%;
+  z-index: 1;
+  display: none;
+}
+
+.fret_pin {
+  position: fixed;
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */

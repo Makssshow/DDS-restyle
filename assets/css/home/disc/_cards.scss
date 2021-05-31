@@ -2,6 +2,8 @@
   background-color: $black;
   padding-top: 226px;
   padding-bottom: 60px;
+  position: relative;
+  z-index: 3;
   &__title {
     font-size: $big;
     width: 40%;
@@ -22,13 +24,16 @@
     z-index: 3;
     padding: 24px;
     margin-right: 27px;
+    width: 442px;
+    height: 365px - 24 - 24;
+    max-width: 30%;
     a {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 4;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 4;
     }
     &:last-child {
       margin-right: 0;
@@ -42,53 +47,53 @@
       height: 100%;
       background-color: $green;
       z-index: 1;
-      transition: $transition-5;
+      transition: $transition-1;
     }
     &:hover {
-        &::before {
-            bottom: 24px;
-            right: 24px;
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-        }
-        .cards__name, .cards__description {
-            color: $green;
-        }
+      &::before {
+        bottom: 24px;
+        right: 24px;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+      }
+      .cards__name,
+      .cards__description {
+        color: $green;
+      }
     }
   }
   &__name {
     letter-spacing: -0.05em;
     position: relative;
     z-index: 3;
-    transition: $transition-5;
+    transition: $transition-1;
   }
   &__description {
     font-size: 18px;
     font-weight: 400;
     line-height: 26px;
-    width: 60%;
+    width: 50%;
     letter-spacing: -0.06em;
     position: relative;
     z-index: 3;
-    transition: $transition-5;
+    transition: $transition-1;
     margin-top: 24px;
   }
   &__button {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    margin-top: 21px;
-    margin-right: 0;
-    margin-left: auto;
     border: 1px solid $black;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
     z-index: 3;
-    
+
     &_text {
       font-size: 14px;
       line-height: 21px;
@@ -96,6 +101,31 @@
       text-align: center;
       letter-spacing: -0.06em;
       text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cards {
+    padding-top: 32px;
+    &__title {
+      font-size: $normal;
+      width: 80%;
+      margin: auto;
+    }
+    &__wrap {
+      margin-top: 64px;
+      width: 95%;
+    }
+    &__item {
+      margin-right: 0;
+      margin-bottom: 27px;
+      width: 100%;
+      height: 365px - 24 - 24;
+      max-width: unset;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
