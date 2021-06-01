@@ -2,7 +2,7 @@ $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
 
   ScrollTrigger.defaults({
-    scrub: 0.3,
+    scrub: .1,
   });
 
   // //Main pin
@@ -10,8 +10,9 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: "html",
       start: "top top",
-      end: "300% bottom",
+      end: "200% bottom",
       pin: ".hero",
+      scrub: .3,
       markers: false,
     },
   });
@@ -101,10 +102,14 @@ $(document).ready(function () {
 
     //1 anim
     //text out
-    .to("#hero__item_1 h2", {
-      transform: "translateY(-150%)",
-      duration: duration2,
-    }, 0)
+    .to(
+      "#hero__item_1 h2",
+      {
+        transform: "translateY(-150%)",
+        duration: duration2,
+      },
+      0
+    )
 
     //2 anim
 
@@ -136,21 +141,55 @@ $(document).ready(function () {
       duration * 5
     );
 
+  ScrollTrigger.create({
+    trigger: ".cards",
+    start: "bottom bottom",
+    end: "center bottom",
+    endTrigger: ".fret__ball",
+    toggleClass: { targets: ".fret__title", className: "fret_pin" },
+    markers: false,
+    onLeave: () => $(".fret__title").css("bottom", $(".fret__ball").height() / 2),
+    onEnter: () => $(".fret__title").css("bottom", 0),
+    onEnterBack: () => $(".fret__title").css("bottom", 0),
+  });
+  ScrollTrigger.create({
+    trigger: ".cards",
+    start: "bottom bottom",
+    end: "top 70%",
+    endTrigger: ".fret__ball",
+    toggleClass: { targets: ".fret__fake-bg", className: "fret_pin" },
+    markers: false,
+  });
 
-    ScrollTrigger.create({
-      trigger: ".cards",
-      start: "bottom bottom",
-      end: "top top",
-      endTrigger: ".fret",
-      toggleClass: {targets: ".fret__title", className: "fret_pin"},
-      markers: false
-    });
-    ScrollTrigger.create({
-      trigger: ".cards",
-      start: "bottom bottom",
-      end: "top center",
-      endTrigger: ".fret",
-      toggleClass: {targets: ".fret__fake-bg", className: "fret_pin"},
-      markers: false
+  var ballAnimations = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".fret__description_wrap",
+      start: "top 50%",
+      end: "top 20%",
+      markers: false,
+    },
+  });
+  ballAnimations
+    .to(".fret__description", {
+      transform: "translateY(0%)",
+      opacity: "1",
+    })
+    .to(".fret__link", {
+      transform: "translateY(0%)",
+      opacity: "1",
+    }, 0);
+
+    
+  var ballTitle = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".fret__subtitle",
+      start: "top 70%",
+      end: "top 30%",
+      markers: false,
+    },
+  });
+  ballTitle
+    .to(".fret__subtitle h2", {
+      transform: "translateY(0%)",
     });
 });
