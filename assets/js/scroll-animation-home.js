@@ -192,4 +192,26 @@ $(document).ready(function () {
     .to(".fret__subtitle h2", {
       transform: "translateY(0%)",
     });
+
+
+
+    var doTitle = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".do__title",
+        start: "top 70%",
+        end: "top 30%",
+        markers: false,
+      },
+    });
+    doTitle
+      .to(".do__title div:nth-child(1) h2", {
+        transform: "translateY(0%)",
+      })
+      .to(".do__title div:nth-child(2) h2", {
+        transform: "translateY(0%)",
+      })
+      .to(".do__title div:nth-child(3) h2", {
+        transform: "translateY(0%)",
+      });
+
 });

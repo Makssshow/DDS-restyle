@@ -1,0 +1,205 @@
+.do {
+  margin-top: 132px;
+  &__title {
+    max-width: 588px;
+    margin-right: 10%;
+    margin-left: auto;
+    font-size: $big;
+    letter-spacing: -0.06em;
+    div {
+        overflow: hidden;
+    }
+    h2 {
+        transform: translateY(130%);
+    }
+  }
+  &__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: 92px auto 132px;
+  }
+  &__card {
+    position: relative;
+    width: 441px;
+    height: 364px;
+    margin-right: 28px;
+    overflow: hidden;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+    h4 {
+      text-align: center;
+      margin-top: 20%;
+      color: $white;
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  &__link {
+    position: absolute;
+    bottom: 26px;
+    right: 37px;
+    color: $red;
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration: underline;
+    &_web {
+      color: $black;
+    }
+  }
+  &__anim {
+    &_brand {
+      &_ball {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 55px;
+        width: 448px;
+        height: 448px;
+        background-color: $black;
+        border-radius: 50%;
+      }
+      &_small-ball {
+        position: absolute;
+        z-index: -1;
+        bottom: 15%;
+        right: 10%;
+        width: 20px;
+        height: 20px;
+        background-color: $red;
+        border-radius: 10px;
+      }
+    }
+    &_web {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $black;
+      z-index: -1;
+      &_arrow {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+      }
+      &_div {
+        width: 140%;
+        height: 50%;
+        z-index: 1;
+        background-color: $green;
+        position: absolute;
+        bottom: -30%;
+        left: -20%;
+        transform: rotate(-25deg);
+      }
+    }
+    &_digital {
+      &_bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -2;
+      }
+      &_man {
+        position: absolute;
+        right: 15%;
+        bottom: 5%;
+        width: 100px;
+        height: auto;
+        z-index: -1;
+      }
+      &_planet {
+        position: absolute;
+        left: 0%;
+        top: 10%;
+        width: 80px;
+        height: auto;
+        z-index: -1;
+      }
+    }
+  }
+  &__cross {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    &_wrap {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    &_top,
+    &_left,
+    &_right,
+    &_bottom {
+      background-color: $white;
+    }
+    &_top {
+      width: 6px;
+      height: 12px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &_bottom {
+      width: 6px;
+      height: 12px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &_left {
+      width: 12px;
+      height: 6px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    &_right {
+      width: 12px;
+      height: 6px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+    .do {
+        &__title {
+            font-size: 36px;
+            margin: 64px auto 0;
+            width: 90%;
+            line-height: 39px;
+        }
+        &__flex {
+            flex-direction: column;
+            width: 98%;
+            margin: 32px auto 18px;
+        }
+        &__card {
+            margin: 0 auto 8px;
+            width: 100%;
+        }
+    }
+}
