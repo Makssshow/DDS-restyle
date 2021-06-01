@@ -214,4 +214,19 @@ $(document).ready(function () {
         transform: "translateY(0%)",
       });
 
+
+      var whyTitle = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".why__title",
+          start: "bottom 90%",
+          end: "bottom 60%",
+          markers: false,
+        },
+      });
+      whyTitle
+        .to(".why__title h2", {
+          transform: "translateY(0%)",
+        });
+
+
 });

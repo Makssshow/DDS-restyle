@@ -7,10 +7,10 @@
     font-size: $big;
     letter-spacing: -0.06em;
     div {
-        overflow: hidden;
+      overflow: hidden;
     }
     h2 {
-        transform: translateY(130%);
+      transform: translateY(130%);
     }
   }
   &__flex {
@@ -136,70 +136,25 @@
     bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    &_wrap {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-    &_top,
-    &_left,
-    &_right,
-    &_bottom {
-      background-color: $white;
-    }
-    &_top {
-      width: 6px;
-      height: 12px;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    &_bottom {
-      width: 6px;
-      height: 12px;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    &_left {
-      width: 12px;
-      height: 6px;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-    }
-    &_right {
-      width: 12px;
-      height: 6px;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-    }
   }
 }
 
 @media screen and (max-width: 700px) {
-    .do {
-        &__title {
-            font-size: 36px;
-            margin: 64px auto 0;
-            width: 90%;
-            line-height: 39px;
-        }
-        &__flex {
-            flex-direction: column;
-            width: 98%;
-            margin: 32px auto 18px;
-        }
-        &__card {
-            margin: 0 auto 8px;
-            width: 100%;
-        }
+  .do {
+    &__title {
+      font-size: 36px;
+      margin: 64px auto 0;
+      width: 90%;
+      line-height: 39px;
     }
+    &__flex {
+      flex-direction: column;
+      width: 98%;
+      margin: 32px auto 18px;
+    }
+    &__card {
+      margin: 0 auto 8px;
+      width: 100%;
+    }
+  }
 }

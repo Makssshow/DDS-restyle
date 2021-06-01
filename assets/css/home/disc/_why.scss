@@ -1,0 +1,95 @@
+.why {
+  position: relative;
+  padding-top: 158px;
+  color: $white;
+  &__title {
+    overflow: hidden;
+    width: 98%;
+    margin: auto;
+    font-size: $large;
+    line-height: 165px;
+    letter-spacing: -0.06em;
+    h2 {
+      transform: translateY(130%);
+    }
+  }
+
+  &__description {
+    width: 40%;
+    margin: 62px 10% 93px auto;
+    letter-spacing: -0.05em;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  &__cross {
+    position: relative;
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 78px;
+        height: 78px;
+        border: 1px solid $red;
+        transform: rotate(0deg);
+      }
+    }
+    &:hover {
+    }
+  }
+}
+
+.slide {
+  position: relative;
+  width: 90%;
+  margin-right: 0;
+  margin-left: auto;
+  &__item {
+    border-left: 2px solid $green;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__image {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__number {
+    font-size: $big;
+    color: $green;
+    letter-spacing: -0.06em;
+    padding: 0 3%;
+  }
+  &__text {
+    width: 25%;
+    h4 {
+      letter-spacing: -0.05em;
+      color: $green;
+      max-width: 55%;
+      margin-bottom: 35px;
+    }
+  }
+  &__description {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    max-width: 80%;
+    margin-bottom: 24px;
+  }
+}
