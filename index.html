@@ -17,6 +17,10 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -61,31 +65,33 @@
             </div>
         </section>
         <section class="cards">
-            <h2 class="cards__title green">Now it’s your turn, are you:</h2>
-            <div class="cards__wrap">
-                <div class="cards__item">
-                    <a href="#"></a>
-                    <h3 class="cards__name">Hungry</h3>
-                    <h4 class="cards__description">You need more quality sales and leads</h4>
-                    <div class="cards__button">
-                        <div class="cards__button_text">look no further</div>
+            <div class="cards__wrap-all">
+                <h2 class="cards__title green">Now it’s your turn, are you:</h2>
+                <div class="cards__wrap">
+                    <div class="cards__item">
+                        <a href="#"></a>
+                        <h3 class="cards__name">Hungry</h3>
+                        <h4 class="cards__description">You need more quality sales and leads</h4>
+                        <div class="cards__button">
+                            <div class="cards__button_text">look no further</div>
+                        </div>
                     </div>
-                </div>
-                <div class="cards__item">
-                    <a href="#"></a>
-                    <h3 class="cards__name">Confused</h3>
-                    <h4 class="cards__description">You need the perfect team but everyone claims to be the "experts"
-                    </h4>
-                    <div class="cards__button">
-                        <div class="cards__button_text">Trust Us</div>
+                    <div class="cards__item">
+                        <a href="#"></a>
+                        <h3 class="cards__name">Confused</h3>
+                        <h4 class="cards__description">You need the perfect team but everyone claims to be the "experts"
+                        </h4>
+                        <div class="cards__button">
+                            <div class="cards__button_text">Trust Us</div>
+                        </div>
                     </div>
-                </div>
-                <div class="cards__item">
-                    <a href="#"></a>
-                    <h3 class="cards__name">Competitive</h3>
-                    <h4 class="cards__description">You need to know how to beat your competition</h4>
-                    <div class="cards__button">
-                        <div class="cards__button_text">pick the winners</div>
+                    <div class="cards__item">
+                        <a href="#"></a>
+                        <h3 class="cards__name">Competitive</h3>
+                        <h4 class="cards__description">You need to know how to beat your competition</h4>
+                        <div class="cards__button">
+                            <div class="cards__button_text">pick the winners</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -188,7 +194,7 @@
                     <img src="assets/image/why/sec-3.jpg" alt="background" class="slide__image" id="slide-1-img" />
                     <div class="slide__number">01</div>
                     <div class="slide__text" id="slide-1-text">
-                        <h4>We pull<br/>all-nighters</h4>
+                        <h4>We pull<br />all-nighters</h4>
                         <div class="slide__description">
                             We don’t sleep so you can. When everyone else is watching
                             series, that’s when we’re researching, bettering, writing,
@@ -206,6 +212,111 @@
                         </div>
                     </div>
                 </div>
+                <div class="slide__item">
+                    <img src="assets/image/why/sec-1.jpg" alt="background" class="slide__image" id="slide-2-img" />
+                    <div class="slide__number">02</div>
+                    <div class="slide__text" id="slide-2-text">
+                        <h4>Deadlines make us happy</h4>
+                        <div class="slide__description">
+                            And we’ve never met one we don’t like. So throw whatever you have at us and we’ll make it
+                            happen.
+                        </div>
+                        <div class="why__cross __cross">
+                            <div class="__cross_wrap">
+                                <a href=""></a>
+                                <div class="__cross_top"></div>
+                                <div class="__cross_bottom"></div>
+                                <div class="__cross_left"></div>
+                                <div class="__cross_right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__item">
+                    <img src="assets/image/why/sec-4.jpg" alt="background" class="slide__image" id="slide-3-img" />
+                    <div class="slide__number">03</div>
+                    <div class="slide__text" id="slide-3-text">
+                        <h4>Manage expectations</h4>
+                        <div class="slide__description">
+                            You have them, we’ll smash them. Because we have a proven system - and it works.
+                        </div>
+                        <div class="why__cross __cross">
+                            <div class="__cross_wrap">
+                                <a href=""></a>
+                                <div class="__cross_top"></div>
+                                <div class="__cross_bottom"></div>
+                                <div class="__cross_left"></div>
+                                <div class="__cross_right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide__item">
+                    <img src="assets/image/why/sec-2.jpg" alt="background" class="slide__image" id="slide-4-img" />
+                    <div class="slide__number">04</div>
+                    <div class="slide__text" id="slide-4-text">
+                        <h4>Intuition</h4>
+                        <div class="slide__description">
+                            We trust ours, it hasn’t let us down yet.
+                        </div>
+                        <div class="why__cross __cross">
+                            <div class="__cross_wrap">
+                                <a href=""></a>
+                                <div class="__cross_top"></div>
+                                <div class="__cross_bottom"></div>
+                                <div class="__cross_left"></div>
+                                <div class="__cross_right"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="clients">
+            <h3 class="clients__title">We have transformed hundreds of businesses using our heart, humour and
+                hard-fought expertise</h3>
+            <h4 class="clients__description">Generating over £15 million through digital alone (thats a lot of zeros)
+                and it's because we know how to test, measure and prove results. </h4>
+            <div class="clients__subtitle">
+                <div>And we will do it for you too</div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/image/converted.png" alt="client" />
+                  </div>
+                </div>
+      
+                <div class="swiper-pagination"></div>
+              </div>
+        </section>
+        <section class="process">
+            <h2 class="process__title">Here's what to expect.</h2>
+            <h3 class="process__subtitle">Our 5 step process has been:</h3>
+            <div></div>
         </section>
     </main>
     <footer>
@@ -253,6 +364,7 @@
         </div>
     </footer>
 
+    <script src="assets/js/swiper.js"></script>
     <script src="assets/js/scroll-animation-home.js"></script>
     <script src="assets/js/svg-animations.js"></script>
 </body>

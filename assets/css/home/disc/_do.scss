@@ -141,9 +141,11 @@
 
 @media screen and (max-width: 700px) {
   .do {
+    padding-top: 64px;
+    margin-top: 0;
     &__title {
       font-size: 36px;
-      margin: 64px auto 0;
+      margin: 0 auto 0;
       width: 90%;
       line-height: 39px;
     }

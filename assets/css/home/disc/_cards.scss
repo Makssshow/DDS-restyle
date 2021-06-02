@@ -1,10 +1,13 @@
 .cards {
   background-color: $black;
-  padding-top: 226px;
-  padding-bottom: 60px;
+  height: 150vh;
   position: relative;
   z-index: 3;
+  &__wrap-all {
+    height: 100vh;
+  }
   &__title {
+    padding-top: 10%;
     font-size: $big;
     width: 40%;
     margin-right: 150px;
@@ -17,6 +20,7 @@
     align-items: center;
     width: 95%;
     margin: 108px auto 0;
+    padding-bottom: 60px;
   }
   &__item {
     border: 1px solid $green;
@@ -107,8 +111,12 @@
 
 @media screen and (max-width: 700px) {
   .cards {
-    padding-top: 32px;
+    height: auto;
+    &__wrap-all {
+      height: auto;
+    }
     &__title {
+      padding-top: 32px;
       font-size: $normal;
       width: 80%;
       margin: auto;

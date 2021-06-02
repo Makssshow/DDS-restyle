@@ -1,24 +1,24 @@
-if ($(window).width() <= 700) {
-  const swiper = new Swiper(".swiper-container", {
-    slidesPerView: 2,
-    slidesPerColumn: 3,
-    spaceBetween: 30,
-    slidesPerGroup: 2,
+var delay = 3000,
+  perView = 2,
+  perGroup = 2,
+  perColumn = 3;
 
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-} else {
-  const swiper = new Swiper(".swiper-container", {
-    slidesPerView: 6,
-    spaceBetween: 30,
-    slidesPerGroup: 6,
-
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+if ($(window).width() > 700) {
+  perView = 6;
+  perGroup = 6;
+  perColumn = 1;
 }
+const swiper = new Swiper(".swiper-container", {
+  slidesPerView: perView,
+  slidesPerGroup: perGroup,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: delay,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});

@@ -1,0 +1,59 @@
+.clients {
+  padding-top: 180px;
+  &__title {
+    letter-spacing: -0.05em;
+    width: 40%;
+    margin-right: 10%;
+    margin-left: auto;
+  }
+  &__description {
+      font-size: $small;
+      line-height: 26px;
+      letter-spacing: -0.06em;
+      font-weight: 400;
+      width: 24%;
+      margin-right: 10%;
+      margin-left: auto;
+      margin-top: 32px;
+  }
+  &__subtitle {
+      overflow: hidden;
+      font-size: $big;
+      letter-spacing: -0.06em;
+      opacity: 0.2;
+      margin-left: 7%;
+      margin-top: 92px;
+      margin-bottom: 120px;
+      & div {
+          transform: translateY(130%);
+      }
+  }
+  .swiper-container {
+    margin: auto;
+    height: 100%;
+    width: 90%;
+    padding-bottom: 76px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    opacity: 1;
+    background-color: transparent;
+    border: 1px solid $black;
+    margin: 0 10px;
+    transition: $transition-5;
+  }
+  .swiper-pagination-bullet-active {
+    background: $black;
+  }
+
+  img {
+    width: 140px;
+    height: 70px;
+    object-fit: contain;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: 0;
+  }
+}
