@@ -279,7 +279,7 @@ $(document).ready(function () {
       trigger: ".clients__subtitle",
       start: "top 80%",
       end: "top 50%",
-      markers: true,
+      markers: false,
     },
   });
   clients.to(".clients__subtitle div", { transform: "translateY(0%)" });
