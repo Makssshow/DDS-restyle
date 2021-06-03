@@ -1,11 +1,8 @@
 .cards {
   background-color: $black;
-  height: 150vh;
+  padding-bottom: 40%;
   position: relative;
   z-index: 3;
-  &__wrap-all {
-    height: 100vh;
-  }
   &__title {
     padding-top: 10%;
     font-size: $big;

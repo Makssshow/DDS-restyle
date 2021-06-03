@@ -10,7 +10,7 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: "html",
       start: "top top",
-      end: "40% bottom",
+      end: "30% bottom",
       pin: ".hero",
       scrub: 0.3,
       markers: false,
@@ -179,8 +179,8 @@ $(document).ready(function () {
   var ballAnimations = gsap.timeline({
     scrollTrigger: {
       trigger: ".fret__description_wrap",
-      start: "top 50%",
-      end: "top 20%",
+      start: "top 70%",
+      end: "top 30%",
       markers: false,
     },
   });

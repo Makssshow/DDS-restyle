@@ -57,3 +57,42 @@
     bottom: 0;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .clients {
+    padding-top: 64px;
+    &__title {
+      font-size: 24px;
+      line-height: 26px;
+      letter-spacing: -0.05em;
+      width: 95%;
+      margin: auto;
+    }
+    &__description {
+      margin-top: 18px;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__subtitle {
+      margin-top: 32px;
+      font-size: 1em;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-container {
+      padding-bottom: 57px;
+    }
+    .swiper-slide {
+      height: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      width: 111px;
+      height: 56px;
+    }
+  }
+}
