@@ -1,6 +1,8 @@
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
 
+  var mobile = $(window).width() > 700;
+
   ScrollTrigger.defaults({
     scrub: 0.1,
   });
@@ -20,7 +22,7 @@ $(document).ready(function () {
   var duration = 1,
     duration2 = 2;
 
-  if ($(window).width() > 700) {
+  if (mobile) {
     hero
       //image out
       .to(
@@ -142,7 +144,7 @@ $(document).ready(function () {
     );
 
   //CARDS PIN
-  if ($(window).width() > 700) {
+  if (mobile) {
     ScrollTrigger.create({
       trigger: ".cards__wrap-all",
       start: "bottom bottom",
@@ -244,7 +246,7 @@ $(document).ready(function () {
   });
 
   //WHY PIN
-  if ($(window).width() > 700) {
+  if (mobile) {
     let WhySectionsAnim1 = gsap.timeline({
       scrollTrigger: {
         trigger: ".why",
@@ -283,4 +285,61 @@ $(document).ready(function () {
     },
   });
   clients.to(".clients__subtitle div", { transform: "translateY(0%)" });
+
+
+
+    //Process ANIMATION
+    var processTitle = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".process__title",
+        start: "bottom 90%",
+        end: "bottom 60%",
+        markers: false,
+      },
+    });
+    processTitle.to(".process__title div:first-child h2", { transform: "translateY(0%)" })
+    .to(".process__title div:last-child h2", { transform: "translateY(0%)" });
+
+
+    var banner = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".banner",
+        start: "bottom bottom",
+        end: "500% bottom",
+        pin: ".process",
+        markers: false,
+      },
+    });
+    banner.to(".banner__title_1", {left: "-110%", duration: 1})
+    .to(".banner__title_2", {left: "0%", duration: 1}, .2)
+    .to(".banner__title_2", {top: "-110%", duration: 1})
+    .to(".banner__title_3", {top: "0%", duration: 1}, 1.2)
+    .to(".banner_wrap", {width: "86vw", duration: 2.2}, 0);
+
+var bannerHeight = $(".banner").height() * 4.5,
+bannerHeight2 = $(".banner").height() * 4 + $(".banner__background").height();
+
+
+    var bannerBG = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".banner__background",
+        start: bannerHeight + " bottom",
+        end: bannerHeight2 + " top",
+        markers: true,
+      },
+    });
+    bannerBG.to(".banner__background", {objectPosition: "0% 100%"});
+
+
+    //CONTACT ANIMATION 
+    
+    var contact = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".contact__block",
+        start: "top 80%",
+        end: "top 40%",
+        markers: false,
+      },
+    });
+    contact.to(".contact__block", {width: "20%"});
 });
