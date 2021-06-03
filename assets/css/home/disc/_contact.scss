@@ -1,5 +1,6 @@
 .contact {
     margin-top: 132px;
+    padding-bottom: 62px;
     &__description {
         position: relative;
     }
@@ -83,7 +84,6 @@
 @media screen and (max-width: 700px) {
     .contact {
         margin-top: 64px;
-        padding-bottom: 62px;
         &__text {
             font-size: $small;
             line-height: 19px;

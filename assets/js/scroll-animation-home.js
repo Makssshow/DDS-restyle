@@ -256,7 +256,7 @@ $(document).ready(function () {
         pin: true,
       },
     });
-    var widthImage = "10vw",
+    var widthImage = "13vw",
       widthText = "25vw";
 
     WhySectionsAnim1.to("#slide-1-img", { width: "0", duration: 0.33 })

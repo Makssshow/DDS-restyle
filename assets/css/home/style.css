@@ -766,6 +766,7 @@ header {
   font-size: 180px;
   line-height: 165px;
   letter-spacing: -0.06em;
+  padding-bottom: 40px;
 }
 
 .why__title h2 {
@@ -777,6 +778,7 @@ header {
   width: 40%;
   margin: 62px 10% 93px auto;
   letter-spacing: -0.05em;
+  line-height: 39px;
 }
 
 .why__background {
@@ -1298,6 +1300,7 @@ header {
 
 .contact {
   margin-top: 132px;
+  padding-bottom: 62px;
 }
 
 .contact__description {
@@ -1403,7 +1406,6 @@ header {
 @media screen and (max-width: 700px) {
   .contact {
     margin-top: 64px;
-    padding-bottom: 62px;
   }
   .contact__text {
     font-size: 18px;
