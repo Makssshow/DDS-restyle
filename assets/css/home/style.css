@@ -345,7 +345,7 @@ header {
 .fret {
   color: #00df8e;
   position: relative;
-  padding-top: 80vh;
+  padding-top: 60vh;
 }
 
 .fret__title {
@@ -384,6 +384,7 @@ header {
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
   line-height: 39px;
+  font-weight: 500;
   opacity: 0;
 }
 
@@ -761,12 +762,15 @@ header {
 }
 
 .why__title {
-  overflow: hidden;
   width: 98%;
   margin: auto;
   font-size: 180px;
   line-height: 165px;
   letter-spacing: -0.06em;
+}
+
+.why__title div {
+  overflow: hidden;
   padding-bottom: 40px;
 }
 

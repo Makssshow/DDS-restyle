@@ -1,7 +1,7 @@
 .fret {
   color: $green;
   position: relative;
-  padding-top: 80vh;
+  padding-top: 60vh;
   &__title {
     color: $purple;
     font-size: $large;
@@ -32,6 +32,7 @@
     letter-spacing: -0.06em;
     transform: translateY(-100px);
     line-height: 39px;
+    font-weight: 500;
     opacity: 0;
     &_wrap {
       margin-top: 200px;

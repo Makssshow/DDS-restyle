@@ -181,7 +181,7 @@ $(document).ready(function () {
   var ballAnimations = gsap.timeline({
     scrollTrigger: {
       trigger: ".fret__description_wrap",
-      start: "top 70%",
+      start: "top 80%",
       end: "top 30%",
       markers: false,
     },
@@ -203,7 +203,7 @@ $(document).ready(function () {
   var ballTitle = gsap.timeline({
     scrollTrigger: {
       trigger: ".fret__subtitle",
-      start: "top 70%",
+      start: "top 80%",
       end: "top 30%",
       markers: false,
     },
@@ -241,9 +241,13 @@ $(document).ready(function () {
       markers: false,
     },
   });
-  whyTitle.to(".why__title h2", {
-    transform: "translateY(0%)",
-  });
+  whyTitle
+    .to(".why__title div:first-child h2", {
+      transform: "translateY(0%)",
+    })
+    .to(".why__title div:last-child h2", {
+      transform: "translateY(0%)",
+    }, .2);
 
   //WHY PIN
   if (mobile) {
@@ -260,19 +264,35 @@ $(document).ready(function () {
       widthText = "25vw",
       imagePadding = "16px";
 
-    WhySectionsAnim1.to("#slide-1-img", { width: "0", paddingLeft: 0,duration: 0.33 })
+    WhySectionsAnim1.to("#slide-1-img", {
+      width: "0",
+      paddingLeft: 0,
+      duration: 0.33,
+    })
       .to("#slide-1-text", { width: "0", duration: 0.33 }, 0)
-      .to("#slide-2-img", { width: widthImage, paddingLeft: imagePadding, duration: 0.33 }, 0)
+      .to(
+        "#slide-2-img",
+        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
+        0
+      )
       .to("#slide-2-text", { width: widthText, duration: 0.33 }, 0)
 
-      .to("#slide-2-img", { width: "0",paddingLeft: 0, duration: 0.33 })
+      .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: 0.33 })
       .to("#slide-2-text", { width: "0", duration: 0.33 }, 0.33)
-      .to("#slide-3-img", { width: widthImage, paddingLeft: imagePadding, duration: 0.33 }, 0.33)
+      .to(
+        "#slide-3-img",
+        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
+        0.33
+      )
       .to("#slide-3-text", { width: widthText, duration: 0.33 }, 0.33)
 
       .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: 0.33 })
       .to("#slide-3-text", { width: "0", duration: 0.33 }, 0.66)
-      .to("#slide-4-img", { width: widthImage, paddingLeft: imagePadding, duration: 0.33 }, 0.66)
+      .to(
+        "#slide-4-img",
+        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
+        0.66
+      )
       .to("#slide-4-text", { width: widthText, duration: 0.33 }, 0.66);
   }
 
@@ -298,7 +318,11 @@ $(document).ready(function () {
   });
   processTitle
     .to(".process__title div:first-child h2", { transform: "translateY(0%)" })
-    .to(".process__title div:last-child h2", { transform: "translateY(0%)" }, .1);
+    .to(
+      ".process__title div:last-child h2",
+      { transform: "translateY(0%)" },
+      0.1
+    );
 
   var banner = gsap.timeline({
     scrollTrigger: {
