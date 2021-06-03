@@ -383,6 +383,7 @@ header {
   letter-spacing: -0.06em;
   -webkit-transform: translateY(-100px);
           transform: translateY(-100px);
+  line-height: 39px;
   opacity: 0;
 }
 
@@ -869,6 +870,7 @@ header {
 
 .slide__item:first-child .slide__image {
   width: 10vw;
+  padding-left: 16px;
 }
 
 .slide__item:first-child .slide__text {
@@ -983,6 +985,7 @@ header {
 .clients__title {
   letter-spacing: -0.05em;
   width: 40%;
+  line-height: 39px;
   margin-right: 10%;
   margin-left: auto;
 }
@@ -1115,7 +1118,7 @@ header {
 }
 
 .process__subtitle {
-  width: 30%;
+  text-align: right;
   margin: 62px 8% 62px auto;
 }
 
@@ -1230,6 +1233,7 @@ header {
   font-size: 20px;
   line-height: 26px;
   letter-spacing: -0.06em;
+  font-weight: 400;
   color: #ffffff;
 }
 

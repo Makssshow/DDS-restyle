@@ -257,21 +257,22 @@ $(document).ready(function () {
       },
     });
     var widthImage = "13vw",
-      widthText = "25vw";
+      widthText = "25vw",
+      imagePadding = "16px";
 
-    WhySectionsAnim1.to("#slide-1-img", { width: "0", duration: 0.33 })
+    WhySectionsAnim1.to("#slide-1-img", { width: "0", paddingLeft: 0,duration: 0.33 })
       .to("#slide-1-text", { width: "0", duration: 0.33 }, 0)
-      .to("#slide-2-img", { width: widthImage, duration: 0.33 }, 0)
+      .to("#slide-2-img", { width: widthImage, paddingLeft: imagePadding, duration: 0.33 }, 0)
       .to("#slide-2-text", { width: widthText, duration: 0.33 }, 0)
 
-      .to("#slide-2-img", { width: "0", duration: 0.33 })
+      .to("#slide-2-img", { width: "0",paddingLeft: 0, duration: 0.33 })
       .to("#slide-2-text", { width: "0", duration: 0.33 }, 0.33)
-      .to("#slide-3-img", { width: widthImage, duration: 0.33 }, 0.33)
+      .to("#slide-3-img", { width: widthImage, paddingLeft: imagePadding, duration: 0.33 }, 0.33)
       .to("#slide-3-text", { width: widthText, duration: 0.33 }, 0.33)
 
-      .to("#slide-3-img", { width: "0", duration: 0.33 })
+      .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: 0.33 })
       .to("#slide-3-text", { width: "0", duration: 0.33 }, 0.66)
-      .to("#slide-4-img", { width: widthImage, duration: 0.33 }, 0.66)
+      .to("#slide-4-img", { width: widthImage, paddingLeft: imagePadding, duration: 0.33 }, 0.66)
       .to("#slide-4-text", { width: widthText, duration: 0.33 }, 0.66);
   }
 
@@ -291,13 +292,13 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".process__title",
       start: "bottom 90%",
-      end: "bottom 60%",
+      end: "bottom 50%",
       markers: false,
     },
   });
   processTitle
     .to(".process__title div:first-child h2", { transform: "translateY(0%)" })
-    .to(".process__title div:last-child h2", { transform: "translateY(0%)" });
+    .to(".process__title div:last-child h2", { transform: "translateY(0%)" }, .1);
 
   var banner = gsap.timeline({
     scrollTrigger: {
