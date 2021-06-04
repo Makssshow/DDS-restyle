@@ -104,3 +104,16 @@
     }
   }
 }
+
+@keyframes Herotext {
+  0% {
+    transform: translateY(120%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes HeroImage {
+  0% {
+  }
+}

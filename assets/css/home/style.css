@@ -178,6 +178,38 @@ header {
   }
 }
 
+@-webkit-keyframes Herotext {
+  0% {
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes Herotext {
+  0% {
+    -webkit-transform: translateY(120%);
+            transform: translateY(120%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes HeroImage {
+  0% {
+  }
+}
+
+@keyframes HeroImage {
+  0% {
+  }
+}
+
 .cards {
   background-color: #000000;
   padding-bottom: 40%;

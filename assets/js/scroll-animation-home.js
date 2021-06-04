@@ -7,6 +7,13 @@ $(document).ready(function () {
     scrub: 0.1,
   });
 
+  // The relevant part to keeping the progress
+  ScrollTrigger.addEventListener("refreshInit", () => (progress = ST.progress));
+  ScrollTrigger.addEventListener("refresh", () =>
+    ST.scroll(progress * ScrollTrigger.maxScroll(window))
+  );
+
+  // gsap.from(".hero__image_1", {height: "20%", bottom: 0, duration: 1});
   // //Main pin
   var hero = gsap.timeline({
     scrollTrigger: {
@@ -18,6 +25,15 @@ $(document).ready(function () {
       markers: false,
     },
   });
+  gsap.from("#hero__item_1 div:first-child h2", {
+    transform: "translateY(150%)",
+    duration: 1.5,
+  });
+  gsap.from(
+    "#hero__item_1 div:last-child h2",
+    { transform: "translateY(150%)", duration: 1 },
+    0.5
+  );
 
   var duration = 1,
     duration2 = 2;
@@ -245,9 +261,13 @@ $(document).ready(function () {
     .to(".why__title div:first-child h2", {
       transform: "translateY(0%)",
     })
-    .to(".why__title div:last-child h2", {
-      transform: "translateY(0%)",
-    }, .2);
+    .to(
+      ".why__title div:last-child h2",
+      {
+        transform: "translateY(0%)",
+      },
+      0.2
+    );
 
   //WHY PIN
   if (mobile) {
@@ -338,7 +358,7 @@ $(document).ready(function () {
     .to(".banner__title_2", { left: "0%", duration: 1 }, 0.2)
     .to(".banner__title_2", { top: "-110%", duration: 1 })
     .to(".banner__title_3", { top: "0%", duration: 1 }, 1.2)
-    .to(".banner_wrap", { width: "86vw", duration: 2.2 }, 0);
+    .to(".banner_wrap", { width: "80vw", duration: 2.2 }, 0);
 
   var bannerHeight = $(".banner").height() * 4.5,
     bannerHeight2 =
