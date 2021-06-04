@@ -7,13 +7,11 @@ $(document).ready(function () {
     scrub: 0.1,
   });
 
-  // The relevant part to keeping the progress
-  ScrollTrigger.addEventListener("refreshInit", () => (progress = ST.progress));
-  ScrollTrigger.addEventListener("refresh", () =>
-    ST.scroll(progress * ScrollTrigger.maxScroll(window))
-  );
+  
+  gsap.to("#hero__item_1 div h2, .hero__image_1", {
+    visibility: "visible"
+  }, .5);
 
-  // gsap.from(".hero__image_1", {height: "20%", bottom: 0, duration: 1});
   // //Main pin
   var hero = gsap.timeline({
     scrollTrigger: {
@@ -25,15 +23,6 @@ $(document).ready(function () {
       markers: false,
     },
   });
-  gsap.from("#hero__item_1 div:first-child h2", {
-    transform: "translateY(150%)",
-    duration: 1.5,
-  });
-  gsap.from(
-    "#hero__item_1 div:last-child h2",
-    { transform: "translateY(150%)", duration: 1 },
-    0.5
-  );
 
   var duration = 1,
     duration2 = 2;

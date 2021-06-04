@@ -1,180 +1,216 @@
 //Header
+$butWidth: 8px;
+$butMargin: 4px;
 .header {
-  width: 100%;
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 34px 0;
-  background-color: $white;
+  width: 100%;
+  z-index: 90;
   &__logo {
-    width: 180px;
+    width: 141px;
     height: auto;
-    padding-left: 20px;
+    margin: 33px;
   }
-}
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: $xsmall;
-  text-transform: uppercase;
-  color: $black;
-  &__item {
-    margin-right: 62px;
+  &__button {
+    cursor: pointer;
     position: relative;
-    transition: .3s ease-in-out;
-    &::before {
-      content: "";
-      opacity: 0;
-      transform: translateX(-50%);
-      position: absolute;
-      z-index: 0;
-      bottom: 0px;
-      left: 50%;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: $green;
-      transition: 0.3s ease-in-out;
-      pointer-events: none;
-    }
-    &_active {
-      color: $green;
-      &::before {
-        opacity: 1;
-        bottom: -22px;
-      }
-    }
-    &:hover {
-      color: $green;
-      &::before {
-        opacity: 1;
-        bottom: -22px;
-      }
-    }
-  }
-}
-
-$bar-length: 28px;
-$bar-thickness: 2px;
-$nav-item-delay: 0.05s;
-$nav-width: 46px;
-.nav__trigger {
-  transition: $transition-3;
-  display: none;
-  z-index: 10;
-  margin-right: 30px;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background-color: $black;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  .bars {
-    position: relative;
-
-    &,
-    &:before,
-    &:after {
-      border-radius: 1px;
-      width: $bar-length;
-      height: $bar-thickness;
-      background-color: $white;
+    width: $butWidth * 3 + $butMargin * 2;
+    height: $butWidth * 3 + $butMargin * 2;
+    margin: 33px;
+    &_open {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
       transition: $transition-3;
-    }
-
-    &:before,
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      will-change: transform;
-    }
-
-    &:before {
-      transform: translateY(-($bar-thickness * 3.5));
-    }
-
-    &:after {
-      transform: translateY(($bar-thickness * 3.5));
-    }
-  }
-
-  &.is-active {
-    transform: rotate(-45deg);
-
-    .bars {
-      &:before,
-      &:after {
-        transform: translateX(0) rotate(-90deg);
+      width: 100%;
+      height: 100%;
+      * {
+        width: $butWidth;
+        height: $butWidth;
+        border-radius: 50%;
+        background-color: $red;
+        margin-right: $butMargin;
+        position: relative;
+        transition: $transition-3;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+      &:hover {
+        .header__button_ {
+          &1 {
+            transform: translate(
+              $butWidth + $butMargin,
+              $butWidth + $butMargin
+            );
+          }
+          &2 {
+            transform: translate(0, $butWidth + $butMargin);
+          }
+          &3 {
+            transform: translate(
+              -$butWidth - $butMargin,
+              $butWidth + $butMargin
+            );
+          }
+          &4 {
+            transform: translate($butWidth + $butMargin, 0);
+          }
+          &5 {
+            &::before {
+              width: 26px;
+              height: 26px;
+              transition-delay: 0.3s;
+            }
+            &::after {
+              width: 32px;
+              height: 32px;
+              transition-delay: 0.3s;
+            }
+          }
+          &6 {
+            transform: translate(-$butWidth - $butMargin, 0);
+          }
+          &7 {
+            transform: translate(
+              $butWidth + $butMargin,
+              -$butWidth - $butMargin
+            );
+          }
+          &8 {
+            transform: translate(0, -$butWidth - $butMargin);
+          }
+        }
       }
     }
-  }
-}
-
-
-@media screen and (max-width: 700px) {
-  
-  header {
-    background-color: $white;
-    position: fixed;
-    width: 100%;
-    z-index: 11;
-    padding: 0;
-    .header-logo {
-      padding: 0;
-      margin: 30px;
-      margin-right: 0;
+    &_1,
+    &_3,
+    &_4,
+    &_7 {
+      background-color: $green;
     }
-  }
-  .nav {
-    display: flex;
-    position: fixed;
-    top: 115px;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 0;
-    overflow: hidden;
-    background-color: $white;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    font-size: 1em;
-    color: $black;
-    transition: $transition-5;
-    &.is-active {
-      height: calc(100vh - 115px);
-    }
-    .nav-item {
-      a {
-        padding-bottom: 14px;
-        display: block;
-      }
-      width: calc(100% - 60px);
-      margin-left: 60px;
-      text-transform: none;
-      font-weight: 600;
-      position: relative;
-      margin-bottom: 43px;
-      &:last-child {
-        margin-bottom: 0;
-      }
+    &_5 {
+      z-index: 2;
       &::before {
         content: "";
         position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: $black;
+        border-radius: 50%;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $red;
+        transition: $transition-5;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid $red;
+        transition: $transition-5;
       }
     }
   }
-  .nav__trigger {
+  .cls-1 {
+    fill: $white;
+  }
+  &.is-active {
+    .cls-1 {
+      fill: $black;
+    }
+  }
+}
+.close {
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 92;
+  background-color: $black;
+  margin-right: 0;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  animation: fadeIn linear 0.3s;
+  &:hover {
+    .close_wrap {
+      transform: rotate(90deg);
+      &::before,
+      &::after {
+        background-color: $green;
+      }
+    }
+  }
+  &_wrap {
+    width: 20px;
+    height: 2px;
+    margin: auto;
+    background-color: unset;
+    position: relative;
+    transition: $transition-3;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 20px;
+      border-radius: 10px;
+      background-color: $red;
+      transform: rotate(45deg);
+      transition: $transition-3;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 2px;
+      width: 20px;
+      border-radius: 10px;
+      background-color: $red;
+      transform: rotate(-45deg);
+      transition: $transition-3;
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  background-color: $white;
+  z-index: 91;
+  overflow: hidden;
+  transition: $transition-1;
+}
+
+header.is-active {
+  .header__button_open {
+    opacity: 0;
+  }
+  .close {
     display: flex;
+  }
+  .nav {
+    width: 100vw;
   }
 }

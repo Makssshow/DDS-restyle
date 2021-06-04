@@ -22,8 +22,21 @@
       }
     }
     &:first-child {
-      h2 {
-        transform: translateY(0%);
+      div:first-child {
+        h2 {
+          transform: translateY(0%);
+          visibility: hidden;
+          animation: Herotext 1s ease-in-out;
+          animation-delay: 0.1s;
+        }
+      }
+      div:last-child {
+        h2 {
+          transform: translateY(0%);
+          visibility: hidden;
+          animation: Herotext 1.3s ease-in-out;
+          animation-delay: 0.1s;
+        }
       }
     }
   }
@@ -52,9 +65,12 @@
     right: 10%;
     transform: translateY(50%);
     &_1 {
+      height: 100%;
       right: -10%;
       bottom: 50%;
-      height: 100%;
+      visibility: hidden;
+      animation: HeroImage 1s ease-in-out;
+      animation-delay: .1s;
     }
   }
   &__image_wrap {
@@ -115,5 +131,8 @@
 }
 @keyframes HeroImage {
   0% {
+    right: 0%;
+    bottom: 0%;
+    height: 30%;
   }
 }
