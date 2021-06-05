@@ -988,9 +988,12 @@
   }
   .why__title {
     font-size: 1em;
-    line-height: 39px;
+    line-height: 35px;
     width: 90%;
     margin-right: 3%;
+  }
+  .why__title div {
+    padding-bottom: 5px;
   }
   .why__description {
     font-size: 14px;

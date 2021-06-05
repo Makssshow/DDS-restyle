@@ -120,21 +120,18 @@ $butMargin: 4px;
   }
   .cls-1 {
     fill: $white;
-  }
-  &.is-active {
-    .cls-1 {
-      fill: $black;
-    }
+    transition: $transition-1;
   }
 }
 .close {
   width: 32px;
   height: 32px;
-  position: fixed;
+  position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 92;
   background-color: $black;
+  border-radius: 50%;
   margin-right: 0;
   justify-content: center;
   align-items: center;
@@ -198,19 +195,113 @@ $butMargin: 4px;
   height: 100vh;
   width: 0;
   background-color: $white;
-  z-index: 91;
+  z-index: 89;
   overflow: hidden;
   transition: $transition-1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  ul {
+    list-style: none;
+  }
+  &__list {
+    margin-right: 20%;
+    transition: 0s linear 0.25s;
+    overflow: hidden;
+  }
+  &__item {
+    font-size: 72px;
+    letter-spacing: -0.06em;
+    padding: 14px 105px;
+    position: relative;
+    overflow: hidden;
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+    &:hover {
+      &.hover {
+        .nav__hover {
+          div:first-child {
+            transform: translateY(-100%);
+          }
+          div:last-child {
+            transform: translateY(-100%);
+          }
+        }
+      }
+      &.hover-s {
+        div:first-child {
+          color: $green;
+        }
+      }
+    }
+  }
+  &__hover {
+    position: relative;
+    overflow: hidden;
+    height: 72px;
+    div {
+      &:first-child {
+        transform: translateY(120%);
+      }
+      transition: $transition-5;
+    }
+  }
 }
 
 header.is-active {
   .header__button_open {
     opacity: 0;
   }
+  .cls-1 {
+    fill: $black;
+  }
   .close {
     display: flex;
   }
   .nav {
     width: 100vw;
+  }
+}
+.nav__list.is-active {
+  .nav__hover {
+    div:first-child {
+      transform: translateY(0);
+    }
+  }
+  .nav__item {
+    @for $num from 1 through 5 {
+      &:nth-child(#{$num}) {
+        .nav__hover {
+          div:first-child {
+            transition-delay: 0.05s * ($num - 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav {
+    justify-content: center;
+    &__list {
+      margin-right: 0;
+    }
+    &__item {
+      padding: 3vh 0;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
   }
 }

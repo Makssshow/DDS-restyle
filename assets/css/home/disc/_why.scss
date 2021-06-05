@@ -146,9 +146,12 @@
     padding-top: 45px;
     &__title {
       font-size: 1em;
-      line-height: 39px;
+      line-height: 35px;
       width: 90%;
       margin-right: 3%;
+      div {
+        padding-bottom: 5px;
+      }
     }
     &__description {
       font-size: 14px;
