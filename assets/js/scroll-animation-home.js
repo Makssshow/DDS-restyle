@@ -19,7 +19,7 @@ $(document).ready(function () {
       trigger: ".hero__trigger_wrap",
       start: "top top",
       end: "bottom bottom",
-      scrub: 1,
+      scrub: .3,
       snap: 1 / (sections.length - 1),
       markers: false,
     },
