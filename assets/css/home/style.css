@@ -665,7 +665,8 @@
 
 .do__card {
   position: relative;
-  width: 441px;
+  width: 442px;
+  padding: 24px;
   height: 364px;
   margin-right: 28px;
   overflow: hidden;
