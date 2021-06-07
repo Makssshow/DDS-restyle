@@ -951,6 +951,7 @@
 
 .slide__text {
   width: 0;
+  max-width: 0;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

@@ -275,7 +275,6 @@
   letter-spacing: -0.06em;
   padding: 14px 105px;
   position: relative;
-  overflow: hidden;
 }
 
 .nav__item a {
@@ -287,34 +286,25 @@
   z-index: 2;
 }
 
-.nav__item:hover.hover .nav__hover div:first-child {
+.nav__item:hover .nav__hover div:first-child {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
 
-.nav__item:hover.hover .nav__hover div:last-child {
+.nav__item:hover .nav__hover div:last-child {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-}
-
-.nav__item:hover.hover-s div:first-child {
-  color: #00df8e;
 }
 
 .nav__hover {
-  position: relative;
   overflow: hidden;
   height: 72px;
 }
 
 .nav__hover div {
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.nav__hover div:first-child {
-  -webkit-transform: translateY(120%);
-          transform: translateY(120%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  padding: 10px 0;
 }
 
 header.is-active .header__button_open {

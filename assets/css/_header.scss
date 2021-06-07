@@ -214,7 +214,7 @@ $butMargin: 4px;
     letter-spacing: -0.06em;
     padding: 14px 105px;
     position: relative;
-    overflow: hidden;
+
 
     a {
       position: absolute;
@@ -225,32 +225,22 @@ $butMargin: 4px;
       z-index: 2;
     }
     &:hover {
-      &.hover {
-        .nav__hover {
-          div:first-child {
-            transform: translateY(-100%);
-          }
-          div:last-child {
-            transform: translateY(-100%);
-          }
-        }
-      }
-      &.hover-s {
+      .nav__hover {
         div:first-child {
-          color: $green;
+          transform: translateY(-100%);
+        }
+        div:last-child {
+          transform: translateY(-100%);
         }
       }
     }
   }
   &__hover {
-    position: relative;
     overflow: hidden;
     height: 72px;
     div {
-      &:first-child {
-        transform: translateY(120%);
-      }
-      transition: $transition-5;
+      transition: $transition-3;
+      padding: 10px 0;
     }
   }
 }
