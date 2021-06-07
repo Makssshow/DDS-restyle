@@ -281,25 +281,25 @@ $(document).ready(function () {
       .to("#slide-1-text", { maxWidth: "0", duration: 0.33 }, 0)
       .to(
         "#slide-2-img",
-        { maxWidth: widthImage, paddingLeft: imagePadding, duration: 0.33 },
+        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
         0
       )
       .to("#slide-2-text", { maxWidth: widthText, duration: 0.33 }, 0)
 
-      .to("#slide-2-img", { maxWidth: "0", paddingLeft: 0, duration: 0.33 })
+      .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: 0.33 })
       .to("#slide-2-text", { maxWidth: "0", duration: 0.33 }, 0.33)
       .to(
         "#slide-3-img",
-        { maxWidth: widthImage, paddingLeft: imagePadding, duration: 0.33 },
+        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
         0.33
       )
       .to("#slide-3-text", { maxWidth: widthText, duration: 0.33 }, 0.33)
 
-      .to("#slide-3-img", { maxWidth: "0", paddingLeft: 0, duration: 0.33 })
+      .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: 0.33 })
       .to("#slide-3-text", { maxWidth: "0", duration: 0.33 }, 0.66)
       .to(
         "#slide-4-img",
-        { maxWidth: widthImage, paddingLeft: imagePadding, duration: 0.33 },
+        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
         0.66
       )
       .to("#slide-4-text", { maxWidth: widthText, duration: 0.33 }, 0.66);
