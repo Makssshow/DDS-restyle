@@ -21,7 +21,7 @@ $(document).ready(function () {
       end: "bottom bottom",
       scrub: 1,
       snap: 1 / (sections.length - 1),
-      markers: true,
+      markers: false,
     },
   });
 
