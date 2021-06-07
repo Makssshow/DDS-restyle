@@ -53,6 +53,14 @@
           transform: translateY(-50%);
 }
 
+.hero__trigger_wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
 .hero {
   background-color: #000000;
   color: #ffffff;
@@ -1278,11 +1286,11 @@
 }
 
 .banner__title_2 {
-  left: 110%;
+  left: 130%;
 }
 
 .banner__title_3 {
-  top: 110%;
+  top: 130%;
 }
 
 .banner__subtitle {

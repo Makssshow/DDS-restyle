@@ -1,26 +1,36 @@
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  var mobile = $(window).width() > 700;
+  var windo = $(window);
+  var mobile = windo.width() > 700;
 
   ScrollTrigger.defaults({
     scrub: 0.1,
   });
 
-  gsap.to(
-    "#hero__item_1 div h2, .hero__image_1",
-    {
-      visibility: "visible",
+  var heroTrigger = $(".hero__trigger");
+  var heroTriggerWrap = $(".hero__trigger_wrap");
+  heroTrigger.height(windo.height());
+  heroTriggerWrap.height(windo.height() * 3);
+
+  let sections = gsap.utils.toArray(".hero__trigger");
+  gsap.to(sections, {
+    scrollTrigger: {
+      trigger: ".hero__trigger_wrap",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: 1,
+      snap: 1 / (sections.length - 1),
+      markers: true,
     },
-    0.5
-  );
+  });
 
   // //Main pin
   var hero = gsap.timeline({
     scrollTrigger: {
       trigger: "html",
       start: "top top",
-      end: "30% bottom",
+      end: "+=" + $(window).height() * 3 + " bottom",
       pin: ".hero",
       scrub: 0.3,
       markers: false,
