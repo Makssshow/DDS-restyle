@@ -420,6 +420,7 @@ footer hr {
 .footer__item:last-child {
   margin-bottom: 0;
   color: #f10000;
+  font-weight: 600;
   position: relative;
   text-transform: uppercase;
   -webkit-transition: 0.3s ease-in-out;
@@ -455,7 +456,7 @@ footer hr {
 }
 
 .footer_bottom {
-  padding: 26px 0 26px 10%;
+  padding: 26px;
   position: relative;
 }
 
@@ -480,6 +481,16 @@ footer hr {
 
 .footer__socials div:last-child {
   margin-right: 0;
+}
+
+.footer__socials div path {
+  fill: #000000;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.footer__socials div:hover path {
+  fill: #575757;
 }
 
 .footer__copyright {

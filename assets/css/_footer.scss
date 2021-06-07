@@ -32,6 +32,7 @@ footer {
     &:last-child {
       margin-bottom: 0;
       color: $red;
+      font-weight: 600;
       a {
         position: relative;
         z-index: 2;
@@ -62,7 +63,7 @@ footer {
   }
 
   &_bottom {
-    padding: 26px 0 26px 10%;
+    padding: 26px;
     position: relative;
   }
   &__socials {
@@ -76,6 +77,15 @@ footer {
       margin-right: 43px;
       &:last-child {
         margin-right: 0;
+      }
+      path {
+        fill: $black;
+        transition: $transition-3;
+      }
+      &:hover {
+        path {
+          fill: #575757;
+        }
       }
     }
   }

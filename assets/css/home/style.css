@@ -816,6 +816,7 @@
   .do__card {
     margin: 0 auto 8px;
     width: 100%;
+    max-width: unset;
   }
 }
 
@@ -937,7 +938,7 @@
 }
 
 .slide__item:first-child .slide__image {
-  width: 10vw;
+  width: 13vw;
   padding-left: 16px;
 }
 
@@ -1196,10 +1197,6 @@
   margin: 62px 8% 62px auto;
 }
 
-.process__bottom {
-  margin-top: -10%;
-}
-
 .banner {
   width: 100%;
   -webkit-transform: translateY(50%);
@@ -1395,7 +1392,8 @@
 .contact__text {
   color: #f10000;
   margin-left: 22%;
-  width: 70%;
+  width: 963px;
+  max-width: 70%;
   line-height: 40px;
   font-weight: 400;
   padding: 15px 0;

@@ -1,6 +1,8 @@
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
 
+  $(".process__bottom").css("margin-top", $(".banner").height() / -2);
+
   var windo = $(window);
   var mobile = windo.width() > 700;
 
@@ -19,7 +21,7 @@ $(document).ready(function () {
       trigger: ".hero__trigger_wrap",
       start: "top top",
       end: "bottom bottom",
-      scrub: .1,
+      scrub: 0.1,
       snap: 1 / (sections.length - 1),
       markers: false,
     },
@@ -32,7 +34,7 @@ $(document).ready(function () {
       start: "top top",
       end: "+=" + $(window).height() * 3 + " bottom",
       pin: ".hero",
-      scrub: .1,
+      scrub: 0.1,
       markers: false,
     },
   });
@@ -284,49 +286,65 @@ $(document).ready(function () {
     });
     var widthImage = "13vw",
       widthText = "25vw",
-      imagePadding = "16px";
+      imagePadding = "16px",
+      dur = 1,
+      del = "+=.5";
 
     WhySectionsAnim1.to("#slide-1-img", {
       width: "0",
       paddingLeft: 0,
-      duration: 0.33,
-    })
-      .to("#slide-1-text", { maxWidth: "0", width: "0", duration: 0.33 }, 0)
+      duration: dur,
+    }, "+=.2")
+      .to("#slide-1-text", { maxWidth: "0", width: "0", duration: dur }, "<")
       .to(
         "#slide-2-img",
-        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
-        0
+        { width: widthImage, paddingLeft: imagePadding, duration: dur },
+        "<"
       )
       .to(
         "#slide-2-text",
-        { maxWidth: widthText, width: widthText, duration: 0.33 },
-        0
+        { maxWidth: widthText, width: widthText, duration: dur },
+        "<"
       )
 
-      .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: 0.33 })
-      .to("#slide-2-text", { maxWidth: "0", width: "0", duration: 0.33 }, 0.33)
       .to(
-        "#slide-3-img",
-        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
-        0.33
+        "#slide-2-img",
+        { width: "0", paddingLeft: 0, duration: dur }, del ) ////////////////
+      .to(
+        "#slide-2-text",
+        { maxWidth: "0", width: "0", duration: dur },
+        "<"
       )
+      .to("#slide-3-img", {
+        width: widthImage,
+        paddingLeft: imagePadding,
+        duration: dur,
+      }, "<")
       .to(
         "#slide-3-text",
-        { maxWidth: widthText, width: widthText, duration: 0.33 },
-        0.33
+        { maxWidth: widthText, width: widthText, duration: dur },
+        "<"
       )
 
-      .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: 0.33 })
-      .to("#slide-3-text", { maxWidth: "0", width: "0", duration: 0.33 }, 0.66)
+      .to(
+        "#slide-3-img",
+        { width: "0", paddingLeft: 0, duration: dur },
+        del
+      )//////////////////
+      .to(
+        "#slide-3-text",
+        { maxWidth: "0", width: "0", duration: dur },
+        "<"
+      )
       .to(
         "#slide-4-img",
-        { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
-        0.66
+        { width: widthImage, paddingLeft: imagePadding, duration: dur },
+        "<"
       )
       .to(
         "#slide-4-text",
-        { maxWidth: widthText, width: widthText, duration: 0.33 },
-        0.66
+        { maxWidth: widthText, width: widthText, duration: dur },
+        "<"
       );
   }
 
