@@ -1020,12 +1020,14 @@
   }
   .slide__item:first-child .slide__text {
     width: auto;
+    max-width: unset;
   }
   .slide__image {
     display: none;
   }
   .slide__text {
     width: auto;
+    max-width: unset;
     padding: 0 13px 32px 30px;
   }
   .slide__text h4 {

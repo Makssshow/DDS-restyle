@@ -175,6 +175,7 @@
         .slide {
           &__text {
             width: auto;
+            max-width: unset; 
           }
         }
       }
@@ -184,6 +185,7 @@
     }
     &__text {
       width: auto;
+      max-width: unset; 
       padding: 0 13px 32px 30px;
       h4 {
         width: auto;
