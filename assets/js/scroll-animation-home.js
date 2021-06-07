@@ -19,7 +19,7 @@ $(document).ready(function () {
       trigger: ".hero__trigger_wrap",
       start: "top top",
       end: "bottom bottom",
-      scrub: .3,
+      scrub: .1,
       snap: 1 / (sections.length - 1),
       markers: false,
     },
@@ -32,7 +32,7 @@ $(document).ready(function () {
       start: "top top",
       end: "+=" + $(window).height() * 3 + " bottom",
       pin: ".hero",
-      scrub: 0.3,
+      scrub: 0.2,
       markers: false,
     },
   });

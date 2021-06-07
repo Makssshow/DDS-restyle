@@ -669,6 +669,7 @@
   height: 364px;
   margin-right: 28px;
   overflow: hidden;
+  max-width: 30%;
 }
 
 .do__card:last-child {
