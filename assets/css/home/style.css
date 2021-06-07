@@ -932,6 +932,7 @@
 }
 
 .slide__item:first-child .slide__text {
+  max-width: 25vw;
   width: 25vw;
 }
 

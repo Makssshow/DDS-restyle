@@ -7,10 +7,13 @@ $(document).ready(function () {
     scrub: 0.1,
   });
 
-  
-  gsap.to("#hero__item_1 div h2, .hero__image_1", {
-    visibility: "visible"
-  }, .5);
+  gsap.to(
+    "#hero__item_1 div h2, .hero__image_1",
+    {
+      visibility: "visible",
+    },
+    0.5
+  );
 
   // //Main pin
   var hero = gsap.timeline({
@@ -274,35 +277,47 @@ $(document).ready(function () {
       imagePadding = "16px";
 
     WhySectionsAnim1.to("#slide-1-img", {
-      maxWidth: "0",
+      width: "0",
       paddingLeft: 0,
       duration: 0.33,
     })
-      .to("#slide-1-text", { maxWidth: "0", duration: 0.33 }, 0)
+      .to("#slide-1-text", { maxWidth: "0", width: "0", duration: 0.33 }, 0)
       .to(
         "#slide-2-img",
         { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
         0
       )
-      .to("#slide-2-text", { maxWidth: widthText, duration: 0.33 }, 0)
+      .to(
+        "#slide-2-text",
+        { maxWidth: widthText, width: widthText, duration: 0.33 },
+        0
+      )
 
       .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: 0.33 })
-      .to("#slide-2-text", { maxWidth: "0", duration: 0.33 }, 0.33)
+      .to("#slide-2-text", { maxWidth: "0", width: "0", duration: 0.33 }, 0.33)
       .to(
         "#slide-3-img",
         { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
         0.33
       )
-      .to("#slide-3-text", { maxWidth: widthText, duration: 0.33 }, 0.33)
+      .to(
+        "#slide-3-text",
+        { maxWidth: widthText, width: widthText, duration: 0.33 },
+        0.33
+      )
 
       .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: 0.33 })
-      .to("#slide-3-text", { maxWidth: "0", duration: 0.33 }, 0.66)
+      .to("#slide-3-text", { maxWidth: "0", width: "0", duration: 0.33 }, 0.66)
       .to(
         "#slide-4-img",
         { width: widthImage, paddingLeft: imagePadding, duration: 0.33 },
         0.66
       )
-      .to("#slide-4-text", { maxWidth: widthText, duration: 0.33 }, 0.66);
+      .to(
+        "#slide-4-text",
+        { maxWidth: widthText, width: widthText, duration: 0.33 },
+        0.66
+      );
   }
 
   //CLIENTS SUBTITLE ANIMATION
