@@ -215,7 +215,6 @@ $butMargin: 4px;
     padding: 14px 105px;
     position: relative;
 
-
     a {
       position: absolute;
       top: 0;
@@ -224,13 +223,14 @@ $butMargin: 4px;
       height: 100%;
       z-index: 2;
     }
+
     &:hover {
       .nav__hover {
         div:first-child {
-          transform: translateY(-100%);
+          transform: translateY(-120%) !important;
         }
         div:last-child {
-          transform: translateY(-100%);
+          transform: translateY(-100%) !important;
         }
       }
     }
@@ -242,6 +242,9 @@ $butMargin: 4px;
       transition: $transition-3;
       padding: 10px 0;
     }
+  }
+  &__content {
+    overflow: hidden;
   }
 }
 
@@ -261,17 +264,13 @@ header.is-active {
 }
 .nav__list.is-active {
   .nav__hover {
-    div:first-child {
       transform: translateY(0);
-    }
   }
   .nav__item {
     @for $num from 1 through 5 {
       &:nth-child(#{$num}) {
         .nav__hover {
-          div:first-child {
             transition-delay: 0.05s * ($num - 1);
-          }
         }
       }
     }

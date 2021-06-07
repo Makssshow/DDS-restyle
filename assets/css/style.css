@@ -287,13 +287,13 @@
 }
 
 .nav__item:hover .nav__hover div:first-child {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-120%) !important;
+          transform: translateY(-120%) !important;
 }
 
 .nav__item:hover .nav__hover div:last-child {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-100%) !important;
+          transform: translateY(-100%) !important;
 }
 
 .nav__hover {
@@ -305,6 +305,10 @@
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   padding: 10px 0;
+}
+
+.nav__content {
+  overflow: hidden;
 }
 
 header.is-active .header__button_open {
@@ -325,32 +329,32 @@ header.is-active .nav {
   width: 100vw;
 }
 
-.nav__list.is-active .nav__hover div:first-child {
+.nav__list.is-active .nav__hover {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-.nav__list.is-active .nav__item:nth-child(1) .nav__hover div:first-child {
+.nav__list.is-active .nav__item:nth-child(1) .nav__hover {
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
 }
 
-.nav__list.is-active .nav__item:nth-child(2) .nav__hover div:first-child {
+.nav__list.is-active .nav__item:nth-child(2) .nav__hover {
   -webkit-transition-delay: 0.05s;
           transition-delay: 0.05s;
 }
 
-.nav__list.is-active .nav__item:nth-child(3) .nav__hover div:first-child {
+.nav__list.is-active .nav__item:nth-child(3) .nav__hover {
   -webkit-transition-delay: 0.1s;
           transition-delay: 0.1s;
 }
 
-.nav__list.is-active .nav__item:nth-child(4) .nav__hover div:first-child {
+.nav__list.is-active .nav__item:nth-child(4) .nav__hover {
   -webkit-transition-delay: 0.15s;
           transition-delay: 0.15s;
 }
 
-.nav__list.is-active .nav__item:nth-child(5) .nav__hover div:first-child {
+.nav__list.is-active .nav__item:nth-child(5) .nav__hover {
   -webkit-transition-delay: 0.2s;
           transition-delay: 0.2s;
 }
