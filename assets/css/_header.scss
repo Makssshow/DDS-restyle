@@ -1,6 +1,7 @@
 //Header
 $butWidth: 8px;
-$butMargin: 4px;
+$butMargin: 2px;
+$butM2: $butMargin * 2;
 .header {
   position: fixed;
   display: flex;
@@ -15,8 +16,8 @@ $butMargin: 4px;
   &__button {
     cursor: pointer;
     position: relative;
-    width: $butWidth * 3 + $butMargin * 2;
-    height: $butWidth * 3 + $butMargin * 2;
+    width: $butWidth * 3 + $butMargin * 6;
+    height: $butWidth * 3 + $butMargin * 6;
     margin: 33px;
     &_open {
       display: flex;
@@ -30,32 +31,29 @@ $butMargin: 4px;
         height: $butWidth;
         border-radius: 50%;
         background-color: $red;
-        margin-right: $butMargin;
+        margin: 0 $butMargin;
         position: relative;
         transition: $transition-3;
-        &:nth-child(3n) {
-          margin-right: 0;
-        }
       }
       &:hover {
         .header__button_ {
           &1 {
             transform: translate(
-              $butWidth + $butMargin,
-              $butWidth + $butMargin
+              $butWidth + $butM2,
+              $butWidth + $butM2
             );
           }
           &2 {
-            transform: translate(0, $butWidth + $butMargin);
+            transform: translate(0, $butWidth + $butM2);
           }
           &3 {
             transform: translate(
-              -$butWidth - $butMargin,
-              $butWidth + $butMargin
+              -$butWidth - $butM2,
+              $butWidth + $butM2
             );
           }
           &4 {
-            transform: translate($butWidth + $butMargin, 0);
+            transform: translate($butWidth + $butM2, 0);
           }
           &5 {
             &::before {
@@ -70,16 +68,16 @@ $butMargin: 4px;
             }
           }
           &6 {
-            transform: translate(-$butWidth - $butMargin, 0);
+            transform: translate(-$butWidth - $butM2, 0);
           }
           &7 {
             transform: translate(
-              $butWidth + $butMargin,
-              -$butWidth - $butMargin
+              $butWidth + $butM2,
+              -$butWidth - $butM2
             );
           }
           &8 {
-            transform: translate(0, -$butWidth - $butMargin);
+            transform: translate(0, -$butWidth - $butM2);
           }
         }
       }
@@ -227,7 +225,7 @@ $butMargin: 4px;
     &:hover {
       .nav__hover {
         div:first-child {
-          transform: translateY(-120%) !important;
+          transform: translateY(-100%) !important;
         }
         div:last-child {
           transform: translateY(-100%) !important;
@@ -238,8 +236,10 @@ $butMargin: 4px;
   &__hover {
     overflow: hidden;
     height: 72px;
+    transition: $transition-5;
+    transform: translateY(110%);
     div {
-      transition: $transition-3;
+      transition: $transition-5;
       padding: 10px 0;
     }
   }

@@ -19,7 +19,7 @@ $(document).ready(function () {
       trigger: ".hero__trigger_wrap",
       start: "top top",
       end: "bottom bottom",
-      scrub: .5,
+      scrub: 1,
       snap: 1 / (sections.length - 1),
       markers: false,
     },
@@ -254,8 +254,8 @@ $(document).ready(function () {
   var whyTitle = gsap.timeline({
     scrollTrigger: {
       trigger: ".why__title",
-      start: "bottom 90%",
-      end: "bottom 60%",
+      start: "center 90%",
+      end: "center 60%",
       markers: false,
     },
   });
