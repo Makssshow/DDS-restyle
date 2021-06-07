@@ -32,7 +32,7 @@ $(document).ready(function () {
       start: "top top",
       end: "+=" + $(window).height() * 3 + " bottom",
       pin: ".hero",
-      scrub: 0.2,
+      scrub: .1,
       markers: false,
     },
   });
