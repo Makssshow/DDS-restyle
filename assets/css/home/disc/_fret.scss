@@ -35,8 +35,8 @@
     font-weight: 500;
     opacity: 0;
     &_wrap {
-      margin-top: 200px;
       width: 30%;
+      min-width: 500px;
       margin-right: 22%;
       margin-left: auto;
     }
@@ -91,6 +91,7 @@
   }
   &__anim {
     width: 720px;
+    max-width: 80%;
     margin: 92px auto 0;
     position: relative;
     &_left {
@@ -141,8 +142,21 @@
     display: block;
   }
 }
+@media screen and (max-width: 1300px) {
+  .fret {
+    &__description {
+      margin-top: 20%;
+    }
+    &__subtitle {
+      font-size: 120px;
+    }
+    &__anim {
+      width: 50%;
+    }
+  }
+}
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: $mobile) {
   .fret {
     padding-top: 0;
     margin-bottom: 55%;

@@ -142,7 +142,20 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1400px) {
+.slide {
+  &__text {
+    h4 {
+      width: 200px;
+    }
+  }
+  &__description {
+    width: 200px;
+  }
+}
+}
+
+@media screen and (max-width: $mobile) {
   .why {
     padding-top: 45px;
     &__title {
@@ -169,13 +182,13 @@
     padding-bottom: 32px;
     &__item {
       align-items: start;
-      justify-content: space-between;
+      justify-content: flex-start;
       border: none;
       &:first-child {
         .slide {
           &__text {
             width: auto;
-            max-width: unset; 
+            max-width: unset;
           }
         }
       }
@@ -185,7 +198,7 @@
     }
     &__text {
       width: auto;
-      max-width: unset; 
+      max-width: unset;
       padding: 0 13px 32px 30px;
       h4 {
         width: auto;

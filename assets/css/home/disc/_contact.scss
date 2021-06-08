@@ -82,7 +82,18 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1400px) {
+.contact {
+    &__flex {
+        width: 98%;
+    }
+    &__title {
+        font-size: 150px;
+    }
+}
+}
+
+@media screen and (max-width: $mobile) {
     .contact {
         margin-top: 64px;
         &__text {

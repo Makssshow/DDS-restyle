@@ -105,19 +105,8 @@
     }
   }
 }
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1300px) {
   .cards {
-    height: auto;
-    &__wrap-all {
-      height: auto;
-    }
-    &__title {
-      padding-top: 32px;
-      font-size: $normal;
-      width: 80%;
-      margin: auto;
-    }
     &__wrap {
       margin-top: 64px;
       width: 95%;
@@ -127,11 +116,23 @@
       margin-right: 0;
       margin-bottom: 27px;
       width: calc(100% - 24px - 24px);
+      max-width: 450px;
       height: 365px - 24 - 24;
-      max-width: unset;
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+}
+
+
+@media screen and (max-width: $mobile) {
+  .cards {
+    &__title {
+      padding-top: 32px;
+      font-size: $normal;
+      width: 80%;
+      margin: auto;
     }
   }
 }

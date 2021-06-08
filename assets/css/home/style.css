@@ -126,11 +126,6 @@
           transform: translateY(130%);
 }
 
-.hero__dots {
-  letter-spacing: normal;
-  font-family: serif;
-}
-
 .hero__image {
   position: absolute;
   -o-object-fit: contain;
@@ -157,10 +152,10 @@
 
 .hero__image_wrap {
   position: absolute;
-  top: 0%;
-  left: 40%;
+  top: 0;
+  left: 0;
   height: 100%;
-  width: 60%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -169,7 +164,7 @@
   font-weight: 300;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .hero {
     font-size: 72px;
   }
@@ -371,19 +366,7 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 700px) {
-  .cards {
-    height: auto;
-  }
-  .cards__wrap-all {
-    height: auto;
-  }
-  .cards__title {
-    padding-top: 32px;
-    font-size: 36px;
-    width: 80%;
-    margin: auto;
-  }
+@media screen and (max-width: 1300px) {
   .cards__wrap {
     margin-top: 64px;
     width: 95%;
@@ -396,11 +379,20 @@
     margin-right: 0;
     margin-bottom: 27px;
     width: calc(100% - 24px - 24px);
+    max-width: 450px;
     height: 317px;
-    max-width: unset;
   }
   .cards__item:last-child {
     margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cards__title {
+    padding-top: 32px;
+    font-size: 36px;
+    width: 80%;
+    margin: auto;
   }
 }
 
@@ -451,8 +443,8 @@
 }
 
 .fret__description_wrap {
-  margin-top: 200px;
   width: 30%;
+  min-width: 500px;
   margin-right: 22%;
   margin-left: auto;
 }
@@ -520,6 +512,7 @@
 
 .fret__anim {
   width: 720px;
+  max-width: 80%;
   margin: 92px auto 0;
   position: relative;
 }
@@ -578,7 +571,19 @@
   display: block;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1300px) {
+  .fret__description {
+    margin-top: 20%;
+  }
+  .fret__subtitle {
+    font-size: 120px;
+  }
+  .fret__anim {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .fret {
     padding-top: 0;
     margin-bottom: 55%;
@@ -794,17 +799,7 @@
           transform: translateX(-50%);
 }
 
-@media screen and (max-width: 700px) {
-  .do {
-    padding-top: 64px;
-    margin-top: 0;
-  }
-  .do__title {
-    font-size: 36px;
-    margin: 0 auto 0;
-    width: 90%;
-    line-height: 39px;
-  }
+@media screen and (max-width: 1300px) {
   .do__flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -816,7 +811,24 @@
   .do__card {
     margin: 0 auto 8px;
     width: 100%;
-    max-width: unset;
+    max-width: 450px;
+    padding: 0;
+  }
+  .do__card:last-child {
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .do {
+    padding-top: 64px;
+    margin-top: 0;
+  }
+  .do__title {
+    font-size: 36px;
+    margin: 0 auto 0;
+    width: 90%;
+    line-height: 39px;
   }
 }
 
@@ -994,7 +1006,16 @@
   margin-bottom: 36px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1400px) {
+  .slide__text h4 {
+    width: 200px;
+  }
+  .slide__description {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .why {
     padding-top: 45px;
   }
@@ -1024,9 +1045,9 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     border: none;
   }
   .slide__item:first-child .slide__text {
@@ -1125,7 +1146,7 @@
   bottom: 0;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .clients {
     padding-top: 64px;
   }
@@ -1257,6 +1278,8 @@
   letter-spacing: -0.06em;
   text-transform: uppercase;
   text-align: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .banner__ball:hover {
@@ -1317,7 +1340,16 @@
      object-position: 0% 0%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1300px) {
+  .banner__title {
+    font-size: 100px;
+  }
+  .banner__ball {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .process {
     padding-top: 64px;
   }
@@ -1479,7 +1511,16 @@
   transition: 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1400px) {
+  .contact__flex {
+    width: 98%;
+  }
+  .contact__title {
+    font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .contact {
     margin-top: 64px;
   }

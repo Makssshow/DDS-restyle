@@ -140,17 +140,8 @@
     transform: translateX(-50%);
   }
 }
-
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1300px) {
   .do {
-    padding-top: 64px;
-    margin-top: 0;
-    &__title {
-      font-size: 36px;
-      margin: 0 auto 0;
-      width: 90%;
-      line-height: 39px;
-    }
     &__flex {
       flex-direction: column;
       width: 98%;
@@ -159,7 +150,26 @@
     &__card {
       margin: 0 auto 8px;
       width: 100%;
-      max-width: unset;
+      max-width: 450px;
+      padding: 0;
+      &:last-child {
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: $mobile) {
+  .do {
+    padding-top: 64px;
+    margin-top: 0;
+    &__title {
+      font-size: 36px;
+      margin: 0 auto 0;
+      width: 90%;
+      line-height: 39px;
     }
   }
 }

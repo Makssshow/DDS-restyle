@@ -1,11 +1,8 @@
 $(document).ready(function () {
-  gsap.to(
-    "#hero__item_1 div h2, .hero__image_1",
-    {
-      visibility: "visible",
-    },
-    0.5
-  );
+
+  setTimeout(() => {
+    $("#hero__item_1 div h2, .hero__image_1").css("visibility", "visible")
+  }, 500);
 
   //Small ball anim
   var leftBall = $(".fret__anim_left"),

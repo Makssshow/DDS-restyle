@@ -1,10 +1,12 @@
 $(document).ready(function () {
   gsap.registerPlugin(ScrollTrigger);
 
-  $(".process__bottom").css("margin-top", $(".banner").height() / -2);
-
   var windo = $(window);
-  var mobile = windo.width() > 700;
+  var mobile = windo.width() > 800;
+
+  if (mobile) {
+    $(".process__bottom").css("margin-top", $(".banner").height() / -2);
+  }
 
   ScrollTrigger.defaults({
     scrub: 0.1,
@@ -178,7 +180,7 @@ $(document).ready(function () {
     //FRET NOT TITLE PIN
     ScrollTrigger.create({
       trigger: ".cards",
-      start: "bottom bottom",
+      start: "80% bottom",
       end: "center bottom",
       endTrigger: ".fret__ball",
       toggleClass: { targets: ".fret__title", className: "fret_pin" },
@@ -190,7 +192,7 @@ $(document).ready(function () {
     });
     ScrollTrigger.create({
       trigger: ".cards",
-      start: "bottom bottom",
+      start: "80% bottom",
       end: "top 70%",
       endTrigger: ".fret__ball",
       toggleClass: { targets: ".fret__fake-bg", className: "fret_pin" },
@@ -290,11 +292,15 @@ $(document).ready(function () {
       dur = 1,
       del = "+=.5";
 
-    WhySectionsAnim1.to("#slide-1-img", {
-      width: "0",
-      paddingLeft: 0,
-      duration: dur,
-    }, "+=.2")
+    WhySectionsAnim1.to(
+      "#slide-1-img",
+      {
+        width: "0",
+        paddingLeft: 0,
+        duration: dur,
+      },
+      "+=.2"
+    )
       .to("#slide-1-text", { maxWidth: "0", width: "0", duration: dur }, "<")
       .to(
         "#slide-2-img",
@@ -307,35 +313,25 @@ $(document).ready(function () {
         "<"
       )
 
+      .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: dur }, del) ////////////////
+      .to("#slide-2-text", { maxWidth: "0", width: "0", duration: dur }, "<")
       .to(
-        "#slide-2-img",
-        { width: "0", paddingLeft: 0, duration: dur }, del ) ////////////////
-      .to(
-        "#slide-2-text",
-        { maxWidth: "0", width: "0", duration: dur },
+        "#slide-3-img",
+        {
+          width: widthImage,
+          paddingLeft: imagePadding,
+          duration: dur,
+        },
         "<"
       )
-      .to("#slide-3-img", {
-        width: widthImage,
-        paddingLeft: imagePadding,
-        duration: dur,
-      }, "<")
       .to(
         "#slide-3-text",
         { maxWidth: widthText, width: widthText, duration: dur },
         "<"
       )
 
-      .to(
-        "#slide-3-img",
-        { width: "0", paddingLeft: 0, duration: dur },
-        del
-      )//////////////////
-      .to(
-        "#slide-3-text",
-        { maxWidth: "0", width: "0", duration: dur },
-        "<"
-      )
+      .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: dur }, del) //////////////////
+      .to("#slide-3-text", { maxWidth: "0", width: "0", duration: dur }, "<")
       .to(
         "#slide-4-img",
         { width: widthImage, paddingLeft: imagePadding, duration: dur },
@@ -364,7 +360,7 @@ $(document).ready(function () {
     scrollTrigger: {
       trigger: ".process__title",
       start: "bottom 90%",
-      end: "bottom 50%",
+      end: "bottom 60%",
       markers: false,
     },
   });
