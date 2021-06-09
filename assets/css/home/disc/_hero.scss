@@ -5,6 +5,7 @@
   width: 100%;
   z-index: 3;
 }
+
 .hero {
   background-color: $black;
   color: $white;
@@ -73,7 +74,7 @@
       bottom: 50%;
       visibility: hidden;
       animation: HeroImage 1s ease-in-out;
-      animation-delay: .1s;
+      animation-delay: 0.1s;
     }
   }
   &__image_wrap {
@@ -122,6 +123,9 @@
       left: 5%;
     }
   }
+}
+.animate {
+  animation: none !important;
 }
 
 @keyframes Herotext {

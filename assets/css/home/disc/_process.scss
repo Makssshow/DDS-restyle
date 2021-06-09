@@ -14,7 +14,8 @@
   }
   &__subtitle {
     text-align: right;
-    margin: 62px 8% 62px auto;
+    margin: 62px 15% 62px auto;
+    letter-spacing: -0.05em;
   }
 }
 .banner {
@@ -59,6 +60,7 @@
       letter-spacing: -0.06em;
       text-transform: uppercase;
       text-align: center;
+      font-weight: 600;
       transition: $transition-3;
     }
     &:hover {
@@ -100,7 +102,7 @@
     font-size: 20px;
     line-height: 26px;
     letter-spacing: -0.06em;
-    font-weight: 400;
+    font-weight: 300;
     color: $white;
   }
   &__background {
@@ -153,19 +155,19 @@
       font-size: $big;
       width: 96%;
       margin-left: auto;
-      margin-right: 0;
+      margin-right: auto;
     }
     &__subtitle {
       width: 96%;
       margin-left: auto;
-      margin-right: 0;
+      margin-right: auto;
       margin-top: 18px;
     }
     &__description {
-      width: 96%;
+      width: 90%;
       margin-top: 8px;
-      margin-left: auto;
-      margin-right: 0;
+      margin-left: 2%;
+      margin-right: auto;
       font-weight: 400;
     }
     &__background {

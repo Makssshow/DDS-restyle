@@ -18,6 +18,8 @@ footer {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      max-width: 184px;
+      height: auto;
     }
   }
   &__links {
@@ -92,11 +94,12 @@ footer {
   &__copyright {
     font-weight: 600;
     font-size: 14px;
+    letter-spacing: -0.06em;
   }
 }
 @media screen and (max-width: 700px) {
   footer {
-    font-size: $small;
+    font-size: $xsmall;
   }
   .footer {
     &_top {
@@ -104,52 +107,54 @@ footer {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding-top: 53px;
-      padding-bottom: 32px;
+      padding-top: 34px;
+      padding-bottom: 10px;
       img {
         position: relative;
-        width: fit-content;
         top: 0;
         left: 0;
         transform: none;
       }
-      div {
-        max-width: 95%;
-        text-align: center;
-        margin: 52px auto 0;
-        p {
-          margin-bottom: 18px;
-          &:last-child {
-            a {
-              display: block;
-              padding: 10px 0;
-              background-color: $red;
-            }
-            color: $white;
-            font-size: $xsmall;
-            &::before {
-              display: none;
-            }
-          }
+    }
+    &__links {
+      width: 95%;
+      max-width: unset;
+      text-align: center;
+      margin: 32px auto 0;
+    }
+    &__item {
+      margin-bottom: 6px;
+      &:last-child {
+        margin-top: 24px;
+        a {
+          display: block;
+          padding: 10px 0;
+          background-color: $red;
+        }
+        color: $white;
+        font-size: $xsmall;
+        &::before {
+          display: none;
         }
       }
     }
     &_bottom {
-      padding: 32px 0;
+      padding: 35px 0;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column-reverse;
     }
     &__copyright {
-      max-width: 95%;
+      max-width: unset;
       margin: auto;
       text-align: center;
       line-height: 20px;
+      font-weight: 700;
     }
     &__socials {
       position: relative;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
       top: 0;
       left: 0;
       div {

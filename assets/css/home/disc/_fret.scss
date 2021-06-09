@@ -191,15 +191,28 @@
       a {
         font-size: 10px;
         letter-spacing: -0.06em;
+        padding-bottom: 8px;
+        &:before {
+          height: 4px;
+        }
+        &:hover {
+          &::before {
+            height: 8px;
+          }
+        }
       }
     }
     &__subtitle {
       font-size: 1em;
       color: $purple;
+      margin-top: 16px;
     }
     &__anim {
       width: 50%;
       margin-top: 20px;
+      &_man {
+bottom: 6%;
+      }
     }
   }
 }

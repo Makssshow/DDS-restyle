@@ -16,6 +16,15 @@
   width: 141px;
   height: auto;
   margin: 33px;
+  position: relative;
+}
+
+.header__logo a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .header__button {
@@ -403,6 +412,8 @@ footer hr {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  max-width: 184px;
+  height: auto;
 }
 
 .footer__links {
@@ -496,11 +507,12 @@ footer hr {
 .footer__copyright {
   font-weight: 600;
   font-size: 14px;
+  letter-spacing: -0.06em;
 }
 
 @media screen and (max-width: 700px) {
   footer {
-    font-size: 18px;
+    font-size: 12px;
   }
   .footer_top {
     display: -webkit-box;
@@ -516,41 +528,40 @@ footer hr {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-top: 53px;
-    padding-bottom: 32px;
+    padding-top: 34px;
+    padding-bottom: 10px;
   }
   .footer_top img {
     position: relative;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
     top: 0;
     left: 0;
     -webkit-transform: none;
             transform: none;
   }
-  .footer_top div {
-    max-width: 95%;
+  .footer__links {
+    width: 95%;
+    max-width: unset;
     text-align: center;
-    margin: 52px auto 0;
+    margin: 32px auto 0;
   }
-  .footer_top div p {
-    margin-bottom: 18px;
+  .footer__item {
+    margin-bottom: 6px;
   }
-  .footer_top div p:last-child {
+  .footer__item:last-child {
+    margin-top: 24px;
     color: #ffffff;
     font-size: 12px;
   }
-  .footer_top div p:last-child a {
+  .footer__item:last-child a {
     display: block;
     padding: 10px 0;
     background-color: #f10000;
   }
-  .footer_top div p:last-child::before {
+  .footer__item:last-child::before {
     display: none;
   }
   .footer_bottom {
-    padding: 32px 0;
+    padding: 35px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -566,14 +577,15 @@ footer hr {
             flex-direction: column-reverse;
   }
   .footer__copyright {
-    max-width: 95%;
+    max-width: unset;
     margin: auto;
     text-align: center;
     line-height: 20px;
+    font-weight: 700;
   }
   .footer__socials {
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     top: 0;
     left: 0;
   }
