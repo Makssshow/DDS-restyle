@@ -90,8 +90,8 @@
 }
 
 .hero__item div h2 {
-  -webkit-transform: translateY(180%);
-          transform: translateY(180%);
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
 }
 
 .hero__item:first-child div:first-child h2 {
