@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
 
   setTimeout(() => {
     $("#hero__item_1 div h2, .hero__image_1").css("visibility", "visible")

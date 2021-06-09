@@ -86,11 +86,12 @@
   position: relative;
   overflow: hidden;
   padding: 20px 0;
+  padding-right: 10px;
 }
 
 .hero__item div h2 {
-  -webkit-transform: translateY(150%);
-          transform: translateY(150%);
+  -webkit-transform: translateY(180%);
+          transform: translateY(180%);
 }
 
 .hero__item:first-child div:first-child h2 {

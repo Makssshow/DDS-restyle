@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
   gsap.registerPlugin(ScrollTrigger);
 
   var windo = $(window);
