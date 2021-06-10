@@ -77,11 +77,9 @@ footer {
     align-items: center;
     div {
       margin-right: 43px;
+      transition: $transition-3;
       &:last-child {
         margin-right: 0;
-      }
-      img {
-        transition: $transition-3;
       }
       &:hover {
         opacity: .5;

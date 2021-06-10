@@ -488,15 +488,12 @@ footer hr {
 
 .footer__socials div {
   margin-right: 43px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .footer__socials div:last-child {
   margin-right: 0;
-}
-
-.footer__socials div img {
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
 }
 
 .footer__socials div:hover {
