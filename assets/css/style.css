@@ -494,14 +494,13 @@ footer hr {
   margin-right: 0;
 }
 
-.footer__socials div path {
-  fill: #000000;
+.footer__socials div img {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-.footer__socials div:hover path {
-  fill: #575757;
+.footer__socials div:hover {
+  opacity: .5;
 }
 
 .footer__copyright {
@@ -594,7 +593,7 @@ footer hr {
     width: 36px;
     height: 36px;
   }
-  .footer__socials div svg {
+  .footer__socials div img {
     height: 100%;
     width: 100%;
     -o-object-fit: contain;
