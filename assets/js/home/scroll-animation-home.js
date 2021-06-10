@@ -47,79 +47,76 @@ jQuery(document).ready(function ($) {
   if (mobile) {
     hero
       //image out
-      .to(
-        ".hero__image_1",
-        { height: "40%", right: "10%", duration: duration },
-        0
-      )
-      .to(".hero__image_1", { bottom: "130%", duration: duration }, duration)
+      .to(".hero__image_1 img", { height: "40%", duration: duration }, 0)
+      .to(".hero__image_1", { right: "10%", duration: duration }, 0)
+      .to(".hero__image_1", { yPercent: -100, duration: duration }, duration)
       //image in
-      .to(".hero__image_2", { bottom: "50%", duration: duration2 }, 0.3)
+      .to(".hero__image_2", { yPercent: -100, duration: duration2 }, 0.5)
+      .to(
+        ".hero__image_2 img",
+        { height: "100%", duration: duration },
+        duration * 2
+      )
       .to(
         ".hero__image_2",
-        { height: "100%", right: "-10%", duration: duration },
+        { right: "-10%", duration: duration },
         duration * 2
       )
       //image out
+      .to(".hero__image_2 img", { height: "40%", duration: duration }, duration * 3)
+      .to(".hero__image_2", { right: "10%", duration: duration }, duration * 3)
       .to(
         ".hero__image_2",
-        { height: "40%", right: "10%", duration: duration },
-        duration * 3
-      )
-      .to(
-        ".hero__image_2",
-        { bottom: "130%", duration: duration },
+        { yPercent: -200, duration: duration },
         duration * 4
       )
       //image in
       .to(
         ".hero__image_3",
-        { bottom: "50%", duration: duration2 },
-        duration * 3 + 0.3
+        { yPercent: -100, duration: duration2 },
+        duration * 3 + 0.5
+      )
+      .to(
+        ".hero__image_3 img",
+        { height: "100%", duration: duration },
+        duration * 5
       )
       .to(
         ".hero__image_3",
-        { height: "100%", right: "-10%", duration: duration },
+        { right: "-10%", duration: duration },
         duration * 5
       );
   } else {
     hero
-      //image out
-      .to(
-        ".hero__image_1",
-        { width: "40%", right: "10%", duration: duration },
-        0
-      )
-      .to(".hero__image_1", { bottom: "130%", duration: duration }, duration)
-      //image in
-      .to(".hero__image_2", { bottom: "50%", duration: duration2 }, 0.3)
-      .to(
-        ".hero__image_2",
-        { width: "130%", right: "-30%", duration: duration },
-        duration * 2
-      )
-      //image out
-      .to(
-        ".hero__image_2",
-        { width: "40%", right: "10%", duration: duration },
-        duration * 3
-      )
-      .to(
-        ".hero__image_2",
-        { bottom: "130%", duration: duration },
-        duration * 4
-      )
-      //image in
-      .to(
-        ".hero__image_3",
-        { bottom: "50%", duration: duration2 },
-        duration * 3 + 0.3
-      )
-      .to(
-        ".hero__image_3",
-        { width: "130%", right: "-30%", duration: duration },
-        duration * 5
-      );
+     //image out
+     .to(".hero__image_1", { width: "40%",right: "10%", duration: duration }, 0)
+     .to(".hero__image_1", { yPercent: -100, duration: duration }, duration)
+     //image in
+     .to(".hero__image_2", { yPercent: -100, duration: duration2 }, 0.5)
+     .to(
+       ".hero__image_2",
+       { width: "100%", right: "-30%",duration: duration },
+       duration * 2
+     )
+     //image out
+     .to(".hero__image_2", { width: "40%", right: "10%", duration: duration }, duration * 3)
+     .to(
+       ".hero__image_2",
+       { yPercent: -200, duration: duration },
+       duration * 4
+     )
+     //image in
+     .to(
+       ".hero__image_3",
+       { yPercent: -100, duration: duration2 },
+       duration * 3 + 0.5
+     )
+     .to(
+       ".hero__image_3",
+       { width: "100%",right: "-30%", duration: duration },
+       duration * 5
+     )
+      // //image out
   }
 
   hero
@@ -129,7 +126,7 @@ jQuery(document).ready(function ($) {
     .to(
       "#hero__item_1 h2",
       {
-        transform: "translateY(-150%)",
+        yPercent: -150,
         duration: duration2,
       },
       0
@@ -140,14 +137,14 @@ jQuery(document).ready(function ($) {
     //text in
     .to(
       "#hero__item_2 h2",
-      { transform: "translateY(0%)", duration: duration },
+      {  yPercent: -150, duration: duration },
       duration * 2
     )
 
     //text out
     .to(
       "#hero__item_2 h2",
-      { transform: "translateY(-150%)", duration: duration2 },
+      {  yPercent: -300, duration: duration2 },
       duration * 3
     )
 
@@ -156,12 +153,12 @@ jQuery(document).ready(function ($) {
     //text in
     .to(
       "#hero__item_3 h2",
-      { transform: "translateY(0%)", duration: duration },
+      {  yPercent: -150, duration: duration },
       duration * 5
     )
     .to(
       ".hero__subtitle h3",
-      { transform: "translateY(0%)", duration: duration },
+      {  yPercent: -150, duration: duration },
       duration * 5
     );
 
