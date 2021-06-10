@@ -192,6 +192,7 @@
   }
   .hero__item div {
     padding: 0;
+    padding-bottom: 8px;
   }
   .hero__image {
     height: 100%;
