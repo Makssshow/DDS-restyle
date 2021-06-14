@@ -167,10 +167,9 @@ jQuery(document).ready(function ($) {
     ScrollTrigger.create({
       trigger: ".cards__wrap-all",
       start: "bottom bottom",
-      end: "bottom bottom",
-      endTrigger: ".cards",
+      end: "+=40% bottom",
       pin: true,
-      pinSpacing: false,
+      pinSpacing: true,
       markers: false,
     });
 
@@ -383,7 +382,7 @@ jQuery(document).ready(function ($) {
     .to(".banner__title_2", { left: "0%", duration: 1 }, 0.2)
     .to(".banner__title_2", { top: "-110%", duration: 1 })
     .to(".banner__title_3", { top: "0%", duration: 1 }, 1.2)
-    .to(".banner_wrap", { width: "80vw", duration: 2.2 }, 0);
+    .to(".banner_wrap", { width: "80%", duration: 2.2 }, 0);
 
   var bannerHeight = $(".banner").height() * 4.5,
     bannerHeight2 =
