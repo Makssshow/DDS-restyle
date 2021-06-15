@@ -1,10 +1,10 @@
-@import url("reset.css");
+@import "reset";
 @import "vars";
-@import url("../fonts/Poppins/stylesheet.css");
+@import url("../fonts/Poppins/fonts.css");
 @import "header";
 @import "footer";
 body {
-  font-family: $Font-poppins, "Times New Roman", sans-serif;
+  font-family: $Font-poppins, "Tahoma", sans-serif;
   font-size: 36px;
   font-weight: 600;
   line-height: 1;
