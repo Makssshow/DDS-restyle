@@ -12,23 +12,6 @@ jQuery(document).ready(function ($) {
     scrub: 0.1,
   });
 
-  var heroTrigger = $(".hero__trigger");
-  var heroTriggerWrap = $(".hero__trigger_wrap");
-  heroTrigger.height(windo.height());
-  heroTriggerWrap.height(windo.height() * 3);
-
-  let sections = gsap.utils.toArray(".hero__trigger");
-  gsap.to(sections, {
-    scrollTrigger: {
-      trigger: ".hero__trigger_wrap",
-      start: "top top",
-      end: "bottom bottom",
-      scrub: 0.1,
-      snap: 1 / (sections.length - 1),
-      markers: false,
-    },
-  });
-
   // //Main pin
   var hero = gsap.timeline({
     scrollTrigger: {
@@ -36,6 +19,7 @@ jQuery(document).ready(function ($) {
       start: "top top",
       end: "+=" + $(window).height() * 3 + " bottom",
       pin: ".hero",
+      snap: 1 / 2,
       scrub: 0.1,
       markers: false,
     },
