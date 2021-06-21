@@ -1,0 +1,332 @@
+main {
+  font-size: 180px;
+  line-height: 165px;
+}
+
+* {
+  letter-spacing: -0.06em;
+}
+
+.hero {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0 30px;
+  margin-bottom: 165px;
+}
+
+.hero__title {
+  position: relative;
+  z-index: 3;
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.hero__text {
+  width: 33%;
+  height: 100vh;
+  margin-right: 0;
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__wrap {
+  border: 2px solid #ffffff;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero__wrap div {
+  width: 60%;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.main__title {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  -webkit-transform: translateY(-75%);
+          transform: translateY(-75%);
+}
+
+.main_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
+  height: 50%;
+  width: 100%;
+}
+
+.main__img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: 0 4px 30px #000000;
+          box-shadow: 0 4px 30px #000000;
+}
+
+.main__text {
+  width: 100%;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  height: 100%;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__year {
+  margin-right: 16px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.main__type {
+  margin-left: 63px;
+  margin-bottom: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.collage-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+.collage-1 img:nth-child(1) {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.collage-1 img:nth-child(2) {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+}
+
+.collage-1 img:nth-child(3) {
+  margin-top: 32px;
+  width: 100%;
+}
+
+.collage-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+.collage-2 img:nth-child(1) {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.collage-2 img:nth-child(2) {
+  width: calc(50% - 10px);
+}
+
+.collage-2 img:nth-child(3) {
+  width: calc(50% - 10px);
+}
+
+.img-shadow {
+  -webkit-box-shadow: 0px 11px 25px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 11px 25px rgba(0, 0, 0, 0.09);
+}
+
+.col-typ {
+  margin-top: 44px;
+  margin-bottom: 150px;
+}
+
+.col-typ__title {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+  text-align: center;
+}
+
+.col-typ__title img {
+  width: 120%;
+}
+
+.col-typ_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 30px;
+}
+
+.colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.colors_1 {
+  width: 330px;
+  height: 330px;
+  background: linear-gradient(295.06deg, #9528cb 14.63%, #240b75 85.42%);
+  margin-right: 12px;
+}
+
+.colors_2 {
+  width: 175px;
+  height: 175px;
+  margin-right: 12px;
+  background: #ea5b1a;
+}
+
+.colors_3 {
+  width: 77px;
+  height: 77px;
+  margin-bottom: 98px;
+  background: #561f99;
+}
+
+.colors_3-shadow {
+  -webkit-filter: drop-shadow(17px 11px 50px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(17px 11px 50px rgba(0, 0, 0, 0.3));
+}
+
+.typo {
+  display: block;
+  margin: auto;
+}
+
+.typo_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.typo__example {
+  font-size: 100px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  font-weight: normal;
+  margin-bottom: 32px;
+}
+
+.typo__name {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+}
+
+.typo_1 {
+  margin-right: 72px;
+}
+
+.pin {
+  background-color: #000000;
+  position: relative;
+  margin: 83px 0;
+}
+
+.pin img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.pin .pin__background {
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+/*# sourceMappingURL=style.css.map */

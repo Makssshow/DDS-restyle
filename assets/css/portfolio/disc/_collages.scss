@@ -1,0 +1,43 @@
+.collage-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30px;
+  img {
+    &:nth-child(1) {
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+    &:nth-child(2) {
+      width: calc(50% - 10px);
+      margin-bottom: 20px;
+    }
+    &:nth-child(3) {
+      margin-top: 32px;
+      width: 100%;
+    }
+  }
+}
+.collage-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    img {
+      &:nth-child(1) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      &:nth-child(2) {
+        width: calc(50% - 10px);
+      }
+      &:nth-child(3) {
+        width: calc(50% - 10px);
+      }
+    }
+  }
+.img-shadow {
+    box-shadow: 0px 11px 25px rgba(0, 0, 0, 0.09);
+}

@@ -1,0 +1,14 @@
+@import "../vars";
+
+main {
+    font-size: 180px;
+    line-height: 165px;
+}
+* {
+    letter-spacing: -0.06em;
+}
+
+@import "disc/hero";
+@import "disc/collages";
+@import "disc/colors";
+@import "disc/pin";
