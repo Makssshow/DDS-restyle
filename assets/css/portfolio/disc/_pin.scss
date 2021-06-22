@@ -5,7 +5,7 @@
   img {
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    object-fit: contain;
     position: relative;
     z-index: 2;
     margin-bottom: 120px;
@@ -13,7 +13,7 @@
   .pin__background {
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    object-fit: contain;
     top: 0;
     left: 0;
     position: absolute;
