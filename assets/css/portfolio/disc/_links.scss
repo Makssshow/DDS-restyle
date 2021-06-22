@@ -61,8 +61,8 @@
   margin-bottom: 92px;
   &__left,
   &__right {
-    width: calc(345px - 2px );
-    height: calc(345px - 2px );
+    width: calc(345px - 2px);
+    height: calc(345px - 2px);
     border-radius: 50%;
     border: 1px solid $black;
 
@@ -75,23 +75,23 @@
   }
   &__left {
     &:hover {
-        .arrows_a {
-            width: 226px;
-        }
-        border: 14px solid $black;
-        width: calc(345px - 28px);
-        height: calc(345px - 28px);
+      .arrows_a {
+        width: 226px;
       }
+      border: 14px solid $black;
+      width: calc(345px - 28px);
+      height: calc(345px - 28px);
+    }
   }
   &__right {
     &:hover {
-        .arrows_a {
-            width: 226px;
-        }
-        border: 14px solid $black;
-        width: calc(345px - 28px);
-        height: calc(345px - 28px);
+      .arrows_a {
+        width: 226px;
       }
+      border: 14px solid $black;
+      width: calc(345px - 28px);
+      height: calc(345px - 28px);
+    }
   }
   a {
     position: absolute;
@@ -102,31 +102,27 @@
     border-radius: 50%;
     z-index: 2;
   }
-  svg {
-    width: 136px;
-    height: 116px;
-  }
   &_a {
     width: 136px;
     position: relative;
 
     transition: $transition-5;
     div:first-child {
-        width: 136px;
-        height: 10px;
-        background-color: $black;
-        position: relative;
-        &::before {
-            content: '';
-            width: 80px;
-            height: 80px;
-            border-top: 10px solid $black;
-            border-left: 10px solid $black;
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translate(0, -50%) rotate(-45deg);
-        }
+      width: 136px;
+      height: 10px;
+      background-color: $black;
+      position: relative;
+      &::before {
+        content: "";
+        width: 80px;
+        height: 80px;
+        border-top: 10px solid $black;
+        border-left: 10px solid $black;
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translate(0, -50%) rotate(-45deg);
+      }
     }
     div:last-child {
       position: absolute;
@@ -141,17 +137,79 @@
 
   &_b {
     div:first-child {
-        margin-right: 0;
-        margin-left: auto;
-        &::before {
-            left: auto;
-            right: 10px;
-            transform: translate(0, -50%) rotate(135deg);
-        }
+      margin-right: 0;
+      margin-left: auto;
+      &::before {
+        left: auto;
+        right: 10px;
+        transform: translate(0, -50%) rotate(135deg);
+      }
     }
     div:last-child {
-        left: 0;
-        right: auto;
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $mobileBig) {
+  .ball {
+    margin: 12px auto 64px;
+  }
+  .arrows {
+    margin-bottom: 64px;
+    padding: 0 20px;
+    &__left,
+    &__right {
+      width: calc(102px - 2px);
+      height: calc(102px - 2px);
+    }
+    &_a {
+      width: 80px;
+      div:first-child {
+        width: 80px;
+        height: 6px;
+        &::before {
+          width: 40px;
+          height: 40px;
+          border-top: 6px solid $black;
+          border-left: 6px solid $black;
+          left: 6px;
+        }
       }
+      div:last-child {
+        display: none;
+      }
+    }
+    &_b {
+      div:first-child {
+        &::before {
+          left: auto;
+          right: 6px;
+        }
+      }
+    }
+
+    &__right {
+      &:hover {
+        .arrows_a {
+          width: 80px;
+        }
+        border: 5px solid $black;
+        width: calc(102px - 10px);
+        height: calc(102px - 10px);
+      }
+    }
+
+    &__left {
+      &:hover {
+        .arrows_a {
+          width: 80px;
+        }
+        border: 5px solid $black;
+        width: calc(102px - 10px);
+        height: calc(102px - 10px);
+      }
+    }
   }
 }

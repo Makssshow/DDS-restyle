@@ -4,15 +4,29 @@
   margin: 83px 0;
   img {
     width: 100%;
-    height: auto;
+    height: 100vh;
     object-fit: cover;
     position: relative;
     z-index: 2;
+    margin-bottom: 120px;
   }
   .pin__background {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
     top: 0;
     left: 0;
     position: absolute;
     z-index: 1;
+  }
+}
+
+@media screen and (max-width: $mobileBig) {
+  .pin {
+    margin: 12px 0;
+    padding: 96px 0;
+    .pin__background {
+      top: 96px;
+    }
   }
 }
