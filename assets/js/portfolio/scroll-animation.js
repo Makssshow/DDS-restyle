@@ -86,6 +86,6 @@ jQuery(document).ready(function ($) {
     end: "bottom bottom",
     pin: true,
     pinSpacing: false,
-    markers: true,
+    markers: false,
   });
 });
