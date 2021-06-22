@@ -39,7 +39,18 @@ jQuery(document).ready(function ($) {
         markers: false,
       },
     });
-  } else {
+
+    
+  //PIN GREEN BORDER
+  ScrollTrigger.create({
+    trigger: ".pin__background",
+    start: "top top",
+    endTrigger: ".pin img:last-child",
+    end: "bottom bottom",
+    pin: true,
+    pinSpacing: false,
+    markers: false,
+  });
   }
 
   //ANIM RIGHT
@@ -78,14 +89,4 @@ jQuery(document).ready(function ($) {
     },
   });
 
-  //PIN GREEN BORDER
-  ScrollTrigger.create({
-    trigger: ".pin__background",
-    start: "top top",
-    endTrigger: ".pin img:last-child",
-    end: "bottom bottom",
-    pin: true,
-    pinSpacing: false,
-    markers: false,
-  });
 });

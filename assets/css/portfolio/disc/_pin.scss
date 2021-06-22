@@ -25,8 +25,17 @@
   .pin {
     margin: 12px 0;
     padding: 96px 0;
+    img {
+      height: auto;
+      margin-bottom: 60px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     .pin__background {
+      height: auto;
       top: 96px;
+      display: none;
     }
   }
 }

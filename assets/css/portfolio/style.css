@@ -611,8 +611,17 @@ main {
     margin: 12px 0;
     padding: 96px 0;
   }
+  .pin img {
+    height: auto;
+    margin-bottom: 60px;
+  }
+  .pin img:last-child {
+    margin-bottom: 0;
+  }
   .pin .pin__background {
+    height: auto;
     top: 96px;
+    display: none;
   }
 }
 
