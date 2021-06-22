@@ -56,6 +56,18 @@
     })
   });
 
+    //ANIM RIGHT
+      gsap.from(".tablet img", {
+        xPercent: -20,
+        scrollTrigger: {
+          trigger: ".tablet",
+          start: "top bottom",
+          end: "top top",
+          markers: false,
+        },
+      })
+  
+
   //ANIM COLORS
   gsap.from(".col-typ__title img", {
     yPercent: -102,
@@ -74,7 +86,7 @@
     end: "center center",
     pin: true,
     pinSpacing: false,
-    markers: true
+    markers: false
   })
 
 
