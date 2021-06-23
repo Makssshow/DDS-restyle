@@ -69,7 +69,7 @@ jQuery(document).ready(function ($) {
 
   //ANIM RIGHT
   gsap.from(".tablet img", {
-    xPercent: -20,
+    xPercent: -30,
     scrollTrigger: {
       trigger: ".tablet",
       start: "top bottom",
