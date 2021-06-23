@@ -7,6 +7,10 @@ jQuery(document).ready(function ($) {
 
   if ($(window).width() > 1050) {
     ///////////////////////////////////HERO
+    
+    $(".hero__title")
+      .imagesLoaded()
+      .done(function (instance) {
     //Hero background pin
     ScrollTrigger.create({
       trigger: "html",
@@ -39,7 +43,7 @@ jQuery(document).ready(function ($) {
         markers: false,
       },
     });
-
+  });
     $(".pin")
       .imagesLoaded()
       .done(function (instance) {
