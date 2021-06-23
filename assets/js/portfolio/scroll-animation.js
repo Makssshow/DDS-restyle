@@ -56,6 +56,22 @@ jQuery(document).ready(function ($) {
       });
   }
 
+  
+  $(".pin")
+  .imagesLoaded()
+  .done(function (instance) {
+    //PIN GREEN BORDER
+    ScrollTrigger.create({
+      trigger: ".pin__background",
+      start: "center center",
+      endTrigger: ".pin img:last-child",
+      end: "center center",
+      pin: true,
+      pinSpacing: false,
+      markers: false,
+    });
+  });
+
   $(".anim_right")
     .imagesLoaded()
     .done(function (instance) {
@@ -66,7 +82,7 @@ jQuery(document).ready(function ($) {
           xPercent: -20,
           scrollTrigger: {
             trigger: element,
-            start: "top 70%",
+            start: "top 80%",
             end: "center center",
             markers: false,
           },
