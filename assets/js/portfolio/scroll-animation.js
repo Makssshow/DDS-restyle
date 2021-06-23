@@ -40,53 +40,84 @@ jQuery(document).ready(function ($) {
       },
     });
 
-    
-  //PIN GREEN BORDER
-  ScrollTrigger.create({
-    trigger: ".pin__background",
-    start: "top top",
-    endTrigger: ".pin img:last-child",
-    end: "bottom bottom",
-    pin: true,
-    pinSpacing: false,
-    markers: false,
-  });
+    $(".pin")
+      .imagesLoaded()
+      .done(function (instance) {
+        //PIN GREEN BORDER
+        ScrollTrigger.create({
+          trigger: ".pin__background",
+          start: "top top",
+          endTrigger: ".pin img:last-child",
+          end: "bottom bottom",
+          pin: true,
+          pinSpacing: false,
+          markers: false,
+        });
+      });
   }
 
-  //ANIM RIGHT
-  var move_right = gsap.utils.toArray(".anim_right");
-  move_right.forEach((element) => {
-    gsap.from(element, {
-      xPercent: -20,
-      scrollTrigger: {
-        trigger: element,
-        start: "top 70%",
-        end: "center center",
-        markers: false,
-      },
+  $(".anim_right")
+    .imagesLoaded()
+    .done(function (instance) {
+      //ANIM RIGHT
+      var move_right = gsap.utils.toArray(".anim_right");
+      move_right.forEach((element) => {
+        gsap.from(element, {
+          xPercent: -20,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 70%",
+            end: "center center",
+            markers: false,
+          },
+        });
+      });
     });
-  });
 
-  //ANIM RIGHT
-  gsap.from(".tablet img", {
-    xPercent: -30,
-    scrollTrigger: {
-      trigger: ".tablet",
-      start: "top bottom",
-      end: "bottom top",
-      markers: false,
-    },
-  });
+  $(".tablet")
+    .imagesLoaded()
+    .done(function (instance) {
+      //ANIM RIGHT
+      gsap.from(".tablet img", {
+        xPercent: -30,
+        scrollTrigger: {
+          trigger: ".tablet",
+          start: "top bottom",
+          end: "bottom top",
+          markers: false,
+        },
+      });
+    });
 
-  //ANIM COLORS
-  gsap.from(".col-typ__title img", {
-    yPercent: -102,
-    scrollTrigger: {
-      trigger: ".col-typ__title",
-      start: "top 70%",
-      end: "bottom 70%",
-      markers: false,
-    },
-  });
+  $(".col-typ__title")
+    .imagesLoaded()
+    .done(function (instance) {
+      //ANIM COLORS
+      gsap.from(".col-typ__title img", {
+        yPercent: -102,
+        scrollTrigger: {
+          trigger: ".col-typ__title",
+          start: "top 70%",
+          end: "bottom 70%",
+          markers: false,
+        },
+      });
+    });
 
+  $(".anim")
+    .imagesLoaded()
+    .done(function (instance) {
+      var anim = gsap.utils.toArray(".anim");
+      anim.forEach((element) => {
+        ScrollTrigger.create({
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 10%",
+          onEnter: () => {
+            $(element).addClass("animated");
+          },
+          markers: true,
+        });
+      });
+    });
 });
