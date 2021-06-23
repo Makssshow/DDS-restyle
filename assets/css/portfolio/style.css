@@ -494,7 +494,7 @@ main {
   background: #561f99;
 }
 
-.colors div-shadow {
+.colors-shadow {
   -webkit-filter: drop-shadow(17px 11px 50px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(17px 11px 50px rgba(0, 0, 0, 0.3));
 }
