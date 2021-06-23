@@ -516,6 +516,10 @@ main {
           align-items: flex-end;
 }
 
+.typo_wrap div:first-child {
+  margin-right: 72px;
+}
+
 .typo__example {
   font-size: 100px;
   line-height: 90px;
@@ -530,10 +534,6 @@ main {
   font-size: 18px;
   line-height: 23px;
   letter-spacing: 0.03em;
-}
-
-.typo_1 {
-  margin-right: 72px;
 }
 
 @media screen and (max-width: 1050px) {

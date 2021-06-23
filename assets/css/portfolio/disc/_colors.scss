@@ -56,6 +56,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    div:first-child {
+      margin-right: 72px;
+    }
   }
   &__example {
     font-size: 100px;
@@ -71,9 +74,7 @@
     line-height: 23px;
     letter-spacing: 0.03em;
   }
-  &_1 {
-    margin-right: 72px;
-  }
+
 }
 
 @media screen and (max-width: $mobileBig) {
