@@ -473,28 +473,28 @@ main {
           justify-content: flex-start;
 }
 
-.colors_1 {
+.colors div:nth-child(1) {
   width: 330px;
   height: 330px;
   background: linear-gradient(295.06deg, #9528cb 14.63%, #240b75 85.42%);
   margin-right: 12px;
 }
 
-.colors_2 {
+.colors div:nth-child(2) {
   width: 175px;
   height: 175px;
   margin-right: 12px;
   background: #ea5b1a;
 }
 
-.colors_3 {
+.colors div:nth-child(3) {
   width: 77px;
   height: 77px;
   margin-bottom: 98px;
   background: #561f99;
 }
 
-.colors_3-shadow {
+.colors div:nth-child(3)-shadow {
   -webkit-filter: drop-shadow(17px 11px 50px rgba(0, 0, 0, 0.3));
           filter: drop-shadow(17px 11px 50px rgba(0, 0, 0, 0.3));
 }
@@ -564,16 +564,16 @@ main {
     position: relative;
     margin-top: 62px;
   }
-  .colors_1 {
+  .colors div:nth-child(1) {
     width: 212px;
     height: 193px;
     margin-right: 7px;
   }
-  .colors_2 {
+  .colors div:nth-child(2) {
     width: 112px;
     height: 112px;
   }
-  .colors_3 {
+  .colors div:nth-child(3) {
     position: absolute;
     width: 50px;
     height: 50px;
