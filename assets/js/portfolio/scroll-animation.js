@@ -131,8 +131,8 @@ jQuery(document).ready(function ($) {
           opacity: 0,
           scrollTrigger: {
             trigger: element,
-            start: "top 80%",
-            end: "top 50%",
+            start: "top 90%",
+            end: "top 40%",
             markers: false,
           },
         });
