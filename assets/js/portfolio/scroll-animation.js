@@ -104,19 +104,21 @@ jQuery(document).ready(function ($) {
       });
     });
 
-  $(".anim")
+  $(".animBox .anim")
     .imagesLoaded()
     .done(function (instance) {
-      var anim = gsap.utils.toArray(".anim");
+      var anim = gsap.utils.toArray(".animBox");
       anim.forEach((element) => {
-        ScrollTrigger.create({
-          trigger: element,
-          start: "top 80%",
-          end: "bottom 10%",
-          onEnter: () => {
-            $(element).addClass("animated");
+        var el = $(element).find(".anim");
+        gsap.from(el, {
+          yPercent: -30,
+          opacity: 0,
+          scrollTrigger: {
+            trigger: element,
+            start: "top 80%",
+            end: "top 50%",
+            markers: false,
           },
-          markers: true,
         });
       });
     });

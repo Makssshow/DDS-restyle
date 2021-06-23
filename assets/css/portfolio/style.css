@@ -7,20 +7,6 @@ main {
   letter-spacing: -0.06em;
 }
 
-.anim {
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  opacity: 0;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-}
-
-.animated {
-  -webkit-transform: none;
-          transform: none;
-  opacity: 1;
-}
-
 @media screen and (max-width: 1050px) {
   main {
     font-size: 72px;

@@ -7,15 +7,15 @@ main {
 * {
   letter-spacing: -0.06em;
 }
-.anim {
-  transform: translateY(-50%);
-  opacity: 0;
-  transition: $transition-5;
-}
-.animated {
-  transform: none;
-  opacity: 1;
-}
+// .anim {
+//   transform: translateY(-50%);
+//   opacity: 0;
+//   transition: $transition-5;
+// }
+// .animated {
+//   transform: none;
+//   opacity: 1;
+// }
 
 @media screen and (max-width: $mobileBig) {
   main {
