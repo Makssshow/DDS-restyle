@@ -104,14 +104,14 @@ jQuery(document).ready(function ($) {
       });
     });
 
-  $(".animBox .anim")
+  $(".animBox")
     .imagesLoaded()
     .done(function (instance) {
       var anim = gsap.utils.toArray(".animBox");
       anim.forEach((element) => {
         var el = $(element).find(".anim");
         gsap.from(el, {
-          yPercent: -30,
+          yPercent: -20,
           opacity: 0,
           scrollTrigger: {
             trigger: element,

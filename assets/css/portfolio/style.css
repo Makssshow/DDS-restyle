@@ -246,23 +246,25 @@ main {
   padding: 0 30px;
 }
 
-.collage-1 img {
+.collage-1 div img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.collage-1 img:nth-child(1) {
+.collage-1 div:nth-child(1) {
   max-width: calc(50% - 10px);
   width: 681px;
   margin-right: 20px;
 }
 
-.collage-1 img:nth-child(2) {
+.collage-1 div:nth-child(2) {
   max-width: calc(50% - 10px);
   width: 681px;
 }
 
-.collage-1 img:nth-child(3) {
+.collage-1 div:nth-child(3) {
   margin-top: 20px;
   width: 100%;
   height: 600px;
@@ -286,25 +288,27 @@ main {
   padding: 0 30px;
 }
 
-.collage-2 img {
+.collage-2 div img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.collage-2 img:nth-child(1) {
+.collage-2 div:nth-child(1) {
   width: 100%;
   height: 603px;
   margin-bottom: 20px;
 }
 
-.collage-2 img:nth-child(2) {
+.collage-2 div:nth-child(2) {
   max-width: calc(50% - 10px);
   margin-right: 20px;
   width: 680px;
   height: 600px;
 }
 
-.collage-2 img:nth-child(3) {
+.collage-2 div:nth-child(3) {
   max-width: calc(50% - 10px);
   width: 680px;
   height: 600px;
@@ -328,26 +332,28 @@ main {
   padding: 0 30px;
 }
 
-.collage-3 img {
+.collage-3 div img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
-.collage-3 img:nth-child(1) {
+.collage-3 div:nth-child(1) {
   max-width: calc(50% - 10px);
   width: 680px;
   height: 600px;
   margin-right: 20px;
 }
 
-.collage-3 img:nth-child(2) {
+.collage-3 div:nth-child(2) {
   max-width: calc(50% - 10px);
   width: 680px;
   height: 600px;
   width: 681px;
 }
 
-.collage-3 img:nth-child(3) {
+.collage-3 div:nth-child(3) {
   margin-top: 20px;
   width: 100%;
   height: 887px;
