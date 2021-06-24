@@ -516,7 +516,7 @@ main {
           align-items: flex-end;
 }
 
-.typo_wrap div:first-child {
+.typo__margin {
   margin-right: 72px;
 }
 
