@@ -106,8 +106,6 @@ main {
   position: relative;
   z-index: 2;
   width: 66.6%;
-  -webkit-box-shadow: 0 4px 30px #000000;
-          box-shadow: 0 4px 30px #000000;
 }
 
 .main__img img {
@@ -115,6 +113,11 @@ main {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.main__shadow {
+  -webkit-box-shadow: 0 4px 30px #000000;
+          box-shadow: 0 4px 30px #000000;
 }
 
 .main__text {

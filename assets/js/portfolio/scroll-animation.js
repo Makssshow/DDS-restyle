@@ -1,6 +1,13 @@
 jQuery(document).ready(function ($) {
   gsap.registerPlugin(ScrollTrigger);
 
+      
+  $(".main__img")
+  .imagesLoaded()
+  .done(function (instance) {
+$(".main__img").addClass("main__shadow");
+  });
+
   ScrollTrigger.defaults({
     scrub: 0.05,
   });
