@@ -56,9 +56,9 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    div:first-child {
-      margin-right: 72px;
-    }
+  }
+  &__margin {
+    margin-right: 72px;
   }
   &__example {
     font-size: 100px;
