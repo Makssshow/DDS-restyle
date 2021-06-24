@@ -519,7 +519,7 @@ main {
           align-items: flex-end;
 }
 
-.typo__margin {
+.typo__margin:first-child {
   margin-right: 72px;
 }
 

@@ -58,7 +58,9 @@
     align-items: flex-end;
   }
   &__margin {
-    margin-right: 72px;
+    &:first-child {
+      margin-right: 72px;
+    }
   }
   &__example {
     font-size: 100px;
