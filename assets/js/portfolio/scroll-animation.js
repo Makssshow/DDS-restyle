@@ -64,6 +64,25 @@ jQuery(document).ready(function ($) {
           markers: false,
         });
       });
+
+    $(".animBox")
+      .imagesLoaded()
+      .done(function (instance) {
+        var anim = gsap.utils.toArray(".animBox");
+        anim.forEach((element) => {
+          var el = $(element).find(".anim");
+          gsap.from(el, {
+            yPercent: -20,
+            opacity: 0,
+            scrollTrigger: {
+              trigger: element,
+              start: "top 90%",
+              end: "top 40%",
+              markers: false,
+            },
+          });
+        });
+      });
   } else {
     $(".main_wrap")
       .imagesLoaded()
@@ -253,23 +272,4 @@ jQuery(document).ready(function ($) {
         },
       });
     });
-
-  // $(".animBox")
-  //   .imagesLoaded()
-  //   .done(function (instance) {
-  //     var anim = gsap.utils.toArray(".animBox");
-  //     anim.forEach((element) => {
-  //       var el = $(element).find(".anim");
-  //       gsap.from(el, {
-  //         yPercent: -20,
-  //         opacity: 0,
-  //         scrollTrigger: {
-  //           trigger: element,
-  //           start: "top 90%",
-  //           end: "top 40%",
-  //           markers: false,
-  //         },
-  //       });
-  //     });
-  //   });
 });
