@@ -151,7 +151,7 @@ jQuery(document).ready(function ($) {
           trigger: ".collage-2",
           start: "bottom bottom",
           end: "bottom top",
-          markers: true,
+          markers: false,
           pin: true,
           pinSpacing: false,
         });
