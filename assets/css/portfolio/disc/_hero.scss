@@ -69,7 +69,9 @@
     }
   }
   &__shadow {
-    box-shadow: 0 4px 30px $black; 
+    img {
+      box-shadow: 0 4px 30px $black; 
+    } 
   }
 
   &__text {
@@ -145,11 +147,20 @@
       margin-left: 0;
       margin-top: 32px;
       margin-bottom: 32px;
+      overflow: hidden;
+      span {
+        display: block;
+      }
     }
     &__text {
       width: 100%;
       font-size: 36px;
       line-height: 39px;
+    }
+    &__shadow {
+      img {
+        box-shadow: 0 4px 30px $black; 
+      } 
     }
   }
 

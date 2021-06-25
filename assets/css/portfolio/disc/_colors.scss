@@ -122,5 +122,11 @@
   }
   .typo {
     margin-top: 32px; 
+    &__example {
+      overflow: hidden;
+      span {
+        display: block;
+      }
+    }
   }
 }

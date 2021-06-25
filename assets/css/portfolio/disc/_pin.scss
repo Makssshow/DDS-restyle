@@ -23,7 +23,8 @@
 
 @media screen and (max-width: $mobileBig) {
   .pin {
-    margin: 12px 0;
+    margin: 0;
+    margin-bottom: 12px;
     padding: 96px 0;
     img {
       height: auto;

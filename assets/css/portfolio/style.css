@@ -115,7 +115,7 @@ main {
      object-fit: cover;
 }
 
-.main__shadow {
+.main__shadow img {
   -webkit-box-shadow: 0 4px 30px #000000;
           box-shadow: 0 4px 30px #000000;
 }
@@ -203,11 +203,19 @@ main {
     margin-left: 0;
     margin-top: 32px;
     margin-bottom: 32px;
+    overflow: hidden;
+  }
+  .main__type span {
+    display: block;
   }
   .main__text {
     width: 100%;
     font-size: 36px;
     line-height: 39px;
+  }
+  .main__shadow img {
+    -webkit-box-shadow: 0 4px 30px #000000;
+            box-shadow: 0 4px 30px #000000;
   }
   .hero {
     padding: 0 20px;
@@ -586,6 +594,12 @@ main {
   .typo {
     margin-top: 32px;
   }
+  .typo__example {
+    overflow: hidden;
+  }
+  .typo__example span {
+    display: block;
+  }
 }
 
 .pin {
@@ -617,7 +631,8 @@ main {
 
 @media screen and (max-width: 1050px) {
   .pin {
-    margin: 12px 0;
+    margin: 0;
+    margin-bottom: 12px;
     padding: 96px 0;
   }
   .pin img {

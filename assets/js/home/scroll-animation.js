@@ -27,6 +27,7 @@ jQuery(document).ready(function ($) {
       scrub: 0.1,
       markers: false,
     },
+    ease: Linear.easeNone,
   });
 
   var duration = 1,
