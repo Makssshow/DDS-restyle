@@ -156,6 +156,39 @@ jQuery(document).ready(function ($) {
           pinSpacing: false,
         });
       });
+
+    $(".banner")
+      .imagesLoaded()
+      .done(function (instance) {
+        var banner_anim_mob = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".banner",
+            start: "top 60%",
+            end: "bottom 50%",
+            markers: false,
+          },
+        });
+
+        banner_anim_mob
+          .from(".banner__big", {
+            y: -90,
+            duration: 0.3,
+          })
+          .from(
+            ".banner__top",
+            {
+              xPercent: -100,
+            },
+            0.2
+          )
+          .from(
+            ".banner__bottom",
+            {
+              yPercent: -50,
+            },
+            0.25
+          );
+      });
   }
 
   $(".pin")

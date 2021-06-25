@@ -968,7 +968,7 @@ main {
 @media screen and (max-width: 1050px) {
   .banner {
     margin-top: 12px;
-    margin-bottom: 64px;
+    margin-bottom: 0;
   }
   .banner__background {
     height: 40%;
@@ -982,6 +982,8 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-bottom: 64px;
+    overflow: hidden;
   }
   .banner_wrap div {
     display: -webkit-box;
@@ -1000,6 +1002,8 @@ main {
     margin-top: 100px;
     max-width: unset;
     margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
   }
   .banner__top {
     width: 165px;
@@ -1012,6 +1016,8 @@ main {
     height: auto;
     margin-left: 25px;
     margin-top: 0;
+    position: relative;
+    z-index: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
