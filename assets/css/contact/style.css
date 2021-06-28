@@ -90,6 +90,7 @@ form .submit input {
   background-color: transparent;
   background-position: center center;
   background-repeat: no-repeat;
+  border: none !important;
   width: 44px;
   height: 38px;
   right: 0;
