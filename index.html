@@ -166,6 +166,7 @@
     </header>
     <main>
         <section class="hero">
+        <div class="hero_sticky">
             <div class="hero_relative">
                 <div class="hero__title">
                     <div class="hero__item" id="hero__item_1">
@@ -205,8 +206,10 @@
                             class="hero__image"></div>
                 </div>
             </div>
+        </div>
         </section>
         <section class="cards">
+            <div class="cards_space"></div>
             <div class="cards__wrap-all">
                 <h2 class="cards__title green">Now it’s your turn, are you:</h2>
                 <div class="cards__wrap">
@@ -262,9 +265,9 @@
                         <div class="fret__anim_red-circle"></div>
                     </div>
                 </div>
-                <img src="assets/image/ball/big-ball.png" width="1920" height="1920" alt="background"
-                    class="fret__background">
-                <img src="assets/image/ball/big-ball.png" alt="background" class="fret__fake-bg">
+                    <img src="assets/image/ball/big-ball.png" width="1920" height="1920" alt="background"
+                        class="fret__background">
+              <div class="fret__bg_wrap">  <img src="assets/image/ball/big-ball.png" alt="background" class="fret__fake-bg"></div>
             </div>
         </section>
         <section class="do">
@@ -324,97 +327,100 @@
             </div>
         </section>
         <section class="why">
-            <img src="assets/image/why/why-bg.png" alt="bg" class="why__background" />
-            <div class="why__title">
-                <div>
-                    <h2>Ah, so you’re</h2>
+            <div class="why_space"></div>
+           <div class="why_sticky">
+                <img src="assets/image/why/why-bg.png" alt="bg" class="why__background" />
+                <div class="why__title">
+                    <div>
+                        <h2>Ah, so you’re</h2>
+                    </div>
+                    <div>
+                        <h2>asking why us.</h2>
+                    </div>
                 </div>
-                <div>
-                    <h2>asking why us.</h2>
+                <div class="why__description">
+                    Well, besides for clearly being able to read your mind, we’ve got things to offer you that you
+                    simply won’t find anywhere else.
                 </div>
-            </div>
-            <div class="why__description">
-                Well, besides for clearly being able to read your mind, we’ve got things to offer you that you
-                simply won’t find anywhere else.
-            </div>
-            <div class="slide">
-                <div class="slide__item">
-                    <img src="assets/image/why/sec-3.jpg" alt="background" class="slide__image" id="slide-1-img" />
-                    <div class="slide__number">01</div>
-                    <div class="slide__text" id="slide-1-text">
-                        <h4>We pull<br />all-nighters</h4>
-                        <div class="slide__description">
-                            We don’t sleep so you can. When everyone else is watching
-                            series, that’s when we’re researching, bettering, writing,
-                            deleting, rewriting and designing to make your brand the best
-                            one out there.
+                <div class="slide">
+                    <div class="slide__item">
+                        <img src="assets/image/why/sec-3.jpg" alt="background" class="slide__image" id="slide-1-img" />
+                        <div class="slide__number">01</div>
+                        <div class="slide__text" id="slide-1-text">
+                            <h4>We pull<br />all-nighters</h4>
+                            <div class="slide__description">
+                                We don’t sleep so you can. When everyone else is watching
+                                series, that’s when we’re researching, bettering, writing,
+                                deleting, rewriting and designing to make your brand the best
+                                one out there.
+                            </div>
+                            <div class="why__cross __cross">
+                                <div class="__cross_wrap">
+                                    <div class="__cross_top"></div>
+                                    <div class="__cross_bottom"></div>
+                                    <div class="__cross_left"></div>
+                                    <div class="__cross_right"></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="why__cross __cross">
-                            <div class="__cross_wrap">
-                                <div class="__cross_top"></div>
-                                <div class="__cross_bottom"></div>
-                                <div class="__cross_left"></div>
-                                <div class="__cross_right"></div>
+                    </div>
+                    <div class="slide__item">
+                        <img src="assets/image/why/sec-1.jpg" alt="background" class="slide__image" id="slide-2-img" />
+                        <div class="slide__number">02</div>
+                        <div class="slide__text" id="slide-2-text">
+                            <h4>Deadlines make us happy</h4>
+                            <div class="slide__description">
+                                And we’ve never met one we don’t like. So throw whatever you have at us and we’ll make it
+                                happen.
+                            </div>
+                            <div class="why__cross __cross">
+                                <div class="__cross_wrap">
+                                    <div class="__cross_top"></div>
+                                    <div class="__cross_bottom"></div>
+                                    <div class="__cross_left"></div>
+                                    <div class="__cross_right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__item">
+                        <img src="assets/image/why/sec-4.jpg" alt="background" class="slide__image" id="slide-3-img" />
+                        <div class="slide__number">03</div>
+                        <div class="slide__text" id="slide-3-text">
+                            <h4>Manage expectations</h4>
+                            <div class="slide__description">
+                                You have them, we’ll smash them. Because we have a proven system - and it works.
+                            </div>
+                            <div class="why__cross __cross">
+                                <div class="__cross_wrap">
+                                    <div class="__cross_top"></div>
+                                    <div class="__cross_bottom"></div>
+                                    <div class="__cross_left"></div>
+                                    <div class="__cross_right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__item">
+                        <img src="assets/image/why/sec-2.jpg" alt="background" class="slide__image" id="slide-4-img" />
+                        <div class="slide__number">04</div>
+                        <div class="slide__text" id="slide-4-text">
+                            <h4>Intuition</h4>
+                            <div class="slide__description">
+                                We trust ours, it hasn’t let us down yet.
+                            </div>
+                            <div class="why__cross __cross">
+                                <div class="__cross_wrap">
+                                    <div class="__cross_top"></div>
+                                    <div class="__cross_bottom"></div>
+                                    <div class="__cross_left"></div>
+                                    <div class="__cross_right"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="slide__item">
-                    <img src="assets/image/why/sec-1.jpg" alt="background" class="slide__image" id="slide-2-img" />
-                    <div class="slide__number">02</div>
-                    <div class="slide__text" id="slide-2-text">
-                        <h4>Deadlines make us happy</h4>
-                        <div class="slide__description">
-                            And we’ve never met one we don’t like. So throw whatever you have at us and we’ll make it
-                            happen.
-                        </div>
-                        <div class="why__cross __cross">
-                            <div class="__cross_wrap">
-                                <div class="__cross_top"></div>
-                                <div class="__cross_bottom"></div>
-                                <div class="__cross_left"></div>
-                                <div class="__cross_right"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__item">
-                    <img src="assets/image/why/sec-4.jpg" alt="background" class="slide__image" id="slide-3-img" />
-                    <div class="slide__number">03</div>
-                    <div class="slide__text" id="slide-3-text">
-                        <h4>Manage expectations</h4>
-                        <div class="slide__description">
-                            You have them, we’ll smash them. Because we have a proven system - and it works.
-                        </div>
-                        <div class="why__cross __cross">
-                            <div class="__cross_wrap">
-                                <div class="__cross_top"></div>
-                                <div class="__cross_bottom"></div>
-                                <div class="__cross_left"></div>
-                                <div class="__cross_right"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide__item">
-                    <img src="assets/image/why/sec-2.jpg" alt="background" class="slide__image" id="slide-4-img" />
-                    <div class="slide__number">04</div>
-                    <div class="slide__text" id="slide-4-text">
-                        <h4>Intuition</h4>
-                        <div class="slide__description">
-                            We trust ours, it hasn’t let us down yet.
-                        </div>
-                        <div class="why__cross __cross">
-                            <div class="__cross_wrap">
-                                <div class="__cross_top"></div>
-                                <div class="__cross_bottom"></div>
-                                <div class="__cross_left"></div>
-                                <div class="__cross_right"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           </div>
         </section>
         <section class="clients">
             <h3 class="clients__title">We have transformed hundreds of businesses using our heart, humour and
@@ -459,6 +465,8 @@
             </div>
         </section>
         <section class="process">
+            <div class="process_space"></div>
+            <div class="process_sticky">
             <div class="process__title">
                 <div>
                     <h2>Here's what to</h2>
@@ -486,8 +494,9 @@
                         </div>
                     </div>
                 </div>
-                <img src="assets/image/Graphic_04-01.png" alt="background" class="banner__background">
+                <div class="banner__bg_wrap"><img src="assets/image/Graphic_04-01.png" alt="background" class="banner__background"></div>
             </div>
+        </div>
         </section>
         <section class="contact">
             <div class="contact__description">

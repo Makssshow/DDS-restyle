@@ -1,6 +1,5 @@
 .why {
   position: relative;
-  padding-top: 158px;
   color: $white;
   &__title {
     width: 98%;
@@ -8,6 +7,7 @@
     font-size: $large;
     line-height: 165px;
     letter-spacing: -0.06em;
+    padding-top: 158px;
     div {
       overflow: hidden;
       padding-bottom: 40px;
@@ -16,7 +16,13 @@
       transform: translateY(130%);
     }
   }
-
+  &_sticky {
+    position: sticky;
+    bottom: 0;
+  }
+  &_space {
+    height: 300vh;
+  }
   &__description {
     width: 40%;
     margin: 62px 10% 93px auto;
@@ -135,25 +141,30 @@
 }
 
 @media screen and (max-width: 1400px) {
-.slide {
-  &__text {
-    h4 {
+  .slide {
+    &__text {
+      h4 {
+        width: 200px;
+      }
+    }
+    &__description {
       width: 200px;
     }
   }
-  &__description {
-    width: 200px;
-  }
-}
 }
 
 @media screen and (max-width: $mobile) {
   .why {
-    padding-top: 45px;
+    &_space {
+      height: 200vh;
+    }
     &__title {
+      padding-top: 0;
       font-size: 1em;
       line-height: 35px;
       width: 90%;
+      margin: 0;
+      margin-left: auto;
       margin-right: 3%;
       div {
         padding-bottom: 5px;
@@ -163,18 +174,29 @@
       font-size: 14px;
       line-height: 21px;
       width: 90%;
-      margin-right: 3%;
-      margin-top: 32px;
+      margin: 32px 3% 64px auto;
       font-weight: 400;
       text-transform: uppercase;
     }
+    &_sticky {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+    }
+    &__background {
+      height: 200%;
+    }
   }
   .slide {
-    display: block;
-    width: 100%;
+    width: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
     height: auto;
     padding-bottom: 32px;
     &__item {
+      width: 100vw;
       align-items: start;
       justify-content: flex-start;
       border: none;

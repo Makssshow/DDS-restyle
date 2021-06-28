@@ -19,157 +19,164 @@ jQuery(document).ready(function ($) {
   // //Main pin
   var hero = gsap.timeline({
     scrollTrigger: {
-      trigger: "html",
+      trigger: ".hero",
       start: "top top",
-      end: "+=" + heroDur + " bottom",
-      pin: ".hero",
+      end: "bottom bottom",
       snap: 0.5,
       scrub: 0.1,
       markers: false,
     },
-    ease: Linear.easeNone,
+    defaults: {
+      ease: Linear.easeNone,
+    },
   });
-
-  var duration = 1,
-    duration2 = 2;
 
   if (mobile) {
     hero
       //image out
-      .to(".hero__image_1 img", { height: "40%", duration: duration }, 0)
-      .to(".hero__image_1", { right: "10%", duration: duration }, 0)
-      .to(".hero__image_1", { yPercent: -100, duration: duration }, duration)
+      .to(".hero__image_1 img", { height: "40%", duration: 1 }, 0)
+      .to(".hero__image_1", { right: "10%", duration: 1 }, 0)
+      .to(".hero__image_1", { yPercent: -100, duration: 1 }, 1)
       //image in
-      .to(".hero__image_2", { yPercent: -100, duration: duration2 }, 0.5)
-      .to(
-        ".hero__image_2 img",
-        { height: "100%", duration: duration },
-        duration * 2
-      )
-      .to(".hero__image_2", { right: "-10%", duration: duration }, duration * 2)
-      //image out
-      .to(
-        ".hero__image_2 img",
-        { height: "40%", duration: duration },
-        duration * 3
-      )
-      .to(".hero__image_2", { right: "10%", duration: duration }, duration * 3)
-      .to(
+      .fromTo(
         ".hero__image_2",
-        { yPercent: -200, duration: duration },
-        duration * 4
+        { yPercent: 100 },
+        { yPercent: 0, duration: 2 },
+        0.5
       )
-      //image in
-      .to(
-        ".hero__image_3",
-        { yPercent: -100, duration: duration2 },
-        duration * 3 + 0.5
-      )
-      .to(
-        ".hero__image_3 img",
-        { height: "100%", duration: duration },
-        duration * 5
-      )
-      .to(
-        ".hero__image_3",
-        { right: "-10%", duration: duration },
-        duration * 5
-      );
-  } else {
-    hero
+      .to(".hero__image_2 img", { height: "100%", duration: 1 }, 2)
+      .to(".hero__image_2", { right: "-10%", duration: 1 }, 2)
       //image out
+      .to(".hero__image_2 img", { height: "40%", duration: 1 }, 3)
+      .to(".hero__image_2", { right: "10%", duration: 1 }, 3)
+      .to(".hero__image_2", { yPercent: -100, duration: 1 }, 4)
+      //image in
+      .fromTo(
+        ".hero__image_3",
+        { yPercent: 100 },
+        { yPercent: 0, duration: 2 },
+        3 + 0.5
+      )
+      .to(".hero__image_3 img", { height: "100%", duration: 1 }, 5)
+      .to(".hero__image_3", { right: "-10%", duration: 1 }, 5)
+
+      //1 anim
+      //text out
       .to(
-        ".hero__image_1",
-        { width: "40%", right: "10%", duration: duration },
+        "#hero__item_1 h2",
+        {
+          yPercent: -140,
+          duration: 2,
+        },
         0
       )
-      .to(".hero__image_1", { yPercent: -100, duration: duration }, duration)
-      //image in
-      .to(".hero__image_2", { yPercent: -100, duration: duration2 }, 0.5)
-      .to(
-        ".hero__image_2",
-        { width: "100%", right: "-30%", duration: duration },
-        duration * 2
+
+      //2 anim
+
+      //text in
+      .fromTo(
+        "#hero__item_2 h2",
+        { yPercent: 140 },
+        { yPercent: 0, duration: 1 },
+        2
       )
-      //image out
-      .to(
-        ".hero__image_2",
-        { width: "40%", right: "10%", duration: duration },
-        duration * 3
+
+      //text out
+      .to("#hero__item_2 h2", { yPercent: -140, duration: 2 }, 3)
+
+      //3 anim
+
+      //text in
+      .fromTo(
+        "#hero__item_3 h2",
+        { yPercent: 140 },
+        { yPercent: 0, duration: 1 },
+        5
       )
-      .to(
-        ".hero__image_2",
-        { yPercent: -200, duration: duration },
-        duration * 4
-      )
-      //image in
-      .to(
-        ".hero__image_3",
-        { yPercent: -100, duration: duration2 },
-        duration * 3 + 0.5
-      )
-      .to(
-        ".hero__image_3",
-        { width: "100%", right: "-30%", duration: duration },
-        duration * 5
+      .fromTo(
+        ".hero__subtitle h3",
+        { yPercent: 140 },
+        { yPercent: 0, duration: 1 },
+        5
       );
-    // //image out
+  } else {
+    ScrollTrigger.create({
+      trigger: ".hero",
+      start: "bottom bottom",
+      end: "bottom top",
+      pin: true,
+      pinSpacing: false,
+    });
+
+    hero
+      //image out
+      .to(".hero__image_1", { width: "70%", right: "0%", duration: 1 }, 0)
+      .to(".hero__image_1", { yPercent: -100, duration: 1 }, 1)
+      //image in
+      .fromTo(
+        ".hero__image_2",
+        { yPercent: 40, scale: 0 },
+        { scale: 1, duration: 1 },
+        0
+      )
+      .to(".hero__image_2", { yPercent: 0, right: "-20%", duration: 1 }, 1)
+      //image out
+      .to(".hero__image_2", { width: "70%", right: "0%", duration: 1 }, 2)
+      .to(".hero__image_2", { yPercent: -100, duration: 1 }, 3)
+      //image in
+      .fromTo(
+        ".hero__image_3",
+        { yPercent: 40, scale: 0 },
+        { scale: 1, duration: 1 },
+        2
+      )
+      .to(".hero__image_3", { yPercent: 0, right: "-20%", duration: 1 }, 3)
+      // //image out
+
+      //1 anim
+      //text out
+      .fromTo(
+        "#hero__item_1 h2",
+        { yPercent: 0 },
+        {
+          yPercent: -140,
+          duration: 1,
+        },
+        0
+      )
+
+      //2 anim
+
+      //text in
+      .fromTo(
+        "#hero__item_2 h2",
+        { yPercent: 140 },
+        { yPercent: 0, duration: 1 },
+        1
+      )
+
+      //text out
+      .to("#hero__item_2 h2", { yPercent: -140, duration: 1 }, 2)
+
+      //3 anim
+
+      //text in
+      .fromTo(
+        "#hero__item_3 h2",
+        { yPercent: 140 },
+        { yPercent: 0, duration: 1 },
+        3
+      )
+      .fromTo(
+        ".hero__subtitle h3",
+        { yPercent: 140 },
+        { yPercent: 0, duration: 1 },
+        3
+      );
   }
-
-  hero
-
-    //1 anim
-    //text out
-    .to(
-      "#hero__item_1 h2",
-      {
-        yPercent: -150,
-        duration: duration2,
-      },
-      0
-    )
-
-    //2 anim
-
-    //text in
-    .to(
-      "#hero__item_2 h2",
-      { yPercent: -150, duration: duration },
-      duration * 2
-    )
-
-    //text out
-    .to(
-      "#hero__item_2 h2",
-      { yPercent: -300, duration: duration2 },
-      duration * 3
-    )
-
-    //3 anim
-
-    //text in
-    .to(
-      "#hero__item_3 h2",
-      { yPercent: -150, duration: duration },
-      duration * 5
-    )
-    .to(
-      ".hero__subtitle h3",
-      { yPercent: -150, duration: duration },
-      duration * 5
-    );
 
   //CARDS PIN
   if (mobile) {
-    ScrollTrigger.create({
-      trigger: ".cards__wrap-all",
-      start: "bottom bottom",
-      end: "+=40% bottom",
-      pin: true,
-      pinSpacing: true,
-      markers: false,
-    });
-
     //FRET NOT TITLE PIN
     ScrollTrigger.create({
       trigger: ".cards",
@@ -191,8 +198,28 @@ jQuery(document).ready(function ($) {
       toggleClass: { targets: ".fret__fake-bg", className: "fret_pin" },
       markers: false,
     });
+  } else {
+    gsap.to(".cards_space", {
+      height: "20%",
+      scrollTrigger: {
+        trigger: ".cards",
+        start: "bottom bottom",
+        end: "bottom top",
+      },
+    });
   }
   //BALL ANIMATIONS
+  if (!mobile) {
+    gsap.from(".fret__fake-bg", {
+      scale: 2,
+      scrollTrigger: {
+        trigger: ".fret__ball",
+        start: "center bottom",
+        end: "center 70%",
+      },
+    });
+  }
+
   var ballAnimations = gsap.timeline({
     scrollTrigger: {
       trigger: ".fret__description_wrap",
@@ -250,9 +277,9 @@ jQuery(document).ready(function ($) {
   //WHY TITLE
   var whyTitle = gsap.timeline({
     scrollTrigger: {
-      trigger: ".why__title",
-      start: "center 90%",
-      end: "center 60%",
+      trigger: ".why",
+      start: "top 50%",
+      end: "top 30%",
       markers: false,
     },
   });
@@ -273,10 +300,9 @@ jQuery(document).ready(function ($) {
     let WhySectionsAnim1 = gsap.timeline({
       scrollTrigger: {
         trigger: ".why",
-        start: "bottom bottom",
-        end: "+300% bottom",
+        start: "+=" + $(".why_sticky").height() + " bottom",
+        end: "bottom bottom",
         markers: false,
-        pin: true,
       },
     });
     var widthImage = "13vw",
@@ -335,6 +361,20 @@ jQuery(document).ready(function ($) {
         { maxWidth: widthText, width: widthText, duration: dur },
         "<"
       );
+  } else {
+    var slides = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".why",
+        start: "+=" + $(".why_sticky").height() + " bottom",
+        end: "bottom bottom",
+      },
+      defaults: {
+        ease: Linear.easeNone,
+      },
+    });
+    slides
+      .to(".slide", { xPercent: -100 + 100 / 4 })
+      .to(".why__background", { yPercent: -50 }, 0);
   }
 
   //CLIENTS SUBTITLE ANIMATION
@@ -349,28 +389,55 @@ jQuery(document).ready(function ($) {
   clients.to(".clients__subtitle div", { transform: "translateY(0%)" });
 
   //Process ANIMATION
-  var processTitle = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".process__title",
-      start: "bottom 90%",
-      end: "bottom 60%",
-      markers: false,
-    },
-  });
-  processTitle
-    .to(".process__title div:first-child h2", { transform: "translateY(0%)" })
-    .to(
-      ".process__title div:last-child h2",
-      { transform: "translateY(0%)" },
-      0.1
-    );
+  if (mobile) {
+    var processTitle = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".process",
+        start: "+=" + $(".process__title").height() + " 90%",
+        end: "+=" + $(".process__title").height() + " 60%",
+        markers: false,
+      },
+    });
+    processTitle
+      .fromTo(
+        ".process__title div:first-child h2",
+        { yPercent: 130 },
+        { yPercent: 0 }
+      )
+      .fromTo(
+        ".process__title div:last-child h2",
+        { yPercent: 130 },
+        { yPercent: 0 },
+        0.1
+      );
+  } else {
+    gsap.from(".process__title h2", {
+      xPercent: 30,
+      scrollTrigger: {
+        trigger: ".process",
+        start: "+=64 bottom",
+        end: "+=64 center",
+        markers: false,
+      },
+    });
+  }
 
+  var bannerHeight = $(".banner").height(),
+    bgHeigh = $(".banner__background").height();
+  var prEH = bgHeigh - bannerHeight / 2;
+  var prEHP = bgHeigh + bannerHeight / 2;
+  if (mobile) {
+    $(".process_sticky").css("bottom", -prEH - 6);
+  } else {
+    prEH = bgHeigh;
+    prEHP = bgHeigh;
+    $(".process_sticky").css("bottom", -bgHeigh - 6);
+  }
   var banner = gsap.timeline({
     scrollTrigger: {
-      trigger: ".banner",
-      start: "bottom bottom",
-      end: "500% bottom",
-      pin: ".process",
+      trigger: ".process",
+      start: "+=" + ($(".process_sticky").height() - prEH) + " bottom",
+      end: "bottom-=" + prEH + " bottom",
       markers: false,
     },
   });
@@ -379,26 +446,38 @@ jQuery(document).ready(function ($) {
     .to(".banner__title_2", { left: "0%", duration: 1 }, 0.2)
     .to(".banner__title_2", { top: "-110%", duration: 1 })
     .to(".banner__title_3", { top: "0%", duration: 1 }, 1.2)
-    .to(".banner_wrap", { width: "80%", duration: 2.2 }, 0);
+    .fromTo(
+      ".banner_wrap",
+      { width: "100%" },
+      { width: "80%", duration: 2.2 },
+      0
+    );
 
-  var bannerHeight = $(".banner").height() * 4.5,
-    bannerHeight2 =
-      $(".banner").height() * 4 + $(".banner__background").height();
   if (!mobile) {
-    bannerHeight = $(".banner").height() * 4;
-    bannerHeight2 =
-      $(".banner").height() * 4 + $(".banner__background").height();
+    banner.to(".banner__background", { height: "100vh", bottom: "100%" });
+    gsap.fromTo(".banner__background", { height: "100vh", bottom: "100%" },{
+      height: "100%",
+      bottom: 0,
+      immediateRender: false,
+      scrollTrigger: {
+        trigger: ".process",
+        start: "bottom-=" + $(".banner__bg_wrap").height() + " bottom",
+        end: "bottom bottom",
+      },
+    });
   }
 
-  var bannerBG = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".banner__background",
-      start: bannerHeight + " bottom",
-      end: bannerHeight2 + " top",
-      markers: false,
-    },
-  });
-  bannerBG.to(".banner__background", { objectPosition: "0% 100%" });
+  if (mobile) {
+    var bannerBG = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".process",
+        start: "bottom-=" + prEH + " bottom",
+        end: "bottom top",
+        markers: false,
+      },
+    });
+    bannerBG.to(".banner__background", { objectPosition: "0% 100%" });
+  }
 
   //CONTACT ANIMATION
 
@@ -411,4 +490,15 @@ jQuery(document).ready(function ($) {
     },
   });
   contact.to(".contact__block", { width: "20%" });
+
+  if (!mobile) {
+    gsap.from(".contact__ball", {
+      xPercent: -100,
+      scrollTrigger: {
+        trigger: ".contact__ball",
+        start: "top 80%",
+        end: "top 50%"
+      }
+    });
+  }
 });
