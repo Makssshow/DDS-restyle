@@ -1,0 +1,102 @@
+* {
+  letter-spacing: -0.06em;
+}
+
+.hero {
+  background-color: #000000;
+  width: 100%;
+  color: #ffffff;
+  margin-bottom: 93px;
+}
+
+.hero div {
+  padding-top: 180px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: 170px;
+}
+
+.form {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: 170px;
+}
+
+.form * {
+  font-family: inherit;
+  font-size: 36px;
+  line-height: 39px;
+  font-weight: 400;
+  color: #000000;
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.form input {
+  border-radius: none;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+.form input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.form input:-ms-input-placeholder {
+  color: #000000;
+}
+
+.form input::-ms-input-placeholder {
+  color: #000000;
+}
+
+.form input::placeholder {
+  color: #000000;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+}
+
+.textarea {
+  position: relative;
+}
+
+.textarea textarea {
+  resize: none;
+  border-radius: none;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+.textarea textarea::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.textarea textarea:-ms-input-placeholder {
+  color: #000000;
+}
+
+.textarea textarea::-ms-input-placeholder {
+  color: #000000;
+}
+
+.textarea textarea::placeholder {
+  color: #000000;
+}
+
+.textarea input[type="submit"] {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../image/form.png");
+  width: 44px;
+  height: 38px;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
