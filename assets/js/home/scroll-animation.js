@@ -274,6 +274,14 @@ jQuery(document).ready(function ($) {
       transform: "translateY(0%)",
     });
 
+
+    gsap.to(".do__flex", {yPercent: -10, ease: Linear.easeNone, scrollTrigger: {
+      trigger: ".why",
+      start: "top center",
+      end: "top top",
+      pin: ".do__flex",
+      pinSpacing: false
+    }})
   //WHY TITLE
   var whyTitle = gsap.timeline({
     scrollTrigger: {
