@@ -274,14 +274,19 @@ jQuery(document).ready(function ($) {
       transform: "translateY(0%)",
     });
 
-
-    gsap.to(".do__flex", {yPercent: -10, ease: Linear.easeNone, scrollTrigger: {
-      trigger: ".why",
-      start: "top center",
-      end: "top top",
-      pin: ".do__flex",
-      pinSpacing: false
-    }})
+  if (!mobile) {
+    gsap.to(".do__flex", {
+      yPercent: -10,
+      ease: Linear.easeNone,
+      scrollTrigger: {
+        trigger: ".why",
+        start: "top center",
+        end: "top top",
+        pin: ".do__flex",
+        pinSpacing: false,
+      },
+    });
+  }
   //WHY TITLE
   var whyTitle = gsap.timeline({
     scrollTrigger: {
@@ -463,16 +468,20 @@ jQuery(document).ready(function ($) {
 
   if (!mobile) {
     banner.to(".banner__background", { height: "100vh", bottom: "100%" });
-    gsap.fromTo(".banner__background", { height: "100vh", bottom: "100%" },{
-      height: "100%",
-      bottom: 0,
-      immediateRender: false,
-      scrollTrigger: {
-        trigger: ".process",
-        start: "bottom-=" + $(".banner__bg_wrap").height() + " bottom",
-        end: "bottom bottom",
-      },
-    });
+    gsap.fromTo(
+      ".banner__background",
+      { height: "100vh", bottom: "100%" },
+      {
+        height: "100%",
+        bottom: 0,
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: ".process",
+          start: "bottom-=" + $(".banner__bg_wrap").height() + " bottom",
+          end: "bottom bottom",
+        },
+      }
+    );
   }
 
   if (mobile) {
@@ -505,8 +514,8 @@ jQuery(document).ready(function ($) {
       scrollTrigger: {
         trigger: ".contact__ball",
         start: "top 80%",
-        end: "top 50%"
-      }
+        end: "top 50%",
+      },
     });
   }
 });
