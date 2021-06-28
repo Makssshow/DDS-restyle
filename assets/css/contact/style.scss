@@ -27,9 +27,8 @@
     display: block;
     width: 100%;
     margin-bottom: 8px;
-
-}
-input {
+  }
+  input {
     border-radius: none;
     border: none;
     border-bottom: 1px solid $black;
@@ -50,7 +49,7 @@ input {
     border: none;
     border-bottom: 1px solid $black;
     &::placeholder {
-        color: $black;
+      color: $black;
     }
   }
   input[type="submit"] {
@@ -65,4 +64,90 @@ input {
     z-index: 2;
     cursor: pointer;
   }
+}
+.link {
+  margin-top: 93px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 95%;
+  font-size: 180px;
+}
+.ball {
+  position: relative;
+  width: 196px;
+  height: 196px;
+  border-radius: 50%;
+  background-color: $black;
+  color: $white;
+  transition: $transition-5;
+  transition-property: color;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+  div {
+    position: relative;
+    z-index: 2;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: $transition-5;
+    transition-property: transform;
+  }
+  &:hover {
+    color: $black;
+    &::before {
+      transform: scale(.8);
+    }
+  }
+}
+
+@media screen and (max-width: $mobileBig) {
+    .hero {
+        margin-bottom: 38px;
+        div {
+            max-width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin: auto;
+        }
+    }
+    .form {
+        max-width: 100%;
+        margin: auto;
+        padding: 0 20px;
+    }
+    .link {
+        display: block;
+        font-size: 72px;
+        margin: 66px auto;
+        width: 100%;
+        h1 {
+            margin-bottom: 66px;
+        }
+        .ball {
+            margin: auto;
+        }
+    }
 }
