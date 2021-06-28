@@ -14,10 +14,11 @@
   }
   &__item {
     position: absolute;
-    top: 50%;
+    top: 50%; 
     left: 62px;
     transform: translateY(-50%);
     letter-spacing: -0.06em;
+    opacity: 0;
     div {
       position: relative;
       overflow: hidden;

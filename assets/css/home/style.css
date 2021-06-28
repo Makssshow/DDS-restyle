@@ -79,6 +79,7 @@
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   letter-spacing: -0.06em;
+  opacity: 0;
 }
 
 .hero__item div {

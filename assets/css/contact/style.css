@@ -16,82 +16,80 @@
   margin-right: 170px;
 }
 
-.form {
+form {
   max-width: 680px;
   margin-left: auto;
   margin-right: 170px;
 }
 
-.form * {
-  font-family: inherit;
-  font-size: 36px;
-  line-height: 39px;
-  font-weight: 400;
-  color: #000000;
-  display: block;
+form * {
+  font-family: inherit !important;
+  font-size: 36px !important;
+  line-height: 39px !important;
+  font-weight: 400 !important;
+  color: #000000 !important;
+  display: block !important;
   width: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 8px !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  outline: none !important;
 }
 
-.form input {
-  border-radius: none;
-  border: none;
-  border-bottom: 1px solid #000000;
+form input {
+  padding: 5px 0 !important;
+  border-radius: none !important;
+  height: auto !important;
+  border: none !important;
+  border-bottom: 1px solid #000000 !important;
 }
 
-.form input::-webkit-input-placeholder {
-  color: #000000;
+form input::-webkit-input-placeholder {
+  color: #000000 !important;
 }
 
-.form input:-ms-input-placeholder {
-  color: #000000;
+form input:-ms-input-placeholder {
+  color: #000000 !important;
 }
 
-.form input::-ms-input-placeholder {
-  color: #000000;
+form input::-ms-input-placeholder {
+  color: #000000 !important;
 }
 
-.form input::placeholder {
-  color: #000000;
+form input::placeholder {
+  color: #000000 !important;
 }
 
-.form input:focus,
-.form textarea:focus {
-  outline: none;
+form textarea {
+  resize: none !important;
+  padding: 5px 0 !important;
+  border-radius: unset !important;
+  border: none !important;
+  border-bottom: 1px solid #000000 !important;
 }
 
-.textarea {
-  position: relative;
+form textarea::-webkit-input-placeholder {
+  color: #000000 !important;
 }
 
-.textarea textarea {
-  resize: none;
-  border-radius: none;
-  border: none;
-  border-bottom: 1px solid #000000;
+form textarea:-ms-input-placeholder {
+  color: #000000 !important;
 }
 
-.textarea textarea::-webkit-input-placeholder {
-  color: #000000;
+form textarea::-ms-input-placeholder {
+  color: #000000 !important;
 }
 
-.textarea textarea:-ms-input-placeholder {
-  color: #000000;
+form textarea::placeholder {
+  color: #000000 !important;
 }
 
-.textarea textarea::-ms-input-placeholder {
-  color: #000000;
-}
-
-.textarea textarea::placeholder {
-  color: #000000;
-}
-
-.textarea input[type="submit"] {
+form .submit input {
   position: absolute;
   border: none;
   background-color: transparent;
-  background-image: url("../../image/form.png");
+  background-position: center center;
+  background-repeat: no-repeat;
   width: 44px;
   height: 38px;
   right: 0;
@@ -157,7 +155,7 @@
 }
 
 .ball::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -194,10 +192,10 @@
     padding-right: 20px;
     margin: auto;
   }
-  .form {
-    max-width: 100%;
-    margin: auto;
-    padding: 0 20px;
+  form {
+    max-width: 100% !important;
+    margin: auto !important;
+    padding: 0 20px !important;
   }
   .link {
     display: block;
