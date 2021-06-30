@@ -81,10 +81,11 @@ main {
 
 .main__title {
   position: absolute;
-  top: 0;
+  top: 20px;
   z-index: 1;
-  -webkit-transform: translateY(-75%);
-          transform: translateY(-75%);
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  word-wrap: break-word;
 }
 
 .main_wrap {
