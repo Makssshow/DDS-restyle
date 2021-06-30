@@ -30,21 +30,18 @@
   div {
     &:nth-child(1) {
       width: 330px;
-      height: 330px;
-      background: linear-gradient(295.06deg, #9528cb 14.63%, #240b75 85.42%);
+      height: 330px; 
       margin-right: 12px;
     }
     &:nth-child(2) {
       width: 175px;
       height: 175px;
       margin-right: 12px;
-      background: #ea5b1a;
     }
     &:nth-child(3) {
       width: 77px;
       height: 77px;
       margin-bottom: 98px;
-      background: #561f99;
     }
   }
   &-shadow {
