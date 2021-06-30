@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
   }
 
   ScrollTrigger.defaults({
-    scrub: 0.1,
+    scrub: 0.2,
   });
 
   var heroDur = $(window).height() * 2;

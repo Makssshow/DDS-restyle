@@ -543,8 +543,8 @@ main {
           align-items: flex-end;
 }
 
-.typo__margin:first-child {
-  margin-right: 72px;
+.typo__margin:last-child {
+  margin-left: 72px;
 }
 
 .typo__example {

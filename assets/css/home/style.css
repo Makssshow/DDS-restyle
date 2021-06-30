@@ -1238,8 +1238,8 @@
 }
 
 .clients img {
-  width: 140px;
-  height: 70px;
+  width: 170px;
+  height: inherit;
   -o-object-fit: contain;
      object-fit: contain;
 }
