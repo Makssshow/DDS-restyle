@@ -388,6 +388,10 @@ main {
   max-width: unset;
 }
 
+.video iframe {
+  max-width: 100%;
+}
+
 .img-shadow {
   -webkit-box-shadow: 0px 11px 25px rgba(0, 0, 0, 0.09);
           box-shadow: 0px 11px 25px rgba(0, 0, 0, 0.09);
