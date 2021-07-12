@@ -1,4 +1,4 @@
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
   if ($(".img_3, .img_4")) {
     for (var i = 0; i <= $(".img_3").length - 1; i++ ) {
       $(".img_3:eq("+i+"), .img_4:eq("+i+")").wrapAll("<div></div>");
