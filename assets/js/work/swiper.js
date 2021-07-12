@@ -1,3 +1,19 @@
+$(document).ready(function () {
+  if ($(".img_3, .img_4")) {
+    for (var i = 0; i <= $(".img_3").length - 1; i++ ) {
+      $(".img_3:eq("+i+"), .img_4:eq("+i+")").wrapAll("<div></div>");
+    }
+  };
+  if ($(".img_12")) {
+    for (var i = 0; i <= $(".img_12").length - 1; i++ ) {
+      $(".img_12:eq("+i+"), .img_13:eq("+i+"), .img_14:eq("+i+")").wrapAll("<div class='div_2'></div>");
+   }
+}
+});
+
+
+
+
 var delay = 3000,
   perView = "auto",
   perColumn = 1;
