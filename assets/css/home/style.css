@@ -115,11 +115,13 @@
   left: 62px;
   font-size: 36px;
   overflow: hidden;
+  opacity: 0;
 }
 
 .hero__image {
   -o-object-fit: contain;
      object-fit: contain;
+  opacity: 0;
   height: 60%;
   width: auto;
 }
@@ -140,6 +142,7 @@
 }
 
 .hero__image_1 {
+  opacity: 1;
   visibility: hidden;
   -webkit-animation: HeroImage 1s ease-in-out;
           animation: HeroImage 1s ease-in-out;
@@ -217,6 +220,12 @@
 .animate {
   -webkit-animation: none !important;
           animation: none !important;
+}
+
+@media screen and (max-width: 320px) {
+  .hero {
+    font-size: 64px;
+  }
 }
 
 @-webkit-keyframes Herotext {
@@ -431,7 +440,7 @@
   .cards_space {
     height: 0%;
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
     width: 100%;
     background-color: #00df8e;
@@ -1070,6 +1079,7 @@
   color: #00df8e;
   margin-bottom: 35px;
   width: 300px;
+  word-wrap: break-word;
 }
 
 .slide__description {
@@ -1095,7 +1105,7 @@
     height: 200vh;
   }
   .why__title {
-    padding-top: 0;
+    padding-top: 20px;
     font-size: 1em;
     line-height: 35px;
     width: 90%;
@@ -1115,7 +1125,7 @@
     text-transform: uppercase;
   }
   .why_sticky {
-    height: 100vh;
+    min-height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1173,6 +1183,12 @@
   }
   .slide__description {
     width: auto;
+  }
+}
+
+@media screen and (max-height: 580px) {
+  .slide__description {
+    font-size: 16px;
   }
 }
 

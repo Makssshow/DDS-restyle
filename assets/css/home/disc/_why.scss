@@ -128,6 +128,7 @@
       color: $green;
       margin-bottom: 35px;
       width: 300px;
+      word-wrap: break-word;
     }
   }
   &__description {
@@ -159,7 +160,7 @@
       height: 200vh;
     }
     &__title {
-      padding-top: 0;
+      padding-top: 20px;
       font-size: 1em;
       line-height: 35px;
       width: 90%;
@@ -179,7 +180,7 @@
       text-transform: uppercase;
     }
     &_sticky {
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -226,6 +227,13 @@
     }
     &__description {
       width: auto;
+    }
+  }
+}
+@media screen and (max-height: 580px) {
+  .slide {
+    &__description {
+      font-size: 16px;
     }
   }
 }

@@ -14,7 +14,7 @@
   }
   &__item {
     position: absolute;
-    top: 50%; 
+    top: 50%;
     left: 62px;
     transform: translateY(-50%);
     letter-spacing: -0.06em;
@@ -50,10 +50,11 @@
     left: 62px;
     font-size: $normal;
     overflow: hidden;
+    opacity: 0;
   }
   &__image {
     object-fit: contain;
-
+    opacity: 0;
     height: 60%;
     width: auto;
     &_1,
@@ -70,6 +71,7 @@
       align-items: center;
     }
     &_1 {
+      opacity: 1;
       visibility: hidden;
       animation: HeroImage 1s ease-in-out;
       animation-delay: 0.1s;
@@ -141,6 +143,12 @@
 }
 .animate {
   animation: none !important;
+}
+
+@media screen and (max-width: 320px) {
+  .hero {
+    font-size: 64px;
+  }
 }
 
 @keyframes Herotext {

@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
   gsap.registerPlugin(ScrollTrigger);
 
-  $(".hero__item").css("opacity", 1);
+  $(".hero__item, .hero__subtitle, .hero__image").css("opacity", 1);
 
   var windo = $(window);
   var mobile = windo.width() > 800;
