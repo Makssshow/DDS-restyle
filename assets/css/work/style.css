@@ -12,7 +12,7 @@ main * {
 
 .title {
   font-size: 180px;
-  margin-top: 168px;
+  padding-top: 168px;
 }
 
 .subtitle {
@@ -96,12 +96,17 @@ main * {
   width: 100%;
 }
 
-.grid img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.grid a {
   width: 100%;
   height: 882px;
   margin-bottom: 20px;
+}
+
+.grid img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .grid .img_1 {
@@ -305,7 +310,7 @@ main * {
     margin-top: 10px;
     display: block;
   }
-  .grid img {
+  .grid a {
     width: 100% !important;
     height: 335px !important;
     margin-bottom: 16px;

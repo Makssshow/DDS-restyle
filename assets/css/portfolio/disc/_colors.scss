@@ -26,6 +26,7 @@
   align-items: flex-end;
   justify-content: flex-start;
   max-width: 1920px;
+  position: relative;
   margin: auto;
   div {
     &:nth-child(1) {
@@ -43,6 +44,13 @@
       height: 77px;
       margin-bottom: 98px;
     }
+    &:nth-child(4) {
+      width: 77px;
+      height: 77px;
+      position: absolute;
+      top: 0;
+      left: 330px + 12px;
+    }
   }
   &-shadow {
     filter: drop-shadow(17px 11px 50px rgba(0, 0, 0, 0.3));
@@ -57,7 +65,7 @@
     align-items: flex-end;
   }
   &__margin {
-    &:last-child {
+    &:nth-child(2) {
       margin-left: 72px;
     }
   }
@@ -117,6 +125,11 @@
         height: 50px;
         top: 0;
         left: 212px + 7px;
+      }
+      &:nth-child(4) {
+        width: 50px;
+        height: 50px;
+        left: 212px + 7px + 50px + 7px;
       }
     }
   }

@@ -91,9 +91,6 @@ jQuery(document).ready(function ($) {
           });
         });
     } else {
-      $(".main_wrap")
-        .imagesLoaded()
-        .done(function (instance) {
           var hero_anim_mob = gsap.timeline({
             scrollTrigger: {
               trigger: "html",
@@ -117,7 +114,6 @@ jQuery(document).ready(function ($) {
               },
               0
             );
-        });
 
       $(".main_wrap, .collage-1, .col-typ")
         .imagesLoaded()
@@ -143,6 +139,12 @@ jQuery(document).ready(function ($) {
             )
             .from(
               ".colors div:nth-child(3)",
+              {
+                x: 120,
+              },
+              0.3
+            ).from(
+              ".colors div:nth-child(4)",
               {
                 x: 120,
               },
