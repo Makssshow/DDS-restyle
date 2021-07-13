@@ -1,14 +1,43 @@
-jQuery(document).ready(function ($) {
-  if ($(".img_3, .img_4")) {
-    for (var i = 0; i <= $(".img_3").length - 1; i++ ) {
-      $(".img_3:eq("+i+"), .img_4:eq("+i+")").wrapAll("<div></div>");
+jQuery(document).ready(function () {
+  div();
+});
+function div() {
+  if (jQuery(".img_3, .img_4")) {
+    for (var i = 0; i <= jQuery(".img_3").length - 1; i++) {
+      jQuery(".img_3:eq(" + i + "), .img_4:eq(" + i + ")").wrapAll("<div></div>");
     }
-  };
-  if ($(".img_12")) {
-    for (var i = 0; i <= $(".img_12").length - 1; i++ ) {
-      $(".img_12:eq("+i+"), .img_13:eq("+i+"), .img_14:eq("+i+")").wrapAll("<div class='div_2'></div>");
-   }
+  }
+  if (jQuery(".img_12")) {
+    for (var i = 0; i <= jQuery(".img_12").length - 1; i++) {
+      jQuery(
+        ".img_12:eq(" + i + "), .img_13:eq(" + i + "), .img_14:eq(" + i + ")"
+      ).wrapAll("<div class='div_2'></div>");
+    }
+  }
 }
+
+
+jQuery(function() {
+  var mainContent = jQuery('.grid'),
+      cat_links = jQuery('.types__item');
+
+  cat_links.on('click', function(e) {
+
+      e.preventDefault();
+      var el = jQuery(this).find("a");
+      var value = el.attr("href");
+      mainContent.animate({
+          opacity: "0.5"
+      });
+      mainContent.load(value + " .img", function() {
+          mainContent.animate({
+              opacity: "1"
+          });
+          div();
+      });
+      cat_links.removeClass("active");
+      jQuery(this).addClass("active");
+  });
 });
 
 
@@ -24,20 +53,16 @@ const swiper = new Swiper(".sl", {
   slidesPerView: perView,
   spaceBetween: 18,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 });
-
-
-
-
 
 var Sdelay = 3000,
   SperView = 6,
   SperGroup = 6,
-  SperColumn = 1
-  Slo = true;
+  SperColumn = 1;
+Slo = true;
 if (jQuery(window).width() <= 800) {
   SperView = 2;
   SperGroup = 2;
@@ -60,8 +85,6 @@ const swiperr = new Swiper(".sw", {
   },
 });
 
-
-
 var h = 5;
 if (jQuery(window).width() <= 800) {
   for (let i = 4; i >= 0; i--) {
@@ -70,12 +93,12 @@ if (jQuery(window).width() <= 800) {
   }
 }
 jQuery(".button_mob").click(function () {
-    var portfol = jQuery(".img");
-    for (let a = h + 4; a >= h; a--) {
-        jQuery(portfol[a]).css("display", "block");
-    }
-    h = h + 4;
-    if (jQuery('.img:visible').length >= portfol.length) {
-        jQuery(".button_mob").css("display", "none");
-    }
+  var portfol = jQuery(".img");
+  for (let a = h + 4; a >= h; a--) {
+    jQuery(portfol[a]).css("display", "block");
+  }
+  h = h + 4;
+  if (jQuery(".img:visible").length >= portfol.length) {
+    jQuery(".button_mob").css("display", "none");
+  }
 });

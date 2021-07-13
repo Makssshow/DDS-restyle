@@ -140,22 +140,17 @@ table {
   border-spacing: 0;
 }
 
-.header {
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  z-index: 90;
-}
-
 .header__logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
   width: 141px;
   height: auto;
   margin: 33px;
+}
+
+.header__logo div {
   position: relative;
 }
 
@@ -169,7 +164,9 @@ table {
 
 .header__button {
   cursor: pointer;
-  position: relative;
+  position: fixed;
+  right: 0;
+  top: 0;
   width: 36px;
   height: 36px;
   margin: 33px;
