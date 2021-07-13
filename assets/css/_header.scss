@@ -27,6 +27,7 @@ $butM2: $butMargin * 2;
     position: fixed;
     right: 0;
     top: 0;
+    z-index: 90;
     width: $butWidth * 3 + $butMargin * 6;
     height: $butWidth * 3 + $butMargin * 6;
     margin: 33px;
