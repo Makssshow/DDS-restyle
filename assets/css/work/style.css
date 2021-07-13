@@ -57,11 +57,14 @@ main * {
   text-transform: uppercase;
   padding-right: 37px;
   position: relative;
+}
+
+.types__item a {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
 
-.types__item:hover {
+.types__item a:hover {
   color: #f10000;
 }
 
@@ -86,7 +89,7 @@ main * {
   display: none;
 }
 
-.types__item.active {
+.types__item.active a {
   color: #00df8e;
 }
 

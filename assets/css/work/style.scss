@@ -37,9 +37,12 @@ main {
     text-transform: uppercase;
     padding-right: 37px;
     position: relative;
-    transition: $transition-3;
-    &:hover {
-      color: $red;
+    
+    a {
+      transition: $transition-3;
+      &:hover {
+        color: $red;
+      }
     }
 
     &::before {
@@ -60,7 +63,9 @@ main {
       }
     }
     &.active {
-      color: $green;
+      a {
+        color: $green;
+      }
     }
   }
 }

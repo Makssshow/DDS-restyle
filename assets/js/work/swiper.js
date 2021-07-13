@@ -1,5 +1,6 @@
 jQuery(document).ready(function () {
   div();
+  mobile();
 });
 function div() {
   if (jQuery(".img_3, .img_4")) {
@@ -16,6 +17,28 @@ function div() {
   }
 }
 
+function mobile() {
+  var h = 5;
+  if (jQuery(window).width() <= 800) {
+    for (let i = 4; i >= 0; i--) {
+      var img = jQuery(".img");
+      jQuery(img[i]).css("display", "block");
+    }
+    if (jQuery(".img").length <= 4) {
+      jQuery(".button_mob").fadeOut(500);
+    };
+  }
+  jQuery(".button_mob").click(function () {
+    var portfol = jQuery(".img");
+    for (let a = h + 4; a >= h; a--) {
+      jQuery(portfol[a]).css("display", "block");
+    }
+    h = h + 4;
+    if (jQuery(".img:visible").length >= portfol.length) {
+      jQuery(".button_mob").css("display", "none");
+    }
+  });
+}
 
 jQuery(function() {
   var mainContent = jQuery('.grid'),
@@ -34,6 +57,7 @@ jQuery(function() {
               opacity: "1"
           });
           div();
+          mobile();
       });
       cat_links.removeClass("active");
       jQuery(this).addClass("active");
@@ -85,20 +109,3 @@ const swiperr = new Swiper(".sw", {
   },
 });
 
-var h = 5;
-if (jQuery(window).width() <= 800) {
-  for (let i = 4; i >= 0; i--) {
-    var img = jQuery(".img");
-    jQuery(img[i]).css("display", "block");
-  }
-}
-jQuery(".button_mob").click(function () {
-  var portfol = jQuery(".img");
-  for (let a = h + 4; a >= h; a--) {
-    jQuery(portfol[a]).css("display", "block");
-  }
-  h = h + 4;
-  if (jQuery(".img:visible").length >= portfol.length) {
-    jQuery(".button_mob").css("display", "none");
-  }
-});
