@@ -25,24 +25,31 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
+  max-width: 1920px;
+  position: relative;
+  margin: auto;
   div {
     &:nth-child(1) {
       width: 330px;
-      height: 330px;
-      background: linear-gradient(295.06deg, #9528cb 14.63%, #240b75 85.42%);
+      height: 330px; 
       margin-right: 12px;
     }
     &:nth-child(2) {
       width: 175px;
       height: 175px;
       margin-right: 12px;
-      background: #ea5b1a;
     }
     &:nth-child(3) {
       width: 77px;
       height: 77px;
       margin-bottom: 98px;
-      background: #561f99;
+    }
+    &:nth-child(4) {
+      width: 77px;
+      height: 77px;
+      position: absolute;
+      top: 0;
+      left: 330px + 12px;
     }
   }
   &-shadow {
@@ -58,8 +65,8 @@
     align-items: flex-end;
   }
   &__margin {
-    &:first-child {
-      margin-right: 72px;
+    &:nth-child(2) {
+      margin-left: 72px;
     }
   }
   &__example {
@@ -118,6 +125,11 @@
         height: 50px;
         top: 0;
         left: 212px + 7px;
+      }
+      &:nth-child(4) {
+        width: 50px;
+        height: 50px;
+        left: 212px + 7px + 50px + 7px;
       }
     }
   }

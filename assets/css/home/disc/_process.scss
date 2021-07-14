@@ -1,16 +1,19 @@
 .process {
-  padding-top: 132px;
   &__title {
+    padding-top: 132px;
     font-size: $large;
     width: 84%;
     margin: auto;
     letter-spacing: -0.05em;
     div {
       overflow: hidden;
-    }
-    h2 {
-      transform: translateY(130%);
-    }
+    } 
+  }
+  &_sticky {
+    position: sticky;
+  }
+  &_space {
+    height: 200vh;
   }
   &__subtitle {
     text-align: right;
@@ -126,8 +129,8 @@
 
 @media screen and (max-width: $mobile) {
   .process {
-    padding-top: 64px;
     &__title {
+      padding-top: 64px;
       font-size: $big;
       width: 96%;
     }
@@ -171,7 +174,16 @@
       font-weight: 400;
     }
     &__background {
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      object-position: 50% 50%;
+    }
+    &__bg_wrap {
       height: 208px;
+      width: 100%;
+      position: relative;
     }
   }
 }

@@ -3,16 +3,17 @@ $butWidth: 8px;
 $butMargin: 2px;
 $butM2: $butMargin * 2;
 .header {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  z-index: 90;
   &__logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
     width: 141px;
     height: auto;
     margin: 33px;
-    position: relative;
+    div {
+      position: relative;
+    }
     a {
       position: absolute;
       width: 100%;
@@ -23,7 +24,10 @@ $butM2: $butMargin * 2;
   }
   &__button {
     cursor: pointer;
-    position: relative;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 90;
     width: $butWidth * 3 + $butMargin * 6;
     height: $butWidth * 3 + $butMargin * 6;
     margin: 33px;
@@ -199,6 +203,7 @@ $butM2: $butMargin * 2;
   right: 0;
   top: 0;
   height: 100vh;
+  border-left: 2px solid $black;
   width: 0;
   background-color: $white;
   z-index: 89;
@@ -299,6 +304,16 @@ header.is-active {
       &:last-child {
         padding-bottom: 0;
       }
+    }
+  }
+}
+
+
+
+.blog .header {
+  &__logo {
+    .cls-1 {
+      fill: $black;
     }
   }
 }

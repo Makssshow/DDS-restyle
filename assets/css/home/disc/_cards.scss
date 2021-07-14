@@ -1,7 +1,7 @@
 .cards {
   background-color: $black;
   position: relative;
-  z-index: 3;
+  z-index: 3; 
   &__title {
     padding-top: 10%;
     font-size: $big;
@@ -17,6 +17,13 @@
     width: 95%;
     margin: 108px auto 0;
     padding-bottom: 60px;
+    &-all {
+      position: sticky;
+      bottom: 0;
+    }
+  }
+  &_space {
+    height: 40vh;
   }
   &__item {
     border: 1px solid $green;
@@ -133,6 +140,15 @@
       font-size: $normal;
       width: 80%;
       margin: auto;
+    }
+    &_space {
+      height: 0%;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      background-color: $green;
+      z-index: 4;
     }
   }
 }

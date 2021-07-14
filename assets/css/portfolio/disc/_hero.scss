@@ -45,9 +45,10 @@
   height: 100vh;
   &__title {
     position: absolute;
-    top: 0;
+    top: 20px;
     z-index: 1;
-    transform: translateY(-75%);
+    transform: translateY(-100%);
+    word-wrap: break-word;
   }
   &_wrap {
     position: relative;
