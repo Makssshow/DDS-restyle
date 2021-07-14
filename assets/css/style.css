@@ -527,6 +527,10 @@ header.is-active .nav {
   }
 }
 
+.blog .header__logo .cls-1 {
+  fill: #000000;
+}
+
 footer {
   font-size: 12px;
   font-weight: 400;

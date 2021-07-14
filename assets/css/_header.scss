@@ -307,3 +307,13 @@ header.is-active {
     }
   }
 }
+
+
+
+.blog .header {
+  &__logo {
+    .cls-1 {
+      fill: $black;
+    }
+  }
+}
