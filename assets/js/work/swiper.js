@@ -2,10 +2,23 @@ jQuery(document).ready(function () {
   div();
   mobile();
 });
+
+// if (jQuery(window).width() <= 800) {
+//   var a = jQuery(".img img");
+//   for (var t = 0; t < a.length; t++) {
+//     var q = jQuery(a[t]).attr("src");
+//     const img = new Image();
+//     img.src = q;
+//     console.log(q)
+//   }
+// }
+
 function div() {
   if (jQuery(".img_3, .img_4")) {
     for (var i = 0; i <= jQuery(".img_3").length - 1; i++) {
-      jQuery(".img_3:eq(" + i + "), .img_4:eq(" + i + ")").wrapAll("<div></div>");
+      jQuery(".img_3:eq(" + i + "), .img_4:eq(" + i + ")").wrapAll(
+        "<div></div>"
+      );
     }
   }
   if (jQuery(".img_12")) {
@@ -42,32 +55,28 @@ function mobile() {
   });
 }
 
-jQuery(function() {
-  var mainContent = jQuery('.grid'),
-      cat_links = jQuery('.types__item');
+jQuery(function () {
+  var mainContent = jQuery(".grid"),
+    cat_links = jQuery(".types__item");
 
-  cat_links.on('click', function(e) {
-
-      e.preventDefault();
-      var el = jQuery(this).find("a");
-      var value = el.attr("href");
+  cat_links.on("click", function (e) {
+    e.preventDefault();
+    var el = jQuery(this).find("a");
+    var value = el.attr("href");
+    mainContent.animate({
+      opacity: "0.5",
+    });
+    mainContent.load(value + " .img", function () {
       mainContent.animate({
-          opacity: "0.5"
+        opacity: "1",
       });
-      mainContent.load(value + " .img", function() {
-          mainContent.animate({
-              opacity: "1"
-          });
-          div();
-          mobile();
-      });
-      cat_links.removeClass("active");
-      jQuery(this).addClass("active");
+      div();
+      mobile();
+    });
+    cat_links.removeClass("active");
+    jQuery(this).addClass("active");
   });
 });
-
-
-
 
 var delay = 3000,
   perView = "auto",
@@ -110,4 +119,3 @@ const swiperr = new Swiper(".sw", {
     clickable: true,
   },
 });
-
