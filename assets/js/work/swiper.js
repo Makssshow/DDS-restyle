@@ -26,7 +26,9 @@ function mobile() {
     }
     if (jQuery(".img").length <= 4) {
       jQuery(".button_mob").fadeOut(500);
-    };
+    } else {
+      jQuery(".button_mob").fadeIn(500);
+    }
   }
   jQuery(".button_mob").click(function () {
     var portfol = jQuery(".img");
