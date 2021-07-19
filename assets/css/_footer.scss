@@ -24,10 +24,9 @@ footer {
     }
   }
   &__links {
-    max-width: 20%;
-    margin-left: 65%;
-    margin-bottom: 48px;
-    margin-top: 65px;
+    min-width: 173px;
+    width: 20%;
+    margin: 65px 27px 48px auto;
     line-height: 16px;
   }
   &__item {
@@ -72,9 +71,10 @@ footer {
   &__socials {
     position: absolute;
     top: 23px;
-    left: 65%;
+    width: 20%;
+    right: 27px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     div {
       margin-right: 43px;
@@ -83,7 +83,7 @@ footer {
         margin-right: 0;
       }
       &:hover {
-        opacity: .5;
+        opacity: 0.5;
       }
       svg {
         width: 100%;
@@ -155,6 +155,8 @@ footer {
     &__socials {
       position: relative;
       margin-bottom: 32px;
+      width: 100%;
+      justify-content: center;
       top: 0;
       left: 0;
       div {

@@ -565,10 +565,9 @@ footer hr {
 }
 
 .footer__links {
-  max-width: 20%;
-  margin-left: 65%;
-  margin-bottom: 48px;
-  margin-top: 65px;
+  min-width: 173px;
+  width: 20%;
+  margin: 65px 27px 48px auto;
   line-height: 16px;
 }
 
@@ -622,13 +621,14 @@ footer hr {
 .footer__socials {
   position: absolute;
   top: 23px;
-  left: 65%;
+  width: 20%;
+  right: 27px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -645,7 +645,7 @@ footer hr {
 }
 
 .footer__socials div:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .footer__socials div svg {
@@ -736,6 +736,10 @@ footer hr {
   .footer__socials {
     position: relative;
     margin-bottom: 32px;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     top: 0;
     left: 0;
   }
