@@ -13,6 +13,7 @@ jQuery(document).ready(function () {
 //   }
 // }
 
+
 function div() {
   if (jQuery(".img_3, .img_4")) {
     for (var i = 0; i <= jQuery(".img_3").length - 1; i++) {

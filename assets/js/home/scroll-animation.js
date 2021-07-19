@@ -437,67 +437,78 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  var bannerHeight = $(".banner").height(),
-    bgHeigh = $(".banner__background").height();
-  var prEH = bgHeigh - bannerHeight / 2;
-  var prEHP = bgHeigh + bannerHeight / 2;
-  if (mobile) {
-    $(".process_sticky").css("bottom", -prEH - 6);
-  } else {
-    prEH = bgHeigh;
-    prEHP = bgHeigh;
-    $(".process_sticky").css("bottom", -bgHeigh - 6);
-  }
-  var banner = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".process",
-      start: "+=" + ($(".process_sticky").height() - prEH) + " bottom",
-      end: "bottom-=" + prEH + " bottom",
-      markers: false,
+  fontSpy('Poppins', {
+    glyphs: '\ue81a\ue82d\ue823',
+    success: function() {
+      setTimeout(() => {
+        bannerFun();
+      }, 300);
     },
   });
-  banner
-    .to(".banner__title_1", { left: "-110%", duration: 1 })
-    .to(".banner__title_2", { left: "0%", duration: 1 }, 0.2)
-    .to(".banner__title_2", { top: "-110%", duration: 1 })
-    .to(".banner__title_3", { top: "0%", duration: 1 }, 1.2)
-    .fromTo(
-      ".banner_wrap",
-      { width: "100%" },
-      { width: "80%", duration: 2.2 },
-      0
-    );
-
-  if (!mobile) {
-    banner.to(".banner__background", { height: "100vh", bottom: "100%" });
-    gsap.fromTo(
-      ".banner__background",
-      { height: "100vh", bottom: "100%" },
-      {
-        height: "100%",
-        bottom: 0,
-        immediateRender: false,
-        scrollTrigger: {
-          trigger: ".process",
-          start: "bottom-=" + $(".banner__bg_wrap").height() + " bottom",
-          end: "bottom bottom",
-        },
-      }
-    );
-  }
-
-  if (mobile) {
-    var bannerBG = gsap.timeline({
+  function bannerFun() {
+    var bannerHeight = $(".banner").height(),
+      bgHeigh = $(".banner__background").height();
+    var prEH = bgHeigh - bannerHeight / 2;
+    var prEHP = bgHeigh + bannerHeight / 2;
+    if (mobile) {
+      $(".process_sticky").css("bottom", -prEH - 6);
+    } else {
+      prEH = bgHeigh;
+      prEHP = bgHeigh;
+      $(".process_sticky").css("bottom", -bgHeigh - 6);
+    }
+    var banner = gsap.timeline({
       scrollTrigger: {
         trigger: ".process",
-        start: "bottom-=" + prEH + " bottom",
-        end: "bottom top",
+        start: "+=" + ($(".process_sticky").height() - prEH) + " bottom",
+        end: "bottom-=" + prEH + " bottom",
         markers: false,
       },
+      defaults: {
+        ease: Linear.easeNone,
+      },
     });
-    bannerBG.to(".banner__background", { objectPosition: "0% 100%" });
-  }
+    banner
+      .to(".banner__title_1", { left: "-110%", duration: 1 })
+      .to(".banner__title_2", { left: "0%", duration: 1 }, 0.2)
+      .to(".banner__title_2", { top: "-110%", duration: 1 })
+      .to(".banner__title_3", { top: "0%", duration: 1 }, 1.2)
+      .fromTo(
+        ".banner_wrap",
+        { width: "100%" },
+        { width: "80%", duration: 2.2 },
+        0
+      );
 
+    if (!mobile) {
+      banner.to(".banner__background", { height: "100vh", bottom: "100%" });
+      gsap.fromTo(
+        ".banner__background",
+        { height: "100vh", bottom: "100%" },
+        {
+          height: "100%",
+          bottom: 0,
+          immediateRender: false,
+          scrollTrigger: {
+            trigger: ".process",
+            start: "bottom-=" + $(".banner__bg_wrap").height() + " bottom",
+            end: "bottom bottom",
+          },
+        }
+      );
+    }
+
+    if (mobile) {
+      var bannerBG = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".process",
+          start: "bottom-=" + prEH + " bottom",
+          end: "bottom top",
+          markers: false,
+        },
+      });
+      bannerBG.to(".banner__background", { objectPosition: "0% 100%" });
+    }
   //CONTACT ANIMATION
 
   var contact = gsap.timeline({
@@ -520,4 +531,5 @@ jQuery(document).ready(function ($) {
       },
     });
   }
+}
 });

@@ -1,6 +1,8 @@
 jQuery(document).ready(function ($) {
   gsap.registerPlugin(ScrollTrigger);
 
+
+
   $(".main__img")
     .imagesLoaded()
     .done(function (instance) {
@@ -91,30 +93,8 @@ jQuery(document).ready(function ($) {
           });
         });
     } else {
-          var hero_anim_mob = gsap.timeline({
-            scrollTrigger: {
-              trigger: "html",
-              start: "top top",
-              endTrigger: ".hero__title",
-              end: "-=" + ($(".main__title").height() + 130) + " top",
-              pin: ".main__title",
-              pinSpacing: false,
-              markers: false,
-            },
-          });
-          hero_anim_mob
-            .to(".main__img img", {
-              yPercent: -100,
-            })
-            .to(
-              ".main__type span",
-              {
-                yPercent: -110,
-                duration: 0.2,
-              },
-              0
-            );
-
+       
+      
       $(".main_wrap, .collage-1, .col-typ")
         .imagesLoaded()
         .done(function (instance) {
@@ -143,7 +123,8 @@ jQuery(document).ready(function ($) {
                 x: 120,
               },
               0.3
-            ).from(
+            )
+            .from(
               ".colors div:nth-child(4)",
               {
                 x: 120,
@@ -282,4 +263,43 @@ jQuery(document).ready(function ($) {
         });
       });
   }
+
+
+
+  function check() {
+    var w = $(".main__title").width();
+    var wScrenn = $(window).width();
+    var fz = parseInt($(".main__title").css("font-size"), 10);
+    if ((w + 60) >= wScrenn) {
+      $(".main__title").css("font-size", fz - 8 + "px");
+      check();
+    } else {
+      if (wScrenn <= 1050) {
+        var hero_anim_mob = gsap.timeline({
+          scrollTrigger: {
+            trigger: "html",
+            start: "top top",
+            endTrigger: ".hero__title",
+            end: "-=" + ($(".main__title").height() + 130) + " top",
+            pin: ".main__title",
+            pinSpacing: false,
+            markers: false,
+          },
+        });
+        hero_anim_mob
+          .to(".main__img img", {
+            yPercent: -100,
+          })
+          .to(
+            ".main__type span",
+            {
+              yPercent: -110,
+              duration: 0.2,
+            },
+            0
+          );
+      }
+    }
+  }
+  check();
 });
