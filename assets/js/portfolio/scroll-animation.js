@@ -8,13 +8,12 @@ jQuery(document).ready(function ($) {
     .done(function (instance) {
       $(".main__img").addClass("main__shadow");
     });
-  FontFaceOnload("Poppins", {
-    success: function () {
+    fontSpy('Poppins', {
+      glyphs: '\ue81a\ue82d\ue823',
+      success: function() {
       animation();
     },
-    timeout: 50, // in ms. Optional, default is 10 seconds
   });
-
   ScrollTrigger.defaults({
     scrub: 0.05,
   });

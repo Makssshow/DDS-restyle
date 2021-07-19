@@ -203,6 +203,7 @@ $butM2: $butMargin * 2;
   right: 0;
   top: 0;
   height: 100vh;
+  transform: translateX(2px);
   border-left: 2px solid $black;
   width: 0;
   background-color: $white;
@@ -273,6 +274,7 @@ header.is-active {
   }
   .nav {
     width: 100vw;
+    transform: translateX(0px);
   }
 }
 .nav__list.is-active {

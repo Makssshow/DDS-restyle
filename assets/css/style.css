@@ -385,6 +385,8 @@ table {
   right: 0;
   top: 0;
   height: 100vh;
+  -webkit-transform: translateX(2px);
+          transform: translateX(2px);
   border-left: 2px solid #000000;
   width: 0;
   background-color: #ffffff;
@@ -475,6 +477,8 @@ header.is-active .close {
 
 header.is-active .nav {
   width: 100vw;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 .nav__list.is-active .nav__hover {
