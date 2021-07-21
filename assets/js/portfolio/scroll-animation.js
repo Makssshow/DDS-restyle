@@ -1,16 +1,14 @@
 jQuery(document).ready(function ($) {
   gsap.registerPlugin(ScrollTrigger);
 
-
-
   $(".main__img")
     .imagesLoaded()
     .done(function (instance) {
       $(".main__img").addClass("main__shadow");
     });
-    fontSpy('Poppins', {
-      glyphs: '\ue81a\ue82d\ue823',
-      success: function() {
+  fontSpy("Poppins", {
+    glyphs: "\ue81a\ue82d\ue823",
+    success: function () {
       animation();
     },
   });
@@ -92,8 +90,6 @@ jQuery(document).ready(function ($) {
           });
         });
     } else {
-       
-      
       $(".main_wrap, .collage-1, .col-typ")
         .imagesLoaded()
         .done(function (instance) {
@@ -263,13 +259,11 @@ jQuery(document).ready(function ($) {
       });
   }
 
-
-
   function check() {
     var w = $(".main__title").width();
     var wScrenn = $(window).width();
     var fz = parseInt($(".main__title").css("font-size"), 10);
-    if ((w + 60) >= wScrenn) {
+    if (w + 60 >= wScrenn) {
       $(".main__title").css("font-size", fz - 8 + "px");
       check();
     } else {
