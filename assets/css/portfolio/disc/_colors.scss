@@ -56,7 +56,8 @@
 }
 .typo {
   display: block;
-  margin-right: 10%;
+  margin-right: 18%;
+  margin-left: 40px;
   min-width: 290px;
   &_wrap {
     display: flex;
@@ -147,6 +148,7 @@
   .typo {
     margin-top: 32px; 
     margin-right: 0;
+    margin-left: 0;
     &__example {
       overflow: hidden;
       span {
