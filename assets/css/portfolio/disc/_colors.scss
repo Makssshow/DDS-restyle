@@ -17,39 +17,37 @@
   &_wrap {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0 30px;
+    justify-content: space-between;
   }
 }
 .colors {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  max-width: 1920px;
   position: relative;
-  margin: auto;
+  margin-left: 4%;
   div {
     &:nth-child(1) {
       width: 330px;
       height: 330px; 
-      margin-right: 12px;
+      margin-right: 1vw; 
     }
     &:nth-child(2) {
       width: 175px;
       height: 175px;
-      margin-right: 12px;
+      margin-right: 1vw;
     }
     &:nth-child(3) {
-      width: 77px;
+      width: 77px; 
       height: 77px;
       margin-bottom: 98px;
     }
     &:nth-child(4) {
       width: 77px;
-      height: 77px;
+      height: 77px; 
       position: absolute;
       top: 0;
-      left: 330px + 12px;
+      left: calc(330px + 1vw);
     }
   }
   &-shadow {
@@ -58,15 +56,16 @@
 }
 .typo {
   display: block;
-  margin: auto;
+  margin-right: 10%;
+  min-width: 290px;
   &_wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-end;
   }
   &__margin {
     &:nth-child(2) {
-      margin-left: 72px;
+      margin-left: 4vw;
     }
   }
   &__example {
@@ -85,6 +84,17 @@
   }
 
 }
+@media screen and (min-width: 1800px) {
+  .col-typ {
+    &__title {
+      img {
+        width: 100%;
+        transform: translateX(0%);
+      }
+    }
+  }
+}
+
 
 @media screen and (max-width: $mobileBig) {
   .col-typ {
@@ -109,6 +119,7 @@
   .colors {
     position: relative;
     margin-top: 62px;
+    margin-left: 0;
     div {
       &:nth-child(1) {
         width: 212px;
@@ -135,6 +146,7 @@
   }
   .typo {
     margin-top: 32px; 
+    margin-right: 0;
     &__example {
       overflow: hidden;
       span {

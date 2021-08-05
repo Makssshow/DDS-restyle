@@ -14,7 +14,8 @@
 
   &__text {
     width: 33%;
-    height: 100vh;
+    height: calc(100vh - 30vh);
+    padding-top: 30vh;
     margin-right: 0;
     margin-left: auto;
 
@@ -22,13 +23,11 @@
     line-height: 26px;
     font-weight: 300;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
   }
   &__wrap {
     border: 2px solid $white;
-    height: 50%;
+    height: 50vh;
 
     display: flex;
     align-items: center;
@@ -39,23 +38,20 @@
   }
 }
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  height: calc(100vh - 30vh);
+  padding-top: 30vh;
   &__title {
     position: absolute;
     line-height: .8em;
-    top: 30px;
+    top: 0;
     z-index: 1;
-    transform: translateY(-100%);
+    transform: translateY(calc(-100% + 30px));
     white-space: nowrap;
   }
   &_wrap {
     position: relative;
-    height: 50%;
+    height: 50vh;
     width: 100%;
-
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
@@ -118,7 +114,7 @@
     height: auto;
     padding-top: 170px;
     &__title {
-      top: 10px;
+      transform: translateY(calc(-100% + 10px));
     }
     &_wrap {
       height: auto;
