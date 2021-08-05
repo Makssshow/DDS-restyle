@@ -27,7 +27,7 @@
   }
   &__wrap {
     border: 2px solid $white;
-    height: 50vh;
+    height: calc(50vh - 4px);
 
     display: flex;
     align-items: center;
