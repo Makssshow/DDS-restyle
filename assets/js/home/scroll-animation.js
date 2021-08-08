@@ -315,7 +315,7 @@ jQuery(document).ready(function ($) {
     let WhySectionsAnim1 = gsap.timeline({
       scrollTrigger: {
         trigger: ".why",
-        start: "+=" + $(".why_sticky").height() + " bottom",
+        start: () => "+=" + $(".why_sticky").height() + " bottom",
         end: "bottom bottom",
         markers: false,
       },
@@ -380,7 +380,7 @@ jQuery(document).ready(function ($) {
     var slides = gsap.timeline({
       scrollTrigger: {
         trigger: ".why",
-        start: "+=" + $(".why_sticky").height() + " bottom",
+        start: () => "+=" + $(".why_sticky").height() + " bottom",
         end: "bottom bottom",
       },
       defaults: {
@@ -408,8 +408,8 @@ jQuery(document).ready(function ($) {
     var processTitle = gsap.timeline({
       scrollTrigger: {
         trigger: ".process",
-        start: "+=" + $(".process__title").height() + " 90%",
-        end: "+=" + $(".process__title").height() + " 60%",
+        start: () => "+=" + $(".process__title").height() + " 90%",
+        end: () => "+=" + $(".process__title").height() + " 60%",
         markers: false,
       },
     });
@@ -460,7 +460,7 @@ jQuery(document).ready(function ($) {
     var banner = gsap.timeline({
       scrollTrigger: {
         trigger: ".process",
-        start: "+=" + ($(".process_sticky").height() - prEH) + " bottom",
+        start: () => "+=" + ($(".process_sticky").height() - prEH) + " bottom",
         end: "bottom-=" + prEH + " bottom",
         markers: false,
       },
@@ -491,7 +491,7 @@ jQuery(document).ready(function ($) {
           immediateRender: false,
           scrollTrigger: {
             trigger: ".process",
-            start: "bottom-=" + $(".banner__bg_wrap").height() + " bottom",
+            start: () => "bottom-=" + $(".banner__bg_wrap").height() + " bottom",
             end: "bottom bottom",
           },
         }
@@ -502,7 +502,7 @@ jQuery(document).ready(function ($) {
       var bannerBG = gsap.timeline({
         scrollTrigger: {
           trigger: ".process",
-          start: "bottom-=" + prEH + " bottom",
+          start: () => "bottom-=" + prEH + " bottom",
           end: "bottom top",
           markers: false,
         },
