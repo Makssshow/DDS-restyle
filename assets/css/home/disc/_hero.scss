@@ -95,6 +95,7 @@
   }
 }
 
+
 @media screen and (max-width: $mobile) {
   .hero {
     font-size: 72px;
@@ -102,7 +103,7 @@
     &__item {
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 98%;
+      width: 93%;
       div {
         padding: 0;
         padding-bottom: 8px;
@@ -164,5 +165,19 @@
     right: 0%;
     bottom: 0%;
     height: 30%;
+  }
+}
+
+@media screen and (min-width: $mobileSmall) and (max-width: $mobile) {
+  .hero {
+    font-size: 120px;
+    line-height: 165px;
+    span.green {
+      display: block;
+    }
+    &__subtitle {
+      font-size: 24px;
+      line-height: 1em;
+    }
   }
 }

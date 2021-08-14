@@ -1,7 +1,7 @@
 .cards {
   background-color: $black;
   position: relative;
-  z-index: 3; 
+  z-index: 3;
   &__title {
     padding-top: 10%;
     font-size: $big;
@@ -131,7 +131,6 @@
   }
 }
 
-
 @media screen and (max-width: $mobile) {
   .cards {
     padding-bottom: 0;
@@ -149,6 +148,24 @@
       width: 100%;
       background-color: $green;
       z-index: 4;
+    }
+  }
+}
+
+@media screen and (min-width: $mobileSmallNI) and (max-width: $mobile) {
+  .cards {
+    &__title {
+      width: 300px;
+      line-height: 39px;
+    }
+    &__description {
+      max-width: 214px;
+    }
+    &__item {
+      padding: 24px;
+      padding-left: 36px;
+      width: calc(100% - 36px - 24px);
+      max-width: 85%;
     }
   }
 }

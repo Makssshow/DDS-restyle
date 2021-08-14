@@ -14,10 +14,6 @@ jQuery(document).ready(function ($) {
     scrub: 0.2,
   });
 
-  var heroDur = $(window).height() * 2;
-  if (mobile) {
-    heroDur = $(window).height() * 3;
-  }
   // //Main pin
   var hero = gsap.timeline({
     scrollTrigger: {
@@ -216,8 +212,9 @@ jQuery(document).ready(function ($) {
       scale: 2,
       scrollTrigger: {
         trigger: ".fret__ball",
-        start: "center bottom",
+        start: "top 80%",
         end: "center 70%",
+        markers: false,
       },
     });
   }
@@ -311,7 +308,7 @@ jQuery(document).ready(function ($) {
     );
 
   //WHY PIN
-  if (mobile) {
+  if ($(window).width() > 650) {
     let WhySectionsAnim1 = gsap.timeline({
       scrollTrigger: {
         trigger: ".why",
@@ -323,9 +320,14 @@ jQuery(document).ready(function ($) {
     var widthImage = "13vw",
       widthText = "25vw",
       imagePadding = "16px",
+      textPadding = "7vw",
+      textFinPadding = "3.5vw",
       dur = 1,
       del = "+=.5";
-
+    if ($(window).width() < 800) {
+      widthText = "39vw";
+    }
+if ($(window).width() >= 800) {
     WhySectionsAnim1.to(
       "#slide-1-img",
       {
@@ -375,7 +377,58 @@ jQuery(document).ready(function ($) {
         "#slide-4-text",
         { maxWidth: widthText, width: widthText, duration: dur },
         "<"
-      );
+      ); } else {
+        WhySectionsAnim1.to(
+          "#slide-1-img",
+          {
+            width: "0",
+            paddingLeft: 0,
+            duration: dur,
+          },
+          "+=.2"
+        )
+          .to("#slide-1-text", { maxWidth: "0", width: "0", paddingLeft: textFinPadding, duration: dur }, "<")
+          .to(
+            "#slide-2-img",
+            { width: widthImage, paddingLeft: imagePadding, duration: dur },
+            "<"
+          )
+          .to(
+            "#slide-2-text",
+            { maxWidth: widthText, width: widthText, paddingLeft: textPadding ,duration: dur },
+            "<"
+          )
+    
+          .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: dur }, del) ////////////////
+          .to("#slide-2-text", { maxWidth: "0", width: "0", paddingLeft: textFinPadding ,duration: dur }, "<")
+          .to(
+            "#slide-3-img",
+            {
+              width: widthImage,
+              paddingLeft: imagePadding,
+              duration: dur,
+            },
+            "<"
+          )
+          .to(
+            "#slide-3-text",
+            { maxWidth: widthText, width: widthText, paddingLeft: textPadding ,duration: dur },
+            "<"
+          )
+    
+          .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: dur }, del) //////////////////
+          .to("#slide-3-text", { maxWidth: "0", width: "0", paddingLeft: textFinPadding ,duration: dur }, "<")
+          .to(
+            "#slide-4-img",
+            { width: widthImage, paddingLeft: imagePadding, duration: dur },
+            "<"
+          )
+          .to(
+            "#slide-4-text",
+            { maxWidth: widthText, width: widthText, paddingLeft: textPadding ,duration: dur },
+            "<"
+          ); 
+      }
   } else {
     var slides = gsap.timeline({
       scrollTrigger: {
@@ -437,9 +490,9 @@ jQuery(document).ready(function ($) {
     });
   }
 
-  fontSpy('Poppins', {
-    glyphs: '\ue81a\ue82d\ue823',
-    success: function() {
+  fontSpy("Poppins", {
+    glyphs: "\ue81a\ue82d\ue823",
+    success: function () {
       setTimeout(() => {
         bannerFun();
       }, 300);
@@ -461,7 +514,7 @@ jQuery(document).ready(function ($) {
       scrollTrigger: {
         trigger: ".process",
         start: () => "+=" + ($(".process_sticky").height() - prEH) + " bottom",
-        end: "bottom-=" + prEH + " bottom",
+        end: () => "bottom-=" + prEH + " bottom",
         markers: false,
       },
       defaults: {
@@ -480,26 +533,32 @@ jQuery(document).ready(function ($) {
         0
       );
 
-    if (!mobile) {
-      banner.to(".banner__background", { height: "100vh", bottom: "100%" });
-      gsap.fromTo(
-        ".banner__background",
-        { height: "100vh", bottom: "100%" },
-        {
-          height: "100%",
-          bottom: 0,
-          immediateRender: false,
+    if ($(window).width() <= 650) {
+      banner.to(".banner__background", { opacity: 1 });
+      gsap
+        .timeline({
           scrollTrigger: {
             trigger: ".process",
-            start: () => "bottom-=" + $(".banner__bg_wrap").height() + " bottom",
+            start: () =>
+              "+=" + (($(".process").height() / 5.8) * 5 - prEH) + " bottom",
             end: "bottom bottom",
+            markers: false,
           },
-        }
-      );
+        })
+        .to(".banner__background", {
+          height: "100vh",
+          bottom: "100%",
+          duration: 0.5,
+        })
+        .to(".banner__background", {
+          height: "100%",
+          bottom: 0,
+        });
     }
 
-    if (mobile) {
-      var bannerBG = gsap.timeline({
+    if ($(window).width() > 650) {
+      gsap.to(".banner__background", {
+        objectPosition: "50% 100%",
         scrollTrigger: {
           trigger: ".process",
           start: () => "bottom-=" + prEH + " bottom",
@@ -507,29 +566,28 @@ jQuery(document).ready(function ($) {
           markers: false,
         },
       });
-      bannerBG.to(".banner__background", { objectPosition: "0% 100%" });
     }
-  //CONTACT ANIMATION
+    //CONTACT ANIMATION
 
-  var contact = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".contact__block",
-      start: "top 80%",
-      end: "top 40%",
-      markers: false,
-    },
-  });
-  contact.to(".contact__block", { width: "20%" });
-
-  if (!mobile) {
-    gsap.from(".contact__ball", {
-      xPercent: -100,
+    gsap.from(".contact__block", {
+      width: "100%",
       scrollTrigger: {
-        trigger: ".contact__ball",
+        trigger: ".contact__block",
         start: "top 80%",
-        end: "top 50%",
+        end: "top 40%",
+        markers: false,
       },
     });
+
+    if (!mobile) {
+      gsap.from(".contact__ball", {
+        xPercent: -50,
+        scrollTrigger: {
+          trigger: ".contact__ball",
+          start: "top 80%",
+          end: "top 50%",
+        },
+      });
+    }
   }
-}
 });

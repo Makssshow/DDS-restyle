@@ -1,9 +1,9 @@
 var delay = 3000,
   perView = 6,
   perGroup = 6,
-  perColumn = 1
+  perColumn = 2
   lo = true;
-if (jQuery(window).width() <= 700) {
+if (jQuery(window).width() <= 650) {
   perView = 2;
   perGroup = 2;
   perColumn = 3;
@@ -13,7 +13,7 @@ const swiper = new Swiper(".swiper-container", {
   slidesPerView: perView,
   slidesPerGroup: perGroup,
   slidesPerColumn: perColumn,
-  spaceBetween: 30,
+  spaceBetween: 44,
   loop: lo,
   autoplay: {
     delay: delay,
