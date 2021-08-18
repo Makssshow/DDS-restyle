@@ -2,9 +2,7 @@ jQuery(document).ready(function ($) {
 
   setTimeout(() => {
     $("#hero__item_1 div h2, .hero__image_1").css("visibility", "visible")
-    // setTimeout(() => {
-    //   $("#hero__item_1 div h2, .hero__image_1").addClass("animate")
-    // }, 1500);
+    
   }, 500);
 
 
