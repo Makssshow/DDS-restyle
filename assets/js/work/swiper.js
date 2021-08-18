@@ -3,21 +3,11 @@ jQuery(document).ready(function () {
   mobile();
 });
 
-// if (jQuery(window).width() <= 800) {
-//   var a = jQuery(".img img");
-//   for (var t = 0; t < a.length; t++) {
-//     var q = jQuery(a[t]).attr("src");
-//     const img = new Image();
-//     img.src = q;
-//     console.log(q)
-//   }
-// }
-
 
 function div() {
-  if (jQuery(".img_3, .img_4")) {
-    for (var i = 0; i <= jQuery(".img_3").length - 1; i++) {
-      jQuery(".img_3:eq(" + i + "), .img_4:eq(" + i + ")").wrapAll(
+  if (jQuery(".img_4, .img_5, .img_6")) {
+    for (var i = 0; i <= jQuery(".img_4").length - 1; i++) {
+      jQuery(".img_4:eq(" + i + "), .img_5:eq(" + i + "), .img_6:eq(" + i + ")").wrapAll(
         "<div></div>"
       );
     }
@@ -88,6 +78,10 @@ if (jQuery(window).width() <= 800) {
 const swiper = new Swiper(".sl", {
   slidesPerView: perView,
   spaceBetween: 18,
+  shortSwipes: false,
+  longSwipesMs: 150,
+  longSwipesRatio: 0.3,
+  mousewheel: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -97,19 +91,19 @@ const swiper = new Swiper(".sl", {
 var Sdelay = 3000,
   SperView = 6,
   SperGroup = 6,
-  SperColumn = 1;
-Slo = true;
-if (jQuery(window).width() <= 800) {
+  SperColumn = 2
+  Slo = true;
+if (jQuery(window).width() <= 650) {
   SperView = 2;
   SperGroup = 2;
   SperColumn = 3;
   Slo = false;
 }
-const swiperr = new Swiper(".sw", {
+const swiper2 = new Swiper(".sw", {
   slidesPerView: SperView,
   slidesPerGroup: SperGroup,
   slidesPerColumn: SperColumn,
-  spaceBetween: 30,
+  spaceBetween: 44,
   loop: Slo,
   autoplay: {
     delay: Sdelay,
@@ -120,3 +114,4 @@ const swiperr = new Swiper(".sw", {
     clickable: true,
   },
 });
+

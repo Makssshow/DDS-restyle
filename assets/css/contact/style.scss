@@ -15,7 +15,7 @@
   }
 }
 form {
-  max-width: 680px;
+  width: 680px;
   margin-left: auto;
   margin-right: 170px;
   * {
@@ -123,6 +123,85 @@ form {
   }
 }
 
+//Sucsess
+input.form-control.parsley-success,
+select.form-control.parsley-success,
+textarea.form-control.parsley-success {
+  background-color: $white !important;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background-color: $green;
+    border-radius: 50%;
+  }
+}
+
+.caldera-grid .alert-success {
+  color: $green !important;
+  background-color: $white !important;
+  border: none !important;
+  font-size: 14px !important;
+  line-height: 21px !important;
+  width: 680px;
+  margin-left: auto;
+  margin-right: 170px;
+  margin-bottom: 0 !important;
+  margin-top: -16px !important;
+  text-transform: uppercase;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  text-shadow: unset !important;
+  letter-spacing: -0.06em !important;
+}
+
+.help-block {
+  display: none !important;
+}
+.has-error {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    background-color: $red;
+    border-radius: 50%;
+  }
+  .form-control {
+    background-color: $white !important;
+  }
+}
+.has-error ≈ .rom-group.submit {
+  input {
+    background-color: $red;
+  }
+}
+.caldera-grid {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1150px) {
+  .link {
+    font-size: 72px;
+    margin: 66px auto;
+    width: 100%;
+    align-items: center;
+    .ball {
+      margin-right: 10vw;
+    }
+  }
+}
+
 @media screen and (max-width: $mobileBig) {
   .hero {
     margin-bottom: 38px;
@@ -149,5 +228,10 @@ form {
     .ball {
       margin: auto;
     }
+  }
+  .caldera-grid .alert-success {
+    max-width: 100%;
+    margin-right: auto;
+    padding: 0 20px !important;
   }
 }
