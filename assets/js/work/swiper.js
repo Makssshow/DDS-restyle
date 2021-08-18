@@ -81,7 +81,6 @@ const swiper = new Swiper(".sl", {
   shortSwipes: false,
   longSwipesMs: 150,
   longSwipesRatio: 0.3,
-  mousewheel: false,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -91,20 +90,17 @@ const swiper = new Swiper(".sl", {
 var Sdelay = 3000,
   SperView = 6,
   SperGroup = 6,
-  SperColumn = 2
-  Slo = true;
+  SperColumn = 2;
 if (jQuery(window).width() <= 650) {
   SperView = 2;
   SperGroup = 2;
   SperColumn = 3;
-  Slo = false;
 }
 const swiper2 = new Swiper(".sw", {
   slidesPerView: SperView,
   slidesPerGroup: SperGroup,
   slidesPerColumn: SperColumn,
   spaceBetween: 44,
-  loop: Slo,
   autoplay: {
     delay: Sdelay,
     disableOnInteraction: false,
