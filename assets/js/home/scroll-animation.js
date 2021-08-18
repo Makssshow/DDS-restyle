@@ -60,8 +60,9 @@ jQuery(document).ready(function ($) {
 
       //1 anim
       //text out
-      .to(
+      .fromTo(
         "#hero__item_1 h2",
+        { yPerceent: 0 },
         {
           yPercent: -140,
           duration: 2,
@@ -327,108 +328,151 @@ jQuery(document).ready(function ($) {
     if ($(window).width() < 800) {
       widthText = "39vw";
     }
-if ($(window).width() >= 800) {
-    WhySectionsAnim1.to(
-      "#slide-1-img",
-      {
-        width: "0",
-        paddingLeft: 0,
-        duration: dur,
-      },
-      "+=.2"
-    )
-      .to("#slide-1-text", { maxWidth: "0", width: "0", duration: dur }, "<")
-      .to(
-        "#slide-2-img",
-        { width: widthImage, paddingLeft: imagePadding, duration: dur },
-        "<"
-      )
-      .to(
-        "#slide-2-text",
-        { maxWidth: widthText, width: widthText, duration: dur },
-        "<"
-      )
-
-      .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: dur }, del) ////////////////
-      .to("#slide-2-text", { maxWidth: "0", width: "0", duration: dur }, "<")
-      .to(
-        "#slide-3-img",
+    if ($(window).width() >= 800) {
+      WhySectionsAnim1.to(
+        "#slide-1-img",
         {
-          width: widthImage,
-          paddingLeft: imagePadding,
+          width: "0",
+          paddingLeft: 0,
           duration: dur,
         },
-        "<"
+        "+=.2"
       )
-      .to(
-        "#slide-3-text",
-        { maxWidth: widthText, width: widthText, duration: dur },
-        "<"
-      )
+        .to("#slide-1-text", { maxWidth: "0", width: "0", duration: dur }, "<")
+        .to(
+          "#slide-2-img",
+          { width: widthImage, paddingLeft: imagePadding, duration: dur },
+          "<"
+        )
+        .to(
+          "#slide-2-text",
+          { maxWidth: widthText, width: widthText, duration: dur },
+          "<"
+        )
 
-      .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: dur }, del) //////////////////
-      .to("#slide-3-text", { maxWidth: "0", width: "0", duration: dur }, "<")
-      .to(
-        "#slide-4-img",
-        { width: widthImage, paddingLeft: imagePadding, duration: dur },
-        "<"
-      )
-      .to(
-        "#slide-4-text",
-        { maxWidth: widthText, width: widthText, duration: dur },
-        "<"
-      ); } else {
-        WhySectionsAnim1.to(
-          "#slide-1-img",
+        .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: dur }, del) ////////////////
+        .to("#slide-2-text", { maxWidth: "0", width: "0", duration: dur }, "<")
+        .to(
+          "#slide-3-img",
           {
-            width: "0",
-            paddingLeft: 0,
+            width: widthImage,
+            paddingLeft: imagePadding,
             duration: dur,
           },
-          "+=.2"
+          "<"
         )
-          .to("#slide-1-text", { maxWidth: "0", width: "0", paddingLeft: textFinPadding, duration: dur }, "<")
-          .to(
-            "#slide-2-img",
-            { width: widthImage, paddingLeft: imagePadding, duration: dur },
-            "<"
-          )
-          .to(
-            "#slide-2-text",
-            { maxWidth: widthText, width: widthText, paddingLeft: textPadding ,duration: dur },
-            "<"
-          )
-    
-          .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: dur }, del) ////////////////
-          .to("#slide-2-text", { maxWidth: "0", width: "0", paddingLeft: textFinPadding ,duration: dur }, "<")
-          .to(
-            "#slide-3-img",
-            {
-              width: widthImage,
-              paddingLeft: imagePadding,
-              duration: dur,
-            },
-            "<"
-          )
-          .to(
-            "#slide-3-text",
-            { maxWidth: widthText, width: widthText, paddingLeft: textPadding ,duration: dur },
-            "<"
-          )
-    
-          .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: dur }, del) //////////////////
-          .to("#slide-3-text", { maxWidth: "0", width: "0", paddingLeft: textFinPadding ,duration: dur }, "<")
-          .to(
-            "#slide-4-img",
-            { width: widthImage, paddingLeft: imagePadding, duration: dur },
-            "<"
-          )
-          .to(
-            "#slide-4-text",
-            { maxWidth: widthText, width: widthText, paddingLeft: textPadding ,duration: dur },
-            "<"
-          ); 
-      }
+        .to(
+          "#slide-3-text",
+          { maxWidth: widthText, width: widthText, duration: dur },
+          "<"
+        )
+
+        .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: dur }, del) //////////////////
+        .to("#slide-3-text", { maxWidth: "0", width: "0", duration: dur }, "<")
+        .to(
+          "#slide-4-img",
+          { width: widthImage, paddingLeft: imagePadding, duration: dur },
+          "<"
+        )
+        .to(
+          "#slide-4-text",
+          { maxWidth: widthText, width: widthText, duration: dur },
+          "<"
+        );
+    } else {
+      WhySectionsAnim1.to(
+        "#slide-1-img",
+        {
+          width: "0",
+          paddingLeft: 0,
+          duration: dur,
+        },
+        "+=.2"
+      )
+        .to(
+          "#slide-1-text",
+          {
+            maxWidth: "0",
+            width: "0",
+            paddingLeft: textFinPadding,
+            duration: dur,
+          },
+          "<"
+        )
+        .to(
+          "#slide-2-img",
+          { width: widthImage, paddingLeft: imagePadding, duration: dur },
+          "<"
+        )
+        .to(
+          "#slide-2-text",
+          {
+            maxWidth: widthText,
+            width: widthText,
+            paddingLeft: textPadding,
+            duration: dur,
+          },
+          "<"
+        )
+
+        .to("#slide-2-img", { width: "0", paddingLeft: 0, duration: dur }, del) ////////////////
+        .to(
+          "#slide-2-text",
+          {
+            maxWidth: "0",
+            width: "0",
+            paddingLeft: textFinPadding,
+            duration: dur,
+          },
+          "<"
+        )
+        .to(
+          "#slide-3-img",
+          {
+            width: widthImage,
+            paddingLeft: imagePadding,
+            duration: dur,
+          },
+          "<"
+        )
+        .to(
+          "#slide-3-text",
+          {
+            maxWidth: widthText,
+            width: widthText,
+            paddingLeft: textPadding,
+            duration: dur,
+          },
+          "<"
+        )
+
+        .to("#slide-3-img", { width: "0", paddingLeft: 0, duration: dur }, del) //////////////////
+        .to(
+          "#slide-3-text",
+          {
+            maxWidth: "0",
+            width: "0",
+            paddingLeft: textFinPadding,
+            duration: dur,
+          },
+          "<"
+        )
+        .to(
+          "#slide-4-img",
+          { width: widthImage, paddingLeft: imagePadding, duration: dur },
+          "<"
+        )
+        .to(
+          "#slide-4-text",
+          {
+            maxWidth: widthText,
+            width: widthText,
+            paddingLeft: textPadding,
+            duration: dur,
+          },
+          "<"
+        );
+    }
   } else {
     var slides = gsap.timeline({
       scrollTrigger: {
