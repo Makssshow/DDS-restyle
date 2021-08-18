@@ -64,7 +64,7 @@ jQuery(document).ready(function ($) {
         "#hero__item_1 h2",
         { transform: "translateY(0%)" },
         {
-          transform: "translate(-140%)",
+          transform: "translateY(-140%)",
           duration: 2,
         },
         0
