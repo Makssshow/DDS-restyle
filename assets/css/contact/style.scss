@@ -50,19 +50,64 @@ form {
       color: $black !important;
     }
   }
-  .submit input {
+  .form-group.submit {
     position: absolute;
-    border: none;
-    background-color: transparent;
-    background-position: center center;
-    background-repeat: no-repeat;
-    border: none !important;
     width: 44px;
     height: 38px;
-    right: 0;
+    right: 7px;
     bottom: 0;
     z-index: 2;
     cursor: pointer;
+
+    margin-bottom: 13px !important;
+    &.has-err {
+      div {
+        &::before {
+          background-color: $red;
+        }
+        &::after {
+          border-color: $red;
+        }
+      }
+    }
+    div {
+      position: relative;
+      line-height: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      &::before {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: $black;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        border-right: 3px solid $black;
+        border-bottom: 3px solid $black;
+        transform: rotate(315deg);
+        pointer-events: none;
+        top: 8px;
+        right: 7px;
+      }
+    }
+    input {
+      border: none;
+      background-color: transparent;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: none !important;
+      padding: 0 !important;
+      margin-bottom: 0 !important;
+    }
   }
 }
 .link {
@@ -129,16 +174,34 @@ select.form-control.parsley-success,
 textarea.form-control.parsley-success {
   background-color: $white !important;
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    background-color: $green;
-    border-radius: 50%;
+}
+
+.checked {
+  .form-group {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      background-color: $green;
+      border-radius: 50%;
+      z-index: 3;
+    }
+    &.submit {
+      &::before, &::after {
+        content: none;
+      }
+    }
   }
+}
+
+.sended {
+  opacity: .3;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .caldera-grid .alert-success {
@@ -163,24 +226,11 @@ textarea.form-control.parsley-success {
   display: none !important;
 }
 .has-error {
-  position: relative;
   &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    background-color: $red;
-    border-radius: 50%;
+    background-color: $red !important;
   }
   .form-control {
     background-color: $white !important;
-  }
-}
-.has-error ≈ .rom-group.submit {
-  input {
-    background-color: $red;
   }
 }
 .caldera-grid {
