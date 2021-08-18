@@ -62,9 +62,9 @@ jQuery(document).ready(function ($) {
       //text out
       .fromTo(
         "#hero__item_1 h2",
-        { yPerceent: 0 },
+        { transform: "translateY(0%)" },
         {
-          yPercent: -140,
+          transform: "translate(-140%)",
           duration: 2,
         },
         0
