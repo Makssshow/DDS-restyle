@@ -157,8 +157,9 @@
     margin: 12px auto 64px;
   }
   .arrows {
-    margin-bottom: 64px;
-    padding: 0 20px;
+    margin: 0 auto 64px;
+    padding: 0;
+    width: 90%;
     &__left,
     &__right {
       width: calc(102px - 2px);

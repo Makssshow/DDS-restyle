@@ -176,3 +176,34 @@
     }
   }
 }
+
+
+@media screen and (min-width: 1700px) {
+  .main {
+    &__img {
+      width: 62.8vw;
+    }
+    &__text {
+      width: 32.7vw;
+    }
+    &_wrap {
+      height: 57.5vh;
+    }
+  }
+  .hero {
+    padding-right: 3vw;
+    padding-left: 1.5vw;
+    &__text {
+      width: calc(32.7vw - .5vw);
+    }
+    &__wrap {
+      height: calc(57.5vh - 4px);
+      justify-content: flex-start;
+      div {
+        margin-left: calc(63px - .5vw);
+        width: fit-content;
+        max-width: 368px;
+      }
+    }
+  }
+}
