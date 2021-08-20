@@ -176,19 +176,6 @@ jQuery(document).ready(function ($) {
 
   //CARDS PIN
   if (mobile) {
-    //FRET NOT TITLE PIN
-    ScrollTrigger.create({
-      trigger: ".cards",
-      start: "80% bottom",
-      end: "center bottom",
-      endTrigger: ".fret__ball",
-      toggleClass: { targets: ".fret__title", className: "fret_pin" },
-      markers: false,
-      onLeave: () =>
-        $(".fret__title").css("bottom", $(".fret__ball").height() / 2),
-      onEnter: () => $(".fret__title").css("bottom", 0),
-      onEnterBack: () => $(".fret__title").css("bottom", 0),
-    });
     ScrollTrigger.create({
       trigger: ".cards",
       start: "80% bottom",
@@ -276,13 +263,14 @@ jQuery(document).ready(function ($) {
 
   if (!mobile) {
     gsap.to(".do__flex", {
-      yPercent: -10,
+      yPercent: -15,
       ease: Linear.easeNone,
       scrollTrigger: {
         trigger: ".why",
         start: "top center",
         end: "top top",
         pin: ".do__flex",
+        scrub: true,
         pinSpacing: false,
       },
     });

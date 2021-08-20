@@ -46,7 +46,7 @@ jQuery(document).ready(function ($) {
   });
 
   branding
-    .to(blackCircle, { x: "-20%", y: "10%" })
+    .to(blackCircle, { x: "-24%", y: "10%" })
     .to(blackCircle, { y: "-20%" })
     .to(blackCircle, { y: "0", x: "0" })
 
