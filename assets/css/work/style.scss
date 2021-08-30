@@ -35,7 +35,7 @@ main {
   &__item {
     font-size: 14px;
     text-transform: uppercase;
-    padding-right: 37px;
+    padding-left: 37px;
     position: relative;
     
     a {
@@ -49,15 +49,15 @@ main {
       content: "";
       position: absolute;
       top: 50%;
-      right: 16px;
+      left: 16px;
       transform: translate(0, -50%);
       border-radius: 50%;
       width: 5px;
       height: 5px;
       background-color: $red;
     }
-    &:last-child {
-      padding-right: 0;
+    &:first-child {
+      padding-left: 0;
       &::before {
         display: none;
       }
@@ -78,6 +78,10 @@ main {
   z-index: 3;
   transform: translateY(calc(3vw + 103%));
 }
+
+$gridMargin: 17px;
+$gridWidth: 23.25vw;
+
 .grid {
   margin-top: 22px;
   display: flex;
@@ -85,10 +89,11 @@ main {
   align-items: flex-start;
   flex-wrap: wrap;
   width: fit-content;
+  // transform: translateX(8.5px);
   a {
-    width: 22.75vw;
-    height: 22.75vw;
-    margin-bottom: 1vw;
+    width: calc(23.25vw - 17px);
+    height: calc(23.25vw - 17px);
+    margin-bottom: 17px;
     position: relative;
     overflow: hidden;
     &::before {
@@ -120,48 +125,56 @@ main {
     object-fit: cover;
     transition: $transition-1;
   }
+  
   .img_1 {
-    margin-right: 1vw;
+    margin-right: 17px;
   }
   .img_2 {
-    margin-right: 1vw;
+    margin-right: 17px;
   }
   .img_3 {
-    width: calc(22.75vw * 2 + 1vw);
+    width: calc(23.25vw * 2);
   }
 
 
   .img_4 {
-    margin-right: 1vw;
+    margin-right: 17px;
+  }
+  .img_5 {
+    margin-right: 17px;
   }
   .img_6 {
-    width: calc(22.75vw * 2 + 1vw);
+    width: calc(23.25vw * 2 - 17px);
   }
   .img_7 {
-    width: calc(22.75vw * 2 + 1vw);
-    height: calc(22.75vw * 2 + 1vw);
+    width: calc(23.25vw * 2);
+    height: calc(23.25vw * 2 - 17px);
   }
 
   .img_8 {
-    margin-right: 1vw;
+    margin-right: 17px;
   }
   .img_9 {
-    margin-right: 1vw;
+    margin-right: 17px;
   }
   .img_10 {
-    width: calc(22.75vw * 2 + 1vw);
+    width: calc(23.25vw * 2);
   }
 
   .img_11 {
-    width: calc(22.75vw * 2 + 1vw);
-    height: calc(22.75vw * 2 + 1vw);
-    margin-right: 1vw;
+    width: calc(23.25vw * 2 - 17px);
+    height: calc(23.25vw * 2 - 17px);
+    margin-right: 17px;
   }
   .img_12 {
-    margin-right: 1vw;
+    margin-right: 17px;
+    width: calc(23.25vw - 8.5px);
+  }
+  .img_13 {
+    width: calc(23.25vw - 8.5px);
   }
   .img_14 {
-    width: calc(22.75vw * 2 + 1vw);
+    width: calc(23.25vw * 2);
   }
 
   div {
@@ -169,11 +182,10 @@ main {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    width: calc(22.75vw * 2 + 1vw);
-    margin-right: 1vw;
+    width: calc(23.25vw * 2);
   }
   .div_2 {
-    width: calc(22.75vw * 2 + 1vw);
+    width: calc(23.25vw * 2);
     margin-right: 0;
   }
 }
