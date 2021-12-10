@@ -7,6 +7,9 @@
     letter-spacing: -0.05em;
     div {
       overflow: hidden;
+      h2 {
+        will-change: transform;
+      }
     }
   }
   &_sticky {
@@ -86,12 +89,15 @@
     }
     &_1 {
       position: relative;
+      will-change: left;
     }
     &_2 {
       left: 130%;
+      will-change: left, top;
     }
     &_3 {
       top: 130%;
+      will-change: top;
     }
   }
   &__subtitle {

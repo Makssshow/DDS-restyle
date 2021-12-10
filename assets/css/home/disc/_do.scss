@@ -11,6 +11,7 @@
     }
     h2 {
       transform: translateY(130%);
+      will-change: transform;
     }
   }
   &__flex {
@@ -164,7 +165,7 @@
         &_ball {
           width: 685px;
           height: 685px;
-          left: 30px;
+          left: -20px;
         }
       }
     }

@@ -27,6 +27,7 @@
     margin-bottom: 120px;
     & div {
       transform: translateY(130%);
+      will-change: transform;
     }
   }
   .swiper-container {

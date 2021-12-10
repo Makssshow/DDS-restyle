@@ -110,6 +110,7 @@
       font-size: $big;
     }
     &__ball {
+      will-change: transform;
       margin-top: 24px;
       margin-left: auto;
       margin-right: 0;

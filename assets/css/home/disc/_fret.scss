@@ -36,6 +36,7 @@
     transform: translateY(-100px);
     line-height: 39px;
     font-weight: 500;
+    will-change: transform;
     opacity: 0;
     &_wrap {
       width: 30%;
@@ -47,6 +48,7 @@
   &__link {
     margin-top: 32px;
     transform: translateY(-100px);
+    will-change: transform;
     opacity: 0;
     a {
       color: $white;
@@ -86,6 +88,7 @@
     overflow: hidden;
     h2 {
       transform: translateY(130%);
+      will-change: transform;
     }
   }
   &__background {
@@ -101,6 +104,7 @@
       position: relative;
       width: 70%;
       z-index: 3;
+      will-change: transform;
     }
     &_red-ball {
       position: absolute;
@@ -108,6 +112,7 @@
       width: 60%;
       left: 50%;
       top: 15%;
+      will-change: transform;
       transform: translateX(-50%);
     }
     &_man {
@@ -115,6 +120,7 @@
       bottom: 4%;
       right: 35%;
       position: absolute;
+      will-change: transform;
       z-index: 3;
     }
     &_ball {
@@ -125,6 +131,7 @@
     &_red-circle {
       position: absolute;
       right: 0;
+      will-change: transform;
       top: 0;
       z-index: 1;
       width: 70%;
